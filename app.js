@@ -29,3 +29,43 @@ document.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;po
 addEventListener('scroll',queueLight,{passive:true});
 function hideLight(){pointerActive=false;light.classList.remove('active');activeCard?.classList.remove('cursor-lit');activeCard=null;}
 document.documentElement.addEventListener('pointerleave',hideLight);addEventListener('blur',hideLight);
+const waToggle=document.getElementById('wa-toggle');
+const waPanel=document.getElementById('wa-panel');
+const backTop=document.querySelector('.back-top');
+if(waToggle&&waPanel){
+ const waIconSvg='<svg width="26" height="26" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.676.15s-.777.978-.952 1.18c-.176.2-.351.226-.652.075s-1.272-.469-2.424-1.496c-.896-.799-1.501-1.787-1.677-2.088-.175-.301-.019-.464.132-.614.135-.135.301-.351.451-.527.151-.175.201-.3.301-.501.101-.2.05-.376-.025-.526s-.676-1.63-.927-2.232c-.244-.587-.492-.507-.676-.516l-.576-.01c-.2 0-.526.075-.802.376s-1.052 1.028-1.052 2.508 1.077 2.909 1.228 3.11c.15.2 2.119 3.236 5.134 4.539.717.31 1.277.495 1.714.634.72.229 1.376.196 1.895.12.577-.087 1.78-.727 2.03-1.43.251-.702.251-1.304.176-1.43-.075-.126-.276-.201-.577-.351zm-5.467 7.618c-1.802 0-3.57-.486-5.116-1.408l-.367-.218-3.805.998 1.016-3.71-.239-.38a10.026 10.026 0 0 1-1.536-5.304c0-5.54 4.507-10.047 10.047-10.047 2.684 0 5.207 1.045 7.106 2.944 1.899 1.899 2.944 4.422 2.944 7.106 0 5.54-4.507 10.047-10.047 10.047zm8.526-18.573A12.01 12.01 0 0 0 12.005 0C5.386 0 0 5.386 0 12.005c0 2.112.552 4.175 1.601 5.993L0 24l6.166-1.57a11.966 11.966 0 0 0 5.839 1.575h.005c6.618 0 12.005-5.386 12.005-12.005 0-3.208-1.25-6.223-3.48-8.453z"/></svg>';
+ const closeIconSvg='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+ const iconEl=waToggle.querySelector('.wa-icon');
+ const labelEl=waToggle.querySelector('.wa-label');
+ function openPanel(){
+  waPanel.removeAttribute('hidden');
+  waToggle.setAttribute('aria-expanded','true');
+  if(iconEl)iconEl.innerHTML=closeIconSvg;
+  if(labelEl)labelEl.textContent='Fechar';
+  if(backTop)backTop.classList.add('wa-hidden');
+ }
+ function closePanel(){
+  waPanel.setAttribute('hidden','');
+  waToggle.setAttribute('aria-expanded','false');
+  if(iconEl)iconEl.innerHTML=waIconSvg;
+  if(labelEl)labelEl.textContent='Falar com o time';
+  if(backTop)backTop.classList.remove('wa-hidden');
+ }
+ waToggle.addEventListener('click',e=>{
+  e.stopPropagation();
+  const isOpen=waToggle.getAttribute('aria-expanded')==='true';
+  if(isOpen)closePanel();else openPanel();
+ });
+ waPanel.addEventListener('click',e=>{e.stopPropagation();});
+ document.addEventListener('click',e=>{
+  if(waToggle.getAttribute('aria-expanded')==='true'&&!waPanel.contains(e.target)&&!waToggle.contains(e.target)){
+   closePanel();
+  }
+ });
+ document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&waToggle.getAttribute('aria-expanded')==='true'){
+   closePanel();
+   waToggle.focus();
+  }
+ });
+}
