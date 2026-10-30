@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://modonativo.me/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/assets/og-image.jpg</image:loc>
+      <image:title>Modo Nativo - Curso de Inglês com Shadowing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://modonativo.me/assets/produto-mockup.webp</image:loc>
+      <image:title>Curso Modo Nativo em diferentes dispositivos</image:title>
+    </image:image>
+  </url>
+</urlset>
