@@ -11,3 +11,6 @@
 .cursor-card.cursor-lit:before,.cursor-card.cursor-lit:after{opacity:1}
 .float-card.cursor-card{position:absolute}
 @media(hover:none){.site-cursor-light{display:none}}
+.footer-links{margin-top:14px;font-size:10px}
+.footer-links a{color:#888;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--orange)}
