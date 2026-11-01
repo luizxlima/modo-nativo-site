@@ -42,7 +42,7 @@
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/(assets|blog/img)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -51,7 +51,7 @@
       ]
     },
     {
-      "source": "/(style\\.css|app\\.js)",
+      "source": "/(style\\.css|app\\.js|blog/blog\\.css)",
       "headers": [
         {
           "key": "Cache-Control",
