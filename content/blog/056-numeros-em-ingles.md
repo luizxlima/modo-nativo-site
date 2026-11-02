@@ -1,5 +1,6 @@
 ---
 title: "Números em inglês: thirteen ou thirty? A pronúncia que decide"
+seoTitle: "Números em inglês: thirteen ou thirty? Pronúncia certa"
 slug: "numeros-em-ingles"
 description: "Números em inglês: a diferença de pronúncia entre 13 e 30, o som do TH nos ordinais (fifth, twelfth) e frases reais para treinar."
 keyword: "números em inglês"

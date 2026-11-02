@@ -1,5 +1,6 @@
 ---
 title: "Frases de emergência em inglês: socorro, polícia e passaporte"
+seoTitle: "Frases de emergência em inglês: socorro e polícia"
 slug: "frases-de-emergencia-em-ingles"
 description: "Frases de emergência em inglês para pedir socorro, relatar furto ou perda de passaporte e ligar para o 911 ou 999 com clareza, mesmo sob pressão."
 keyword: "frases de emergência em inglês"

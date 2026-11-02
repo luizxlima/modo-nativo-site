@@ -1,5 +1,6 @@
 ---
 title: "Como perder o medo de falar inglês: treino que gera confiança"
+seoTitle: "Como perder o medo de falar inglês: treino prático"
 slug: "como-perder-o-medo-de-falar-ingles"
 description: "Como perder o medo de falar inglês: entenda de onde vem a trava e veja um plano prático para treinar sozinho e ganhar confiança real."
 keyword: "como perder o medo de falar inglês"

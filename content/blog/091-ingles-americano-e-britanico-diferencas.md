@@ -1,5 +1,6 @@
 ---
 title: "Inglês americano e britânico: diferenças que importam na fala"
+seoTitle: "Inglês americano e britânico: diferenças na fala"
 slug: "ingles-americano-e-britanico-diferencas"
 description: "Inglês americano e britânico: diferenças de vocabulário, escrita e sotaque explicadas com exemplos reais e dicas para entender os dois."
 keyword: "inglês americano e britânico diferenças"

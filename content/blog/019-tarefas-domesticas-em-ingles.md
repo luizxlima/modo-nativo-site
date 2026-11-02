@@ -1,5 +1,6 @@
 ---
 title: "Tarefas domésticas em inglês: casa, cômodos e household chores"
+seoTitle: "Tarefas domésticas em inglês: cômodos e household chores"
 slug: "tarefas-domesticas-em-ingles"
 description: "Aprenda tarefas domésticas em inglês (do the dishes, make the bed), a diferença entre house e home e o nome dos cômodos no dia a dia."
 keyword: "tarefas domésticas em inglês"

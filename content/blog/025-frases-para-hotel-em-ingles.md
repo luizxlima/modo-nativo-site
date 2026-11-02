@@ -1,5 +1,6 @@
 ---
 title: "Frases para hotel em inglês: como reclamar de problemas no quarto"
+seoTitle: "Frases para hotel em inglês: como reclamar do quarto"
 slug: "frases-para-hotel-em-ingles"
 description: "Frases para hotel em inglês para resolver imprevistos com educação: ar-condicionado quebrado, falta de toalhas, barulho e troca de quarto."
 keyword: "frases para hotel em inglês"

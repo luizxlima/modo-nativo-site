@@ -1,5 +1,6 @@
 ---
 title: "Pronúncia do TH em inglês: exercício para dominar think e this"
+seoTitle: "Pronúncia do TH em inglês: domine think e this"
 slug: "pronuncia-do-th-em-ingles"
 description: "Pronúncia do TH em inglês: exercício prático de posição da língua para dominar o TH com voz (this, brother) e sem voz (think, thank)."
 keyword: "pronúncia do th em inglês"

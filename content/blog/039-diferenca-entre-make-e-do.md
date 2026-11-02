@@ -1,5 +1,6 @@
 ---
 title: "Diferença entre make e do: as expressões fixas que resolvem tudo"
+seoTitle: "Diferença entre make e do: as expressões fixas"
 slug: "diferenca-entre-make-e-do"
 description: "Diferença entre make e do explicada com as expressões fixas mais usadas (make a mistake, do homework) e por que decorar frases funciona mais que regras."
 keyword: "diferença entre make e do"

@@ -1,5 +1,6 @@
 ---
 title: "Inglês para turismo: como pedir dicas locais e achar hidden gems"
+seoTitle: "Inglês para turismo: como pedir dicas locais"
 slug: "ingles-para-turismo"
 description: "Inglês para turismo na prática: como perguntar a moradores onde comer bem, lugares fora da rota turística (hidden gems) e se uma área é segura."
 keyword: "inglês para turismo"

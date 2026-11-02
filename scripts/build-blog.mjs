@@ -34,6 +34,14 @@ function escapeXml(str) {
     .replace(/'/g, "&apos;");
 }
 
+function escapeTitleText(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 function parseFrontmatter(fileContent) {
   const match = fileContent.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
   if (!match) {
@@ -193,6 +201,7 @@ async function build() {
     const alt = mapaAltBySlug.get(data.slug) || `Ilustração do artigo: ${data.title}`;
     posts.push({
       title: data.title,
+      seoTitle: data.seoTitle || "",
       slug: data.slug,
       description: data.description || "",
       keyword: data.keyword || "",
@@ -580,13 +589,17 @@ ${JSON.stringify(listingJsonLd, null, 2)}
 
     const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(post.title + " - https://modonativo.me/blog/" + post.slug)}`;
 
+    const titleBase = (post.seoTitle || "").trim() || post.title.trim();
+    const candidateTitle = `${titleBase} | Modo Nativo`;
+    const metaTitle = candidateTitle.length <= 60 ? candidateTitle : titleBase;
+
     const articleHtml = `<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   ${getGtmHead()}
-  <title>${escapeHtml(post.title)} | Blog Modo Nativo</title>
+  <title>${escapeTitleText(metaTitle)}</title>
   <meta name="description" content="${escapeHtml(post.description)}">
   <meta name="keywords" content="${escapeHtml(post.keyword)}">
   <link rel="canonical" href="https://modonativo.me/blog/${escapeHtml(post.slug)}">
@@ -596,7 +609,7 @@ ${JSON.stringify(listingJsonLd, null, 2)}
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Modo Nativo">
-  <meta property="og:title" content="${escapeHtml(post.title)} | Blog Modo Nativo">
+  <meta property="og:title" content="${escapeHtml(metaTitle)}">
   <meta property="og:description" content="${escapeHtml(post.description)}">
   <meta property="og:url" content="https://modonativo.me/blog/${escapeHtml(post.slug)}">
   <meta property="og:image" content="https://modonativo.me${escapeHtml(post.cover)}">
@@ -606,7 +619,7 @@ ${JSON.stringify(listingJsonLd, null, 2)}
   <meta property="article:modified_time" content="${escapeHtml(post.date)}">
   <meta property="article:section" content="${escapeHtml(post.category)}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="${escapeHtml(post.title)} | Blog Modo Nativo">
+  <meta name="twitter:title" content="${escapeHtml(metaTitle)}">
   <meta name="twitter:description" content="${escapeHtml(post.description)}">
   <meta name="twitter:image" content="https://modonativo.me${escapeHtml(post.cover)}">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -633,7 +646,7 @@ ${JSON.stringify(articleJsonLd, null, 2)}
       <div class="article-meta">
         <span class="article-meta-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          ${escapeHtml(formatDatePtBr(post.date))}
+          <time datetime="${escapeHtml(post.date)}">${escapeHtml(formatDatePtBr(post.date))}</time>
         </span>
         <span class="article-meta-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>

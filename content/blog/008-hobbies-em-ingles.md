@@ -1,5 +1,6 @@
 ---
 title: "Hobbies em inglês: como falar do tempo livre além do \"I like\""
+seoTitle: "Hobbies em inglês: fale do tempo livre além do \"I like\""
 slug: "hobbies-em-ingles"
 description: "Fale dos seus hobbies em inglês sem repetir \"I like\": use I'm into, I enjoy, I'm a big fan of e aprenda o uso natural dos verbos com -ing."
 keyword: "hobbies em inglês"

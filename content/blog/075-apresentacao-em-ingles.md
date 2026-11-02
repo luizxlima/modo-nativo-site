@@ -1,5 +1,6 @@
 ---
 title: "Apresentação em inglês: como guiar slides e explicar gráficos"
+seoTitle: "Apresentação em inglês: como guiar slides e gráficos"
 slug: "apresentacao-em-ingles"
 description: "Apresentação em inglês sem travar: frases para guiar a audiência pelos slides, explicar subidas e quedas em gráficos e abrir para perguntas (Q&A)."
 keyword: "apresentação em inglês"

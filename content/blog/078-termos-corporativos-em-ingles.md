@@ -1,5 +1,6 @@
 ---
 title: "Termos corporativos em inglês: ASAP, FYI, KPI e o que significam"
+seoTitle: "Termos corporativos em inglês: ASAP, FYI e KPI"
 slug: "termos-corporativos-em-ingles"
 description: "Termos corporativos em inglês explicados: o significado real de KPI, ASAP, FYI, EOD, brainstorm, benchmark e como pronunciar cada um sem erro."
 keyword: "termos corporativos em inglês"

@@ -1,5 +1,6 @@
 ---
 title: "30 expressões idiomáticas em inglês que você precisa conhecer"
+seoTitle: "30 expressões idiomáticas em inglês essenciais"
 slug: "expressoes-idiomaticas-em-ingles"
 description: "30 expressões idiomáticas em inglês (idioms) com significado, exemplo e tradução: piece of cake, break a leg, under the weather e muito mais."
 keyword: "expressões idiomáticas em inglês"

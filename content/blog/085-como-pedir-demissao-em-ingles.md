@@ -1,5 +1,6 @@
 ---
 title: "Como pedir demissão em inglês: two weeks' notice sem queimar ponte"
+seoTitle: "Como pedir demissão em inglês: two weeks' notice"
 slug: "como-pedir-demissao-em-ingles"
 description: "Como pedir demissão em inglês com etiqueta profissional: a conversa com o gestor, a resignation letter e o two weeks' notice, com frases prontas."
 keyword: "como pedir demissão em inglês"

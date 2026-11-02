@@ -1,5 +1,6 @@
 ---
 title: "Como aprender inglês com séries: método de 3 etapas sem legenda"
+seoTitle: "Como aprender inglês com séries: método em 3 etapas"
 slug: "como-aprender-ingles-com-series"
 description: "Como aprender inglês com séries em 3 etapas: legenda em português, legenda em inglês e sem legenda com Shadowing. Treine o ouvido com entretenimento."
 keyword: "como aprender inglês com séries"

@@ -1,5 +1,6 @@
 ---
 title: "Perguntas da imigração em inglês: as 10 mais comuns e como responder"
+seoTitle: "Perguntas da imigração em inglês: as 10 mais comuns"
 slug: "perguntas-da-imigracao-em-ingles"
 description: "As 10 perguntas da imigração em inglês que o oficial mais faz, com respostas curtas e diretas para você passar pelo controle sem gaguejar."
 keyword: "perguntas da imigração em inglês"

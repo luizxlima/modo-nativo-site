@@ -1,5 +1,6 @@
 ---
 title: "Direções em inglês: como pedir e entender sem depender do GPS"
+seoTitle: "Direções em inglês: como pedir e entender sem GPS"
 slug: "direcoes-em-ingles"
 description: "Direções em inglês na prática: como abordar estranhos com \"Excuse me\" e entender go straight, turn left e block sem depender só do GPS."
 keyword: "direções em inglês"

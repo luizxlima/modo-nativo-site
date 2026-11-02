@@ -1,5 +1,6 @@
 ---
 title: "WH questions em inglês: perguntas rápidas para manter a conversa"
+seoTitle: "WH questions em inglês: perguntas para manter a conversa"
 slug: "wh-questions-em-ingles"
 description: "WH questions em inglês: what, where, when, who, why e how explicados com estrutura simples e frases prontas para fazer perguntas sem travar."
 keyword: "wh questions em inglês"

@@ -1,5 +1,6 @@
 ---
 title: "Pagamentos em inglês: câmbio, cartão, dividir conta e gorjeta"
+seoTitle: "Pagamentos em inglês: câmbio, cartão, conta e gorjeta"
 slug: "pagamentos-em-ingles"
 description: "Pagamentos em inglês na viagem: frases para casa de câmbio, pagar por aproximação, dividir a conta (split the bill) e lidar com gorjetas sem gafe."
 keyword: "pagamentos em inglês"

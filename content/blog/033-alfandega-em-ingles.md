@@ -1,5 +1,6 @@
 ---
 title: "Alfândega em inglês: o que declarar e como falar no Duty Free"
+seoTitle: "Alfândega em inglês: o que declarar e o que dizer"
 slug: "alfandega-em-ingles"
 description: "Guia de alfândega em inglês: goods to declare, limites de compras, perguntas do oficial e o vocabulário das lojas Duty Free no aeroporto."
 keyword: "alfândega em inglês"

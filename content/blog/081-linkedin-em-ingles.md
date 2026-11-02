@@ -1,5 +1,6 @@
 ---
 title: "LinkedIn em inglês: como montar perfil e falar com recrutadores"
+seoTitle: "LinkedIn em inglês: perfil e conversa com recrutadores"
 slug: "linkedin-em-ingles"
 description: "Aprenda a montar seu LinkedIn em inglês (Headline, Summary) e a abordar recrutadores estrangeiros no chat para vagas em dólar ou euro."
 keyword: "linkedin em inglês"

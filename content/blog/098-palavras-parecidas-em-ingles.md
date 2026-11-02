@@ -1,5 +1,6 @@
 ---
 title: "Palavras parecidas em inglês: como não confundir na pronúncia"
+seoTitle: "Palavras parecidas em inglês: não confunda na pronúncia"
 slug: "palavras-parecidas-em-ingles"
 description: "Palavras parecidas em inglês (minimal pairs): beach/bitch, sheet/shit, tree/three, bad/bed. Entenda a diferença de som e treine para não passar vergonha."
 keyword: "palavras parecidas em inglês"

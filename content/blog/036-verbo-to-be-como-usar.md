@@ -1,5 +1,6 @@
 ---
 title: "Verbo to be: como usar de verdade, com contrações da fala real"
+seoTitle: "Verbo to be: como usar com as contrações da fala real"
 slug: "verbo-to-be-como-usar"
 description: "Verbo to be: como usar sem tabela chata. Contrações reais (I'm, you're, he's), negativas, perguntas e o som rápido que os nativos usam no dia a dia."
 keyword: "verbo to be como usar"

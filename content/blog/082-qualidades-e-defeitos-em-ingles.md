@@ -1,5 +1,6 @@
 ---
 title: "Qualidades e defeitos em inglês: como responder na entrevista"
+seoTitle: "Qualidades e defeitos em inglês na entrevista"
 slug: "qualidades-e-defeitos-em-ingles"
 description: "Como falar de qualidades e defeitos em inglês na entrevista (strengths and weaknesses) com exemplos reais e sem clichês batidos."
 keyword: "qualidades e defeitos em inglês"

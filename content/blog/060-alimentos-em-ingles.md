@@ -1,5 +1,6 @@
 ---
 title: "Alimentos em inglês: supermercado, cardápio e a pronúncia certa"
+seoTitle: "Alimentos em inglês: supermercado, cardápio e pronúncia"
 slug: "alimentos-em-ingles"
 description: "Alimentos em inglês: frutas, vegetais, carnes e bebidas do supermercado e do cardápio, com a pronúncia correta de vegetables, salmon e outras."
 keyword: "alimentos em inglês"

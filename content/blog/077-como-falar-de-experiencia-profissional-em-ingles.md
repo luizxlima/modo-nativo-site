@@ -1,5 +1,6 @@
 ---
 title: "Como falar de experiência profissional em inglês e valorizar sua carreira"
+seoTitle: "Como falar de experiência profissional em inglês"
 slug: "como-falar-de-experiencia-profissional-em-ingles"
 description: "Como falar de experiência profissional em inglês: use Simple Past e Present Perfect do jeito certo para valorizar sua trajetória e conquistas."
 keyword: "como falar de experiência profissional em inglês"
