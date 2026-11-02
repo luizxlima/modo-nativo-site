@@ -284,7 +284,13 @@ async function build() {
           "logo": {
             "@type": "ImageObject",
             "url": "https://modonativo.me/assets/icons/icon-512.png"
-          }
+          },
+          "sameAs": [
+            "https://www.instagram.com/modonativo.oficial/",
+            "https://www.youtube.com/@ModoNativo",
+            "https://www.tiktok.com/@modonativo",
+            "https://www.facebook.com/profile.php?id=61594512967553"
+          ]
         }
       },
       {
@@ -553,7 +559,13 @@ ${JSON.stringify(listingJsonLd, null, 2)}
             "logo": {
               "@type": "ImageObject",
               "url": "https://modonativo.me/assets/icons/icon-512.png"
-            }
+            },
+            "sameAs": [
+              "https://www.instagram.com/modonativo.oficial/",
+              "https://www.youtube.com/@ModoNativo",
+              "https://www.tiktok.com/@modonativo",
+              "https://www.facebook.com/profile.php?id=61594512967553"
+            ]
           },
           "mainEntityOfPage": {
             "@type": "WebPage",
