@@ -20,5 +20,8 @@
   "homepage": "https://github.com/luizxlima/modo-nativo-site#readme",
   "dependencies": {
     "marked": "^18.1.2"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

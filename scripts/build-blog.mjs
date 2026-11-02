@@ -12,6 +12,7 @@ const blogOutDir = path.join(rootDir, "blog");
 const postsJsonPath = path.join(blogOutDir, "posts.json");
 const sitemapPath = path.join(rootDir, "sitemap.xml");
 const llmsPath = path.join(rootDir, "llms.txt");
+const mapaPath = path.join(__dirname, "mapa-ilustracoes.json");
 
 function escapeHtml(str) {
   if (!str) return "";
@@ -132,12 +133,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->`;
 }
 
-function renderCardHtml(post, lazy = true) {
-  const loadingAttr = lazy ? ' loading="lazy"' : ' fetchpriority="high"';
+function renderCardHtml(post) {
+  const altText = post.alt || `Ilustração do artigo: ${post.title}`;
   return `<article class="card" data-category="${escapeHtml(post.category)}">
   <div class="card-cover-wrapper">
     <span class="card-badge">${escapeHtml(post.category)}</span>
-    <img class="card-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(post.title)}" width="1200" height="675"${loadingAttr} decoding="async">
+    <img class="card-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(altText)}" width="1600" height="900" loading="lazy" decoding="async">
   </div>
   <div class="card-body">
     <div class="card-meta">
@@ -164,6 +165,20 @@ async function build() {
     fs.mkdirSync(blogOutDir, { recursive: true });
   }
 
+  const mapaAltBySlug = new Map();
+  if (fs.existsSync(mapaPath)) {
+    try {
+      const mapaList = JSON.parse(fs.readFileSync(mapaPath, "utf8"));
+      for (const item of mapaList) {
+        if (item.slug && item.alt) {
+          mapaAltBySlug.set(item.slug, item.alt);
+        }
+      }
+    } catch (err) {
+      console.warn("Aviso: erro ao carregar mapa-ilustracoes.json:", err.message);
+    }
+  }
+
   // 1. Ler todos os arquivos .md (ignorando os que começam com _)
   const fileNames = fs.readdirSync(contentDir).filter(f => f.endsWith(".md") && !f.startsWith("_"));
   console.log(`Encontrados ${fileNames.length} artigos para processar.`);
@@ -175,6 +190,7 @@ async function build() {
     const { data, body } = parseFrontmatter(raw);
 
     const readingTime = calculateReadingTime(body);
+    const alt = mapaAltBySlug.get(data.slug) || `Ilustração do artigo: ${data.title}`;
     posts.push({
       title: data.title,
       slug: data.slug,
@@ -183,6 +199,7 @@ async function build() {
       category: data.category || "Conversação",
       date: data.date || "2026-11-01",
       cover: data.cover || `/blog/img/${data.slug}.webp`,
+      alt,
       author: data.author || "Equipe Modo Nativo",
       order: typeof data.order === "number" ? data.order : 999,
       readingTime,
@@ -225,6 +242,7 @@ async function build() {
     category: p.category,
     date: p.date,
     cover: p.cover,
+    alt: p.alt,
     readingTime: p.readingTime,
     order: p.order
   }));
@@ -233,7 +251,7 @@ async function build() {
 
   // 5. Gerar blog/index.html (Listagem)
   const initialCardsCount = 9;
-  const initialCardsHtml = posts.slice(0, initialCardsCount).map((p, idx) => renderCardHtml(p, idx > 2)).join("\n");
+  const initialCardsHtml = posts.slice(0, initialCardsCount).map(p => renderCardHtml(p)).join("\n");
 
   const filterPillsHtml = [
     `<button class="filter-pill active" data-category="Todos">Todos</button>`,
@@ -388,9 +406,10 @@ ${JSON.stringify(listingJsonLd, null, 2)}
       const article = document.createElement("article");
       article.className = "card";
       article.dataset.category = post.category;
+      const altText = post.alt || ("Ilustração do artigo: " + post.title);
       article.innerHTML = '<div class="card-cover-wrapper">' +
         '<span class="card-badge">' + post.category + '</span>' +
-        '<img class="card-cover" src="' + post.cover + '" alt="' + post.title.replace(/"/g, '&quot;') + '" width="1200" height="675" loading="lazy" decoding="async">' +
+        '<img class="card-cover" src="' + post.cover + '" alt="' + altText.replace(/"/g, '&quot;') + '" width="1600" height="900" loading="lazy" decoding="async">' +
         '</div>' +
         '<div class="card-body">' +
         '<div class="card-meta"><span>' + formatDate(post.date) + '</span><span>•</span><span>' + post.readingTime + '</span></div>' +
@@ -493,7 +512,7 @@ ${JSON.stringify(listingJsonLd, null, 2)}
     const sameCat = posts.filter(p => p.slug !== post.slug && p.category === post.category);
     const otherCat = posts.filter(p => p.slug !== post.slug && p.category !== post.category);
     const relatedPosts = [...sameCat, ...otherCat].slice(0, 3);
-    const relatedCardsHtml = relatedPosts.map(p => renderCardHtml(p, true)).join("\n");
+    const relatedCardsHtml = relatedPosts.map(p => renderCardHtml(p)).join("\n");
 
     const articleJsonLd = {
       "@context": "https://schema.org",
@@ -503,7 +522,12 @@ ${JSON.stringify(listingJsonLd, null, 2)}
           "@id": `https://modonativo.me/blog/${post.slug}#article`,
           "headline": post.title,
           "description": post.description,
-          "image": `https://modonativo.me${post.cover}`,
+          "image": {
+            "@type": "ImageObject",
+            "url": `https://modonativo.me${post.cover}`,
+            "width": 1600,
+            "height": 900
+          },
           "datePublished": post.date,
           "dateModified": post.date,
           "keywords": post.keyword,
@@ -576,8 +600,8 @@ ${JSON.stringify(listingJsonLd, null, 2)}
   <meta property="og:description" content="${escapeHtml(post.description)}">
   <meta property="og:url" content="https://modonativo.me/blog/${escapeHtml(post.slug)}">
   <meta property="og:image" content="https://modonativo.me${escapeHtml(post.cover)}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="675">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
   <meta property="article:published_time" content="${escapeHtml(post.date)}">
   <meta property="article:modified_time" content="${escapeHtml(post.date)}">
   <meta property="article:section" content="${escapeHtml(post.category)}">
@@ -620,7 +644,7 @@ ${JSON.stringify(articleJsonLd, null, 2)}
     </header>
 
     <div class="article-cover-wrap">
-      <img class="article-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(post.title)}" width="1200" height="675" fetchpriority="high">
+      <img class="article-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(post.alt || `Ilustração do artigo: ${post.title}`)}" width="1600" height="900" loading="eager" fetchpriority="high">
     </div>
 
     <div class="article-content">
