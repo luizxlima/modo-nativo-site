@@ -17,9 +17,1009 @@
   </url>
   <url>
     <loc>https://modonativo.me/blog</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/alugar-apartamento-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/alugar-apartamento-em-ingles.webp</image:loc>
+      <image:title>Como alugar apartamento em inglês: contrato e negociação</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/termos-bancarios-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/termos-bancarios-em-ingles.webp</image:loc>
+      <image:title>Termos bancários em inglês para abrir conta fora do país</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/vocabulario-de-supermercado-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/vocabulario-de-supermercado-em-ingles.webp</image:loc>
+      <image:title>Vocabulário de supermercado em inglês: corredores e caixa</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/cortar-cabelo-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/cortar-cabelo-em-ingles.webp</image:loc>
+      <image:title>Como cortar cabelo em inglês: salão e barbearia sem erro</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/vocabulario-de-academia-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/vocabulario-de-academia-em-ingles.webp</image:loc>
+      <image:title>Vocabulário de academia em inglês: aparelhos, séries e treino</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/veterinario-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/veterinario-em-ingles.webp</image:loc>
+      <image:title>Veterinário em inglês: como levar o pet à consulta fora do país</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/servicos-domesticos-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/servicos-domesticos-em-ingles.webp</image:loc>
+      <image:title>Serviços domésticos em inglês: chamar encanador e eletricista</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/problemas-no-carro-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/problemas-no-carro-em-ingles.webp</image:loc>
+      <image:title>Problemas no carro em inglês: pneu furado, bateria e oficina</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/vocabulario-escolar-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/vocabulario-escolar-em-ingles.webp</image:loc>
+      <image:title>Vocabulário escolar em inglês: a escola dos filhos no exterior</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/correios-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/correios-em-ingles.webp</image:loc>
+      <image:title>Correios em inglês: como enviar encomendas e devolver compras</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ielts-speaking-dicas</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ielts-speaking-dicas.webp</image:loc>
+      <image:title>IELTS Speaking dicas: como se preparar para o teste oral</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/toefl-speaking-como-estudar</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/toefl-speaking-como-estudar.webp</image:loc>
+      <image:title>TOEFL Speaking como estudar e zerar as pausas na prova</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/duolingo-english-test-dicas</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/duolingo-english-test-dicas.webp</image:loc>
+      <image:title>Duolingo English Test dicas: guia completo para ir bem</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-intercambio</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-intercambio.webp</image:loc>
+      <image:title>Inglês para intercâmbio: guia de sobrevivência das primeiras 48h</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/bolsas-de-estudo-no-exterior-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/bolsas-de-estudo-no-exterior-ingles.webp</image:loc>
+      <image:title>Bolsas de estudo no exterior: o inglês para conseguir a sua</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-academico</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-academico.webp</image:loc>
+      <image:title>Inglês acadêmico: vocabulário para artigos e apresentações</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/entrevista-visto-americano-perguntas</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/entrevista-visto-americano-perguntas.webp</image:loc>
+      <image:title>Entrevista de visto americano: perguntas que podem vir em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-fazer-amigos-no-exterior</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-fazer-amigos-no-exterior.webp</image:loc>
+      <image:title>Como fazer amigos no exterior: guia para quebrar o gelo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/trabalho-voluntario-no-exterior-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/trabalho-voluntario-no-exterior-ingles.webp</image:loc>
+      <image:title>Trabalho voluntário no exterior: o inglês para se candidatar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/devolver-produto-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/devolver-produto-em-ingles.webp</image:loc>
+      <image:title>Como devolver produto em inglês e pedir reembolso sem travar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/used-to-como-usar</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/used-to-como-usar.webp</image:loc>
+      <image:title>Used to como usar: costumava fazer ou estou acostumado a?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/passive-voice-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/passive-voice-em-ingles.webp</image:loc>
+      <image:title>Passive voice em inglês: como usar a voz passiva sem travar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/reported-speech-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/reported-speech-em-ingles.webp</image:loc>
+      <image:title>Reported speech em inglês: como contar o que alguém disse</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/question-tags-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/question-tags-em-ingles.webp</image:loc>
+      <image:title>Question tags em inglês: como usar o nosso né? ao falar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/comparativos-e-superlativos-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/comparativos-e-superlativos-em-ingles.webp</image:loc>
+      <image:title>Comparativos e superlativos em inglês: quando usar -er e more</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/for-e-since-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/for-e-since-diferenca.webp</image:loc>
+      <image:title>For e since: diferença e como usar sem confundir na fala</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/already-yet-still-como-usar</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/already-yet-still-como-usar.webp</image:loc>
+      <image:title>Already, yet, still e just: como usar cada um na frase certa</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/too-also-as-well-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/too-also-as-well-diferenca.webp</image:loc>
+      <image:title>Too, also e as well: a diferença e onde colocar cada um</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/neither-e-either-como-usar</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/neither-e-either-como-usar.webp</image:loc>
+      <image:title>Neither e either: como usar para dizer também não em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/who-which-that-como-usar</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/who-which-that-como-usar.webp</image:loc>
+      <image:title>Who, which e that: como usar relative pronouns sem travar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/gerund-vs-infinitive-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/gerund-vs-infinitive-ingles.webp</image:loc>
+      <image:title>Gerund vs infinitive em inglês: quando usar to do ou doing</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/past-continuous-exemplos</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/past-continuous-exemplos.webp</image:loc>
+      <image:title>Past Continuous exemplos: o que você estava fazendo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/past-perfect-como-usar</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/past-perfect-como-usar.webp</image:loc>
+      <image:title>Past Perfect como usar: o passado antes do passado em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/third-conditional-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/third-conditional-ingles.webp</image:loc>
+      <image:title>Third Conditional em inglês: como falar de arrependimentos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-usar-o-verbo-get</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-usar-o-verbo-get.webp</image:loc>
+      <image:title>Como usar o verbo get: os 15 sentidos principais em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ordem-dos-adjetivos-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ordem-dos-adjetivos-em-ingles.webp</image:loc>
+      <image:title>Ordem dos adjetivos em inglês: a regra OSASCOMP explicada</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/artigos-em-ingles-a-an-the</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/artigos-em-ingles-a-an-the.webp</image:loc>
+      <image:title>Artigos em inglês a an the: quando usar e quando omitir</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/plural-em-ingles-regras</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/plural-em-ingles-regras.webp</image:loc>
+      <image:title>Plural em inglês regras: exceções e plurais irregulares</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/apostrofo-s-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/apostrofo-s-em-ingles.webp</image:loc>
+      <image:title>Apóstrofo S em inglês: como usar o &apos;s para indicar posse</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/diferenca-entre-to-e-for</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/diferenca-entre-to-e-for.webp</image:loc>
+      <image:title>Diferença entre to e for em inglês: o guia definitivo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-marketing-digital</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-marketing-digital.webp</image:loc>
+      <image:title>Inglês para marketing digital: termos, frases e erros comuns</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-area-da-saude</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-area-da-saude.webp</image:loc>
+      <image:title>Inglês para área da saúde: termos, frases e diálogo com paciente</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-juridico</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-juridico.webp</image:loc>
+      <image:title>Inglês jurídico: termos de contrato, frases e erros de advogados</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-engenheiros</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-engenheiros.webp</image:loc>
+      <image:title>Inglês para engenheiros: termos técnicos, obra e reunião</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-financeiro</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-financeiro.webp</image:loc>
+      <image:title>Inglês financeiro: termos de balanço, frases e erros comuns</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-rh</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-rh.webp</image:loc>
+      <image:title>Inglês para RH: entrevistas, onboarding e performance review</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-vendas</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-vendas.webp</image:loc>
+      <image:title>Inglês para vendas: cold call, pitch, objeções e fechamento</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-comissario-de-bordo</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-comissario-de-bordo.webp</image:loc>
+      <image:title>Inglês para comissário de bordo: frases, segurança e entrevista</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-hotelaria</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-hotelaria.webp</image:loc>
+      <image:title>Inglês para hotelaria: frases de recepção, resort e cruzeiro</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-garcom</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-garcom.webp</image:loc>
+      <image:title>Inglês para garçom e bartender: cardápio, carne e alergias</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-designers</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-designers.webp</image:loc>
+      <image:title>Inglês para designers: vocabulário, frases e erros comuns</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-gerenciamento-de-projetos</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-gerenciamento-de-projetos.webp</image:loc>
+      <image:title>Inglês para gerenciamento de projetos: frases e termos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-comercio-exterior</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-comercio-exterior.webp</image:loc>
+      <image:title>Inglês para comércio exterior: termos e frases de Comex</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-analise-de-dados</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-analise-de-dados.webp</image:loc>
+      <image:title>Inglês para análise de dados: como apresentar insights</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-motoristas</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-motoristas.webp</image:loc>
+      <image:title>Inglês para motoristas: frases para atender turistas</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-arquitetos</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-arquitetos.webp</image:loc>
+      <image:title>Inglês para arquitetos: materiais, plantas e conceitos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-psicologos</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-psicologos.webp</image:loc>
+      <image:title>Inglês para psicólogos: vocabulário clínico e emocional</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-criadores-de-conteudo</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-criadores-de-conteudo.webp</image:loc>
+      <image:title>Inglês para criadores de conteúdo: publis e media kit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-ecommerce</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-ecommerce.webp</image:loc>
+      <image:title>Inglês para ecommerce: fornecedores, suporte e chargeback</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-trabalhar-para-o-exterior</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-trabalhar-para-o-exterior.webp</image:loc>
+      <image:title>Como trabalhar para o exterior remotamente ganhando em dólar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/melhores-series-para-aprender-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/melhores-series-para-aprender-ingles.webp</image:loc>
+      <image:title>As 10 melhores séries para aprender inglês por nível</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/aprender-ingles-com-musica</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/aprender-ingles-com-musica.webp</image:loc>
+      <image:title>Como aprender inglês com música e cantar junto sem travar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/podcasts-para-aprender-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/podcasts-para-aprender-ingles.webp</image:loc>
+      <image:title>Podcasts para aprender inglês: os melhores para o Listening</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-para-jogos-online</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-para-jogos-online.webp</image:loc>
+      <image:title>Inglês para jogos online: vocabulário gamer que você precisa</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/livros-em-ingles-para-iniciantes</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/livros-em-ingles-para-iniciantes.webp</image:loc>
+      <image:title>Livros em inglês para iniciantes: por onde começar a ler</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/aprender-ingles-no-youtube</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/aprender-ingles-no-youtube.webp</image:loc>
+      <image:title>Como aprender inglês no YouTube e ficar fluente de graça</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/termos-do-instagram-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/termos-do-instagram-em-ingles.webp</image:loc>
+      <image:title>Termos do Instagram em inglês: vocabulário de redes sociais</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/vocabulario-de-futebol-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/vocabulario-de-futebol-em-ingles.webp</image:loc>
+      <image:title>Vocabulário de futebol em inglês e de esportes para assistir</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/vocabulario-de-cinema-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/vocabulario-de-cinema-em-ingles.webp</image:loc>
+      <image:title>Vocabulário de cinema em inglês para falar de filmes e séries</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/frases-de-conquista-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/frases-de-conquista-em-ingles.webp</image:loc>
+      <image:title>Frases de conquista em inglês para paquera e dating apps</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/humor-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/humor-em-ingles.webp</image:loc>
+      <image:title>Humor em inglês: como entender piadas, sarcasmo e ironia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/noticias-em-ingles-para-estudantes</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/noticias-em-ingles-para-estudantes.webp</image:loc>
+      <image:title>Notícias em inglês para estudantes: como ler e entender jornais</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/feriados-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/feriados-em-ingles.webp</image:loc>
+      <image:title>Feriados em inglês: tradições americanas e britânicas explicadas</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/sotaques-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/sotaques-em-ingles.webp</image:loc>
+      <image:title>Sotaques em inglês: Austrália, Canadá, Irlanda e Índia no ouvido</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/palavroes-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/palavroes-em-ingles.webp</image:loc>
+      <image:title>Palavrões em inglês: o que significam e por que não usar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/watch-look-see-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/watch-look-see-diferenca.webp</image:loc>
+      <image:title>Diferença entre Watch, Look e See: nunca mais troque os três</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/listen-e-hear-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/listen-e-hear-diferenca.webp</image:loc>
+      <image:title>Diferença entre Listen e Hear: quando ouvir vira escutar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/remember-e-remind-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/remember-e-remind-diferenca.webp</image:loc>
+      <image:title>Diferença entre Remember e Remind: lembrar e fazer lembrar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/borrow-e-lend-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/borrow-e-lend-diferenca.webp</image:loc>
+      <image:title>Diferença entre Borrow e Lend: emprestar sem confundir</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/wait-expect-hope-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/wait-expect-hope-diferenca.webp</image:loc>
+      <image:title>Diferença entre Wait, Expect e Hope: os três tipos de esperar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/win-earn-gain-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/win-earn-gain-diferenca.webp</image:loc>
+      <image:title>Diferença entre Win, Earn e Gain: os três jeitos de ganhar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/travel-e-trip-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/travel-e-trip-diferenca.webp</image:loc>
+      <image:title>Travel, Trip, Journey e Voyage: qual a diferença entre eles</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/job-e-work-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/job-e-work-diferenca.webp</image:loc>
+      <image:title>Job, Work e Career: qual a diferença e quando usar cada um</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/fun-e-funny-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/fun-e-funny-diferenca.webp</image:loc>
+      <image:title>Fun e Funny: a diferença entre divertido e engraçado em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/lose-e-miss-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/lose-e-miss-diferenca.webp</image:loc>
+      <image:title>Lose e Miss: qual a diferença entre os dois perder em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/rob-e-steal-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/rob-e-steal-diferenca.webp</image:loc>
+      <image:title>Rob e Steal: a diferença entre roubar e furtar em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/bring-e-take-diferenca</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/bring-e-take-diferenca.webp</image:loc>
+      <image:title>Bring e Take: a diferença entre trazer e levar em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/erros-de-pronuncia-de-brasileiros-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/erros-de-pronuncia-de-brasileiros-em-ingles.webp</image:loc>
+      <image:title>Erros de pronúncia de brasileiros em inglês: Facebooki e Hoteli</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-pronunciar-world-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-pronunciar-world-em-ingles.webp</image:loc>
+      <image:title>Como pronunciar World em inglês (e Girl, Work, Curl sem travar)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-falar-a-idade-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-falar-a-idade-em-ingles.webp</image:loc>
+      <image:title>Como falar a idade em inglês sem o verbo have: I&apos;m 25, não I have</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/quanto-tempo-demora-para-aprender-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/quanto-tempo-demora-para-aprender-ingles.webp</image:loc>
+      <image:title>Quanto tempo demora para aprender inglês de verdade?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/niveis-de-ingles-a1-a2-b1-b2-c1-c2</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/niveis-de-ingles-a1-a2-b1-b2-c1-c2.webp</image:loc>
+      <image:title>Níveis de inglês A1 A2 B1 B2 C1 C2: o que cada um permite</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/cronograma-de-estudos-de-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/cronograma-de-estudos-de-ingles.webp</image:loc>
+      <image:title>Cronograma de estudos de inglês de 20 minutos por dia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/aprender-ingles-depois-dos-40</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/aprender-ingles-depois-dos-40.webp</image:loc>
+      <image:title>Aprender inglês depois dos 40 ou 50 anos: é possível, sim</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/chunks-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/chunks-em-ingles.webp</image:loc>
+      <image:title>Chunks em inglês: o que são os blocos de palavras e como usar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/repeticao-espacada-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/repeticao-espacada-ingles.webp</image:loc>
+      <image:title>Repetição espaçada em inglês: como unir SRS e Shadowing</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/entendo-ingles-mas-nao-consigo-falar</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/entendo-ingles-mas-nao-consigo-falar.webp</image:loc>
+      <image:title>Entendo inglês mas não consigo falar: por que isso acontece</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-melhorar-o-listening-em-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-melhorar-o-listening-em-ingles.webp</image:loc>
+      <image:title>Como melhorar o listening em inglês e entender nativos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/aplicativos-para-aprender-ingles</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/aplicativos-para-aprender-ingles.webp</image:loc>
+      <image:title>Aplicativos para aprender inglês e IA: vale a pena usar?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-aprender-ingles-do-zero-sozinho</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-aprender-ingles-do-zero-sozinho.webp</image:loc>
+      <image:title>Como aprender inglês do zero sozinho: o passo a passo completo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://modonativo.me/blog/como-se-apresentar-em-ingles</loc>
