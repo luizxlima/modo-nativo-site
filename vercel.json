@@ -42,7 +42,7 @@
       ]
     },
     {
-      "source": "/(assets|blog/img)/(.*)",
+      "source": "/(assets|blog/img|public)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -58,6 +58,56 @@
           "value": "public, max-age=86400"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/e-book",
+      "destination": "/ebook.html"
+    },
+    {
+      "source": "/e-book/obrigado",
+      "destination": "/obrigado.html"
+    },
+    {
+      "source": "/ebook",
+      "destination": "/ebook.html"
+    },
+    {
+      "source": "/ebook/obrigado",
+      "destination": "/obrigado.html"
+    },
+    {
+      "source": "/obrigado",
+      "destination": "/obrigado.html"
+    },
+    {
+      "source": "/curso",
+      "destination": "/curso.html"
+    },
+    {
+      "source": "/curso/obrigado",
+      "destination": "/curso-obrigado.html"
+    },
+    {
+      "source": "/prova",
+      "destination": "/prova.html"
+    },
+    {
+      "source": "/analise",
+      "destination": "/analise.html"
+    },
+    {
+      "source": "/prueba",
+      "destination": "/prueba.html"
+    },
+    {
+      "source": "/avaliacao",
+      "destination": "/avaliacao.html"
+    },
+    {
+      "source": "/diagnostico",
+      "destination": "/diagnostico.html"
     }
   ]
 }
