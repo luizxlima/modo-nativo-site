@@ -8,8 +8,8 @@
 -->
 <html class="scroll-smooth dark" lang="pt-BR"><head>
 <script>
-  // URL do checkout da Hotmart para a taxa de inscrição simbólica de R$ 9,99 (turma de 100 vagas)
-  const CHECKOUT_PREMIUM = "https://pay.hotmart.com/N108058349X?off=mtbx2949&checkoutMode=10";
+  // URL do checkout da Hotmart da taxa de inscrição simbólica (R$ 67,00 ou 9x de R$ 8,80)
+  const CHECKOUT_PREMIUM = "https://pay.hotmart.com/N108058349X?checkoutMode=6&off=zwjxmbmv&offDiscount=74%25OFF";
 
   // URL do Webhook para receber o JSON com os eventos "lead" e "quiz_completo"
   const WEBHOOK_QUIZ = "https://n8n.sedacollege.me/webhook/07fe5b79-b5b4-428e-a3f0-c68d629f1ec6";
@@ -525,7 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Falta só um passo para garantir a sua vaga.
       </p>
       <p class="mt-1.5 text-sm sm:text-base text-zinc-400 leading-relaxed">
-        Abrimos 100 vagas nesta turma. O curso e todos os bônus são por nossa conta: você paga apenas a taxa de inscrição simbólica de R$ 9,99, uma única vez.
+        Abrimos 100 vagas nesta turma. O curso e todos os bônus são por nossa conta: você paga apenas a taxa de inscrição simbólica de R$ 67,00 à vista ou 9x de R$ 8,80.
       </p>
     </div>
   </div>
@@ -591,7 +591,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
       </div>
 
-      <!-- Taxa de inscrição simbólica R$ 9,99 -->
+      <!-- Taxa de inscrição simbólica R$ 67,00 -->
       <div class="rounded-2xl bg-[#0e0e11]/90 border border-[#2e2e36] p-6 sm:p-8 text-center flex flex-col items-center">
         <img alt="Modo Nativo" class="h-14 sm:h-16 w-auto mx-auto block select-none" src="assets/logo-transparente.webp"/>
         <p class="text-white font-black text-base sm:text-lg mt-2 tracking-tight">Acesso completo 12 meses + 6 meses de bônus</p>
@@ -600,18 +600,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Curso de <span class="line-through">R$ 297,00</span> por R$ 0,00 · apenas a taxa de inscrição simbólica de
         </p>
 
-        <div class="flex items-baseline justify-center gap-1 my-1 whitespace-nowrap">
-          <span class="text-3xl sm:text-4xl font-black text-white">R$</span>
-          <span id="preco-digito-principal" class="text-[88px] sm:text-[110px] leading-none font-black text-white tracking-tight">9</span>
-          <span class="text-4xl sm:text-5xl font-black text-white">,99</span>
+        <div class="flex items-baseline justify-center gap-1.5 my-1 whitespace-nowrap">
+          <span class="text-xl sm:text-3xl font-black text-white">9x de R$</span>
+          <span id="preco-digito-principal" class="text-[88px] sm:text-[110px] leading-none font-black text-white tracking-tight">8,80</span>
         </div>
+
+        <p class="text-zinc-200 font-semibold text-base sm:text-lg mt-1">
+          ou R$ 67,00 à vista
+        </p>
 
         <p class="text-zinc-200 text-lg sm:text-xl mt-2 font-medium">
           Pagamento único. Sem mensalidades.
         </p>
 
         <a id="btn-checkout-premium" class="cta-checkout-premium w-full px-5 sm:px-8 py-4 min-h-[56px] mt-6 inline-flex items-center justify-center text-[15px] sm:text-lg font-black text-[#080809] bg-[#00d254] hover:bg-[#00b849] rounded-full shadow-[0_0_30px_rgba(0,210,84,0.4)] hover:shadow-[0_0_40px_rgba(0,210,84,0.6)] transform hover:-translate-y-0.5 transition-all text-center tracking-tight uppercase" href="#">
-          <span>GARANTIR MINHA VAGA POR R$ 9,99</span>
+          <span>GARANTIR MINHA VAGA</span>
         </a>
 
         <div class="mt-6 flex flex-wrap justify-center gap-4 text-zinc-200 text-xs leading-tight">
@@ -1052,7 +1055,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <!-- 4 & 5 · TABELA "RECAPITULANDO" + TAXA DE INSCRIÇÃO R$ 9,99 + 2º BOTÃO DE CHECKOUT -->
+  <!-- 4 & 5 · TABELA "RECAPITULANDO" + Taxa de inscrição simbólica R$ 67,00 + 2º BOTÃO DE CHECKOUT -->
   <div id="recapitulando-resultado" class="mt-12 sm:mt-14 max-w-3xl mx-auto">
     <h3 class="flex flex-col sm:flex-row sm:items-baseline sm:justify-center text-center gap-1">
       <span class="text-[#ff6b00] font-black text-[26px] sm:text-4xl">Recapitulando…</span>
@@ -1121,7 +1124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Tudo isso deveria custar <span class="line-through text-[#ff3b30]">R$669</span>
       </p>
 
-      <!-- Taxa de inscrição simbólica R$ 9,99 -->
+      <!-- Taxa de inscrição simbólica R$ 67,00 -->
       <div class="mt-6 pt-6 border-t border-[#242429] text-center flex flex-col items-center">
         <p class="text-zinc-300 text-base sm:text-lg">
           Mas, para os 100 alunos desta turma, o curso e todos os bônus são por nossa conta:
@@ -1129,17 +1132,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="text-zinc-400 text-xs sm:text-sm mt-5">
           Curso de <span class="line-through">R$ 297,00</span> por R$ 0,00 · apenas a taxa de inscrição simbólica de
         </p>
-        <div class="flex items-baseline justify-center gap-1 my-1 whitespace-nowrap">
-          <span class="text-3xl sm:text-4xl font-black text-white">R$</span>
-          <span class="text-[88px] sm:text-[110px] leading-none font-black text-white tracking-tight">9</span>
-          <span class="text-4xl sm:text-5xl font-black text-white">,99</span>
+        <div class="flex items-baseline justify-center gap-1.5 my-1 whitespace-nowrap">
+          <span class="text-xl sm:text-3xl font-black text-white">9x de R$</span>
+          <span class="text-[88px] sm:text-[110px] leading-none font-black text-white tracking-tight">8,80</span>
         </div>
+        <p class="text-zinc-200 font-semibold text-base sm:text-lg mt-1">
+          ou R$ 67,00 à vista
+        </p>
         <p class="text-zinc-200 text-lg sm:text-xl mt-2 font-medium">
           Pagamento único. Sem mensalidades.
         </p>
 
         <a id="btn-checkout-premium-2" class="cta-checkout-premium w-full sm:w-auto px-6 sm:px-10 py-4 min-h-[56px] mt-6 inline-flex items-center justify-center text-[15px] sm:text-lg font-black text-[#080809] bg-[#00d254] hover:bg-[#00b849] rounded-full shadow-[0_0_30px_rgba(0,210,84,0.4)] hover:shadow-[0_0_40px_rgba(0,210,84,0.6)] transform hover:-translate-y-0.5 transition-all text-center tracking-tight uppercase" href="#">
-          <span>GARANTIR MINHA VAGA POR R$ 9,99</span>
+          <span>GARANTIR MINHA VAGA</span>
         </a>
       </div>
     </div>
@@ -1210,7 +1215,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <span class="text-white font-bold text-base sm:text-xl">Qual é a forma de pagamento?</span>
 </button>
 <div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
-<p>Você paga apenas a taxa de inscrição simbólica de R$ 9,99, uma única vez, no Pix ou no cartão. O curso não tem mensalidades nem parcelas.</p>
+<p>Você paga apenas a taxa de inscrição simbólica de R$ 67,00 à vista ou em até 9x de R$ 8,80 no cartão (total de R$ 79,20). O curso não tem mensalidades.</p>
 </div>
 </div>
 <div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
@@ -1219,7 +1224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <span class="text-white font-bold text-base sm:text-xl">Se o curso é por conta de vocês, por que existe uma taxa de inscrição?</span>
 </button>
 <div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
-<p>O valor do curso é por nossa conta. A taxa de inscrição simbólica de R$ 9,99, paga uma única vez, ajuda a manter a equipe acadêmica, a emissão dos certificados de curso livre e esta oportunidade aberta para mais pessoas. Não existem mensalidades.</p>
+<p>O valor do curso é por nossa conta. A taxa de inscrição simbólica de R$ 67,00 (ou 9x de R$ 8,80), ajuda a manter a equipe acadêmica, a emissão dos certificados de curso livre e esta oportunidade aberta para mais pessoas. Não existem mensalidades.</p>
 </div>
 </div>
 <div class="faq-item bg-[#141417] border border-[#2e2e36] rounded-2xl overflow-hidden">
@@ -1246,7 +1251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <span class="text-white font-bold text-base sm:text-xl">E se eu não gostar?</span>
 </button>
 <div class="faq-content hidden text-zinc-300 text-[15px] sm:text-base leading-relaxed px-5 sm:px-7 pb-6 pl-12 sm:pl-14">
-<p>Você tem 7 dias de garantia. Se não gostar, é só pedir o reembolso dentro desse prazo e devolvemos 100% dos R$ 9,99 da taxa de inscrição, sem perguntas.</p>
+<p>Você tem 7 dias de garantia. Se não gostar, é só pedir o reembolso dentro desse prazo e devolvemos 100% do valor da taxa de inscrição, sem perguntas.</p>
 </div>
 </div>
 </div>
@@ -1304,7 +1309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </button>
     </div>
     <div class="mt-4 space-y-3 text-xs sm:text-sm text-zinc-300 leading-relaxed overflow-y-auto pr-1">
-      <p><strong class="text-white">1. Matrícula:</strong> A inscrição na turma de 100 vagas concede acesso ao curso e aos bônus, sem mensalidades, mediante o pagamento único da taxa de inscrição simbólica de R$ 9,99. Em caso de desistência em até 7 dias, o valor é devolvido integralmente.</p>
+      <p><strong class="text-white">1. Matrícula:</strong> A inscrição na turma de 100 vagas concede acesso ao curso e aos bônus, sem mensalidades, mediante o pagamento da taxa de inscrição simbólica de R$ 67,00 à vista ou em até 9x de R$ 8,80 (total de R$ 79,20). Em caso de desistência em até 7 dias, o valor é devolvido integralmente.</p>
       <p><strong class="text-white">2. Uso Pessoal:</strong> A conta criada é pessoal e intransferível, destinada ao treino individual de conversação em inglês.</p>
       <p><strong class="text-white">3. Propriedade Intelectual:</strong> Todo o material didático, áudios e exercícios da plataforma pertencem à MODO NATIVO EDUCAÇÃO DIGITAL.</p>
     </div>
