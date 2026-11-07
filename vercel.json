@@ -63,51 +63,51 @@
   "rewrites": [
     {
       "source": "/e-book",
-      "destination": "/ebook.html"
+      "destination": "/ebook"
     },
     {
       "source": "/e-book/obrigado",
-      "destination": "/obrigado.html"
+      "destination": "/obrigado"
     },
     {
       "source": "/ebook",
-      "destination": "/ebook.html"
+      "destination": "/ebook"
     },
     {
       "source": "/ebook/obrigado",
-      "destination": "/obrigado.html"
+      "destination": "/obrigado"
     },
     {
       "source": "/obrigado",
-      "destination": "/obrigado.html"
+      "destination": "/obrigado"
     },
     {
       "source": "/curso",
-      "destination": "/curso.html"
+      "destination": "/curso"
     },
     {
       "source": "/curso/obrigado",
-      "destination": "/curso-obrigado.html"
+      "destination": "/curso-obrigado"
     },
     {
       "source": "/prova",
-      "destination": "/prova.html"
+      "destination": "/prova"
     },
     {
       "source": "/analise",
-      "destination": "/analise.html"
+      "destination": "/analise"
     },
     {
       "source": "/prueba",
-      "destination": "/prueba.html"
+      "destination": "/prueba"
     },
     {
       "source": "/avaliacao",
-      "destination": "/avaliacao.html"
+      "destination": "/avaliacao"
     },
     {
       "source": "/diagnostico",
-      "destination": "/diagnostico.html"
+      "destination": "/diagnostico"
     }
   ]
 }
