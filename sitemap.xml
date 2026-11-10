@@ -22,6 +22,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://modonativo.me/termos</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://modonativo.me/privacidade</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://modonativo.me/consideracoes</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://modonativo.me/blog/curso-de-ingles-online-funciona</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>monthly</changefreq>
