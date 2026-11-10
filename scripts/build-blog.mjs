@@ -429,7 +429,7 @@ ${JSON.stringify(listingJsonLd, null, 2)}
       const altText = post.alt || ("Ilustração do artigo: " + post.title);
       article.innerHTML = '<div class="card-cover-wrapper">' +
         '<span class="card-badge">' + post.category + '</span>' +
-        '<img class="card-cover" src="' + post.cover + '" alt="' + altText.replace(/"/g, '&quot;') + '" width="1600" height="900" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
+        '<img class="card-cover" src="' + post.cover + '" alt="' + altText.replace(/"/g, '&quot;') + '" width="1600" height="900" loading="lazy" decoding="async">' +
         '</div>' +
         '<div class="card-body">' +
         '<div class="card-meta"><span>' + formatDate(post.date) + '</span><span>•</span><span>' + post.readingTime + '</span></div>' +
