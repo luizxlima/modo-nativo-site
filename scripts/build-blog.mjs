@@ -83,7 +83,7 @@ function formatDatePtBr(dateStr) {
 }
 
 function transformCourseLinks(html, slug) {
-  return html.replace(/href="(https?:\/\/mkt\.modonativo\.me\/curso[^"]*)"/g, (match, url) => {
+  return html.replace(/href="(https?:\/\/(?:mkt\.)?modonativo\.me\/curso[^"]*)"/g, (match, url) => {
     try {
       const u = new URL(url);
       u.searchParams.set("utm_source", "blog");
@@ -91,7 +91,7 @@ function transformCourseLinks(html, slug) {
       u.searchParams.set("utm_campaign", slug);
       return `href="${u.toString()}"`;
     } catch {
-      return `href="https://mkt.modonativo.me/curso?utm_source=blog&utm_medium=artigo&utm_campaign=${slug}"`;
+      return `href="https://modonativo.me/curso?utm_source=blog&utm_medium=artigo&utm_campaign=${slug}"`;
     }
   });
 }
@@ -143,10 +143,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 function renderCardHtml(post) {
   const altText = post.alt || `Ilustração do artigo: ${post.title}`;
+  const coverExists = fs.existsSync(path.join(rootDir, post.cover.replace(/^\//, "")));
+  const onErrorAttr = coverExists ? "" : ' onerror="this.style.display=\'none\'"';
   return `<article class="card" data-category="${escapeHtml(post.category)}">
   <div class="card-cover-wrapper">
     <span class="card-badge">${escapeHtml(post.category)}</span>
-    <img class="card-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(altText)}" width="1600" height="900" loading="lazy" decoding="async">
+    <img class="card-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(altText)}" width="1600" height="900" loading="lazy" decoding="async"${onErrorAttr}>
   </div>
   <div class="card-body">
     <div class="card-meta">
@@ -196,6 +198,9 @@ async function build() {
     const fullPath = path.join(contentDir, fileName);
     const raw = fs.readFileSync(fullPath, "utf8");
     const { data, body } = parseFrontmatter(raw);
+    if (data.draft === true || data.draft === "true") {
+      continue;
+    }
 
     const readingTime = calculateReadingTime(body);
     const alt = mapaAltBySlug.get(data.slug) || `Ilustração do artigo: ${data.title}`;
@@ -424,7 +429,7 @@ ${JSON.stringify(listingJsonLd, null, 2)}
       const altText = post.alt || ("Ilustração do artigo: " + post.title);
       article.innerHTML = '<div class="card-cover-wrapper">' +
         '<span class="card-badge">' + post.category + '</span>' +
-        '<img class="card-cover" src="' + post.cover + '" alt="' + altText.replace(/"/g, '&quot;') + '" width="1600" height="900" loading="lazy" decoding="async">' +
+        '<img class="card-cover" src="' + post.cover + '" alt="' + altText.replace(/"/g, '&quot;') + '" width="1600" height="900" loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' +
         '</div>' +
         '<div class="card-body">' +
         '<div class="card-meta"><span>' + formatDate(post.date) + '</span><span>•</span><span>' + post.readingTime + '</span></div>' +
@@ -524,8 +529,9 @@ ${JSON.stringify(listingJsonLd, null, 2)}
     const contentHtml = transformCourseLinks(rawHtml, post.slug);
 
     // 3 outros artigos (mesma categoria; se faltar, pega os mais recentes)
-    const sameCat = posts.filter(p => p.slug !== post.slug && p.category === post.category);
-    const otherCat = posts.filter(p => p.slug !== post.slug && p.category !== post.category);
+    const relatedPool = post.order <= 200 ? posts.filter(p => p.order <= 200) : posts;
+    const sameCat = relatedPool.filter(p => p.slug !== post.slug && p.category === post.category);
+    const otherCat = relatedPool.filter(p => p.slug !== post.slug && p.category !== post.category);
     const relatedPosts = [...sameCat, ...otherCat].slice(0, 3);
     const relatedCardsHtml = relatedPosts.map(p => renderCardHtml(p)).join("\n");
 
@@ -669,7 +675,7 @@ ${JSON.stringify(articleJsonLd, null, 2)}
     </header>
 
     <div class="article-cover-wrap">
-      <img class="article-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(post.alt || `Ilustração do artigo: ${post.title}`)}" width="1600" height="900" loading="eager" fetchpriority="high">
+      <img class="article-cover" src="${escapeHtml(post.cover)}" alt="${escapeHtml(post.alt || `Ilustração do artigo: ${post.title}`)}" width="1600" height="900" loading="eager" fetchpriority="high"${fs.existsSync(path.join(rootDir, post.cover.replace(/^\//, ""))) ? "" : ' onerror="this.style.display=\'none\'"'}>
     </div>
 
     <div class="article-content">
