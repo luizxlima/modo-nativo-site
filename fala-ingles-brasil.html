@@ -29,7 +29,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css"/>
-<link rel="preload" as="image" href="assets/fala-ingles/hero.webp" media="(min-width: 1024px)">
 <style>
     :root {
       --bg-section-primary: #080809;
@@ -55,20 +54,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     #hero .fh-selo { color: #d95200; }
     #hero .fh-mobile-img { display: block; width: 100%; }
     #hero .fh-mobile-img img { display: block; width: 100%; height: auto; }
+    #hero .fh-grid { display: block; }
     #hero .fh-conteudo { width: 100%; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+    #hero .fh-lado { display: none; }
     @media (min-width: 1024px) {
-      #hero {
-        background-image: url('assets/fala-ingles/hero.webp');
-        background-size: cover;
-        background-position: right center;
-        background-repeat: no-repeat;
-        min-height: 90vh;
-        display: flex;
-        align-items: center;
-        padding: 64px 0;
-      }
+      #hero { padding: 48px 0; }
       #hero .fh-mobile-img { display: none; }
-      #hero .fh-conteudo { width: 50%; max-width: 540px; }
+      #hero .fh-grid { display: grid; grid-template-columns: minmax(0, 540px) minmax(0, 1fr); gap: 48px; align-items: center; }
+      #hero .fh-lado { display: block; align-self: stretch; }
+      #hero .fh-lado img { display: block; width: 100%; height: 100%; max-height: 760px; object-fit: cover; object-position: center top; border-radius: 28px; }
     }
     /* Ajustes intl-tel-input no tema escuro */
     .iti { width: 100%; display: block; }
@@ -114,9 +108,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 relative z-10 pt-6 pb-12 sm:pt-8 sm:pb-16 lg:py-0">
-    <div class="fh-conteudo">
-      <!-- Lockup de Marca -->
-      <div id="hero-lockup" class="w-fit flex items-center gap-3 mb-5 sm:mb-6">
+    <div class="fh-grid">
+      <div class="fh-conteudo">
+        <!-- Lockup de Marca -->
+        <div id="hero-lockup" class="w-fit flex items-center gap-3 mb-5 sm:mb-6">
         <img alt="Modo Nativo" class="h-10 sm:h-12 w-auto shrink-0" src="assets/logo-transparente.webp"/>
         <div id="hero-subtitulo-marca" class="fh-escuro font-black leading-none text-base sm:text-xl whitespace-nowrap text-left">
           Fale inglês de verdade
@@ -228,6 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </button>
         </form>
       </div>
+      <div class="fh-lado"><img src="assets/fala-ingles/hero-mobile.webp" alt="Aluna do Modo Nativo" width="800" height="865" loading="eager" fetchpriority="high"></div>
     </div>
   </div>
 </section>
