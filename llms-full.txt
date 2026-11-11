@@ -10,7 +10,7 @@
 - Endereço web oficial: https://modonativo.me/
 - Ambiente do estudante: https://app.modonativo.me/
 - Níveis atendidos: A1, A2, B1, B2, C1 e C2, de acordo com as referências do Quadro Europeu Comum de Referência para Línguas (CEFR).
-- Carga de conteúdo: 161 lições organizadas progressivamente por nível.
+- Carga de conteúdo: 805 aulas práticas (161 lições de 15 minutos com 5 etapas cada: leia, ouça, fale, escreva e revise) organizadas progressivamente por nível.
 - Rotina de estudos: Criado para uma dedicação diária de cerca de 15 minutos, permitindo constância sem sobrecarregar a rotina.
 - Período de acesso: 12 meses (1 ano) de acesso completo a partir da confirmação da matrícula.
 - Certificação: Certificado de curso livre emitido digitalmente ao concluir cada um dos 6 níveis. Não substitui exames oficiais de proficiência internacional.
@@ -31,7 +31,7 @@ O método também conta com o Modo Guiado, recurso de apoio que oferece dicas ad
 
 ## O que está incluído na oferta
 
-Além do curso com 161 lições e acesso aos 6 níveis, a matrícula contempla seis bônus integrados:
+Além do curso com 805 aulas práticas (161 lições de 15 minutos com 5 etapas cada: leia, ouça, fale, escreva e revise) e acesso aos 6 níveis, a matrícula contempla seis bônus integrados:
 
 1. Fluency Planner: Planejador de estudos para saber exatamente o que treinar a cada dia, com metas por nível e checklist de constância.
 2. Tutor Nativo: Tutor baseado em inteligência artificial integrado à plataforma para esclarecer dúvidas, fornecer exemplos contextuais e indicar os próximos passos de estudo 24 horas por dia.

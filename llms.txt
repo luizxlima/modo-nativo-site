@@ -1,13 +1,13 @@
 # Modo Nativo
 
-> Curso online de inglês "Do Zero à Conversação", focado no desenvolvimento da fala através da técnica de Shadowing, cobrindo do nível A1 ao C2 em 161 lições estruturadas para uma rotina de 15 minutos por dia.
+> Curso online de inglês "Do Zero à Conversação", focado no desenvolvimento da fala através da técnica de Shadowing, cobrindo do nível A1 ao C2 em 805 aulas práticas (161 lições de 15 minutos com 5 etapas cada: leia, ouça, fale, escreva e revise).
 
 ## Sobre o curso
 
 - Nome: Do Zero à Conversação
 - Marca: Modo Nativo
 - Instituição: Modo Nativo Educação Digital
-- Estrutura: 161 lições organizadas em 6 níveis (A1, A2, B1, B2, C1 e C2)
+- Estrutura: 805 aulas práticas (161 lições de 15 minutos com 5 etapas cada: leia, ouça, fale, escreva e revise) organizadas em 6 níveis (A1, A2, B1, B2, C1 e C2)
 - Rotina recomendada: 15 minutos por dia
 - Acesso: 12 meses na plataforma digital
 - Certificação: Certificado de curso livre emitido por nível concluído
@@ -21,7 +21,7 @@ Com o Shadowing, o estudante ouve e repete a fala de um nativo, treinando os son
 
 ## O que está incluído
 
-- Curso completo do A1 ao C2: 161 lições com prática diária
+- Curso completo do A1 ao C2: 805 aulas práticas (161 lições de 15 minutos com 5 etapas cada: leia, ouça, fale, escreva e revise)
 - Fluency Planner: Saiba o que treinar a cada dia, com metas por nível e um checklist para manter a constância.
 - Tutor Nativo: Um tutor com IA dentro da plataforma para tirar dúvidas, pedir exemplos e encontrar o próximo passo.
 - Painel de Prompts: Treine situações de viagem, trabalho e entrevistas no ChatGPT, Claude ou Gemini.
