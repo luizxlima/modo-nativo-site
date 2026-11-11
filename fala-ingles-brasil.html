@@ -49,10 +49,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     textarea {
       font-size: 16px !important;
     }
-    /* Estilos do Hero com background cover na versão desktop */
-    #hero {
-      background-color: #f5f4f2;
-    }
+    #hero { background-color: #f5f4f2; }
+    #hero .fh-escuro { color: #17130f; }
+    #hero .fh-sub { color: #4a4440; }
+    #hero .fh-selo { color: #d95200; }
+    #hero .fh-mobile-img { display: block; width: 100%; }
+    #hero .fh-mobile-img img { display: block; width: 100%; height: auto; }
+    #hero .fh-conteudo { width: 100%; display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
     @media (min-width: 1024px) {
       #hero {
         background-image: url('assets/fala-ingles/hero.webp');
@@ -60,7 +63,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         background-position: right center;
         background-repeat: no-repeat;
         min-height: 90vh;
+        display: flex;
+        align-items: center;
+        padding: 64px 0;
       }
+      #hero .fh-mobile-img { display: none; }
+      #hero .fh-conteudo { width: 50%; max-width: 540px; }
     }
     /* Ajustes intl-tel-input no tema escuro */
     .iti { width: 100%; display: block; }
@@ -92,9 +100,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main class="w-full">
 
 <!-- ===== SEÇÃO 01 · HERO (#hero) ===== -->
-<section class="relative overflow-hidden w-full lg:flex lg:items-center py-0 lg:py-16" id="hero">
+<section class="relative overflow-hidden w-full" id="hero">
   <!-- Imagem Mobile no topo (visível apenas abaixo de lg) -->
-  <div class="block lg:hidden w-full">
+  <div class="fh-mobile-img">
     <img
       src="assets/fala-ingles/hero-mobile.webp"
       alt="Aluna no Método Shadowing"
@@ -106,28 +114,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 relative z-10 pt-6 pb-12 sm:pt-8 sm:pb-16 lg:py-0">
-    <div class="w-full lg:w-1/2 lg:max-w-[540px] flex flex-col items-start text-left">
+    <div class="fh-conteudo">
       <!-- Lockup de Marca -->
       <div id="hero-lockup" class="w-fit flex items-center gap-3 mb-5 sm:mb-6">
         <img alt="Modo Nativo" class="h-10 sm:h-12 w-auto shrink-0" src="assets/logo-transparente.webp"/>
-        <div id="hero-subtitulo-marca" class="text-[#17130f] font-black leading-none text-base sm:text-xl whitespace-nowrap text-left">
+        <div id="hero-subtitulo-marca" class="fh-escuro font-black leading-none text-base sm:text-xl whitespace-nowrap text-left">
           Fale inglês de verdade
         </div>
       </div>
 
       <!-- Selo: 100 vagas gratuitas -->
-      <div class="inline-flex items-center gap-2 rounded-full bg-[#ff6b00]/15 border border-[#ff6b00]/50 px-3.5 py-1 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#d95200]">
+      <div class="inline-flex items-center gap-2 rounded-full bg-[#ff6b00]/15 border border-[#ff6b00]/50 px-3.5 py-1 text-xs sm:text-sm font-extrabold uppercase tracking-wider fh-selo">
         <span class="w-2 h-2 rounded-full bg-[#ff6b00]"></span>
         <span>100 vagas gratuitas</span>
       </div>
 
       <!-- H1 -->
-      <h1 class="mt-4 text-[26px] sm:text-[32px] lg:text-[36px] font-black tracking-tight text-[#17130f] !leading-[1.18]">
+      <h1 class="mt-4 text-[26px] sm:text-[32px] lg:text-[36px] font-black tracking-tight fh-escuro !leading-[1.18]">
         Plataforma brasileira libera <span class="text-[#ff6b00]">100 vagas gratuitas</span> para destravar o seu inglês
       </h1>
 
       <!-- Linha de apoio / Subtítulo -->
-      <p class="mt-4 text-[15px] sm:text-base lg:text-lg text-[#4a4440] leading-relaxed">
+      <p class="mt-4 text-[15px] sm:text-base lg:text-lg fh-sub leading-relaxed">
         São 161 lições de 15 minutos, do A1 ao C2, com a sua pronúncia corrigida na hora. Preencha seus dados, responda 12 perguntas rápidas e sua trilha é montada do seu jeito.
       </p>
 
