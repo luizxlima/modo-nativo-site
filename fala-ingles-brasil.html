@@ -29,6 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css"/>
+<link rel="preload" as="image" href="assets/fala-ingles/hero.webp" media="(min-width: 1024px)">
 <style>
     :root {
       --bg-section-primary: #080809;
@@ -48,12 +49,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     textarea {
       font-size: 16px !important;
     }
-    /* Imagem da hero oculta apenas no mobile e sempre visível no desktop */
-    @media (max-width: 1023px) {
-      #hero-bloco-imagem { display: none !important; }
+    /* Estilos do Hero com background cover na versão desktop */
+    #hero {
+      background-color: #f5f4f2;
     }
     @media (min-width: 1024px) {
-      #hero-bloco-imagem { display: block !important; }
+      #hero {
+        background-image: url('assets/fala-ingles/hero.webp');
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+        min-height: 90vh;
+      }
     }
     /* Ajustes intl-tel-input no tema escuro */
     .iti { width: 100%; display: block; }
@@ -84,74 +91,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="estado-captura" class="w-full">
 <main class="w-full">
 
-<!-- ===== SEÇÃO 01 · HERO EM DUAS COLUNAS (#hero) ===== -->
-<section class="relative overflow-hidden pt-6 sm:pt-10 pb-12 sm:pb-16 bg-[#080809]" id="hero">
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(650px,100%)] h-[420px] bg-gradient-to-b from-[#ff6b00]/12 via-[#ff8533]/5 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
+<!-- ===== SEÇÃO 01 · HERO (#hero) ===== -->
+<section class="relative overflow-hidden w-full lg:flex lg:items-center py-0 lg:py-16" id="hero">
+  <!-- Imagem Mobile no topo (visível apenas abaixo de lg) -->
+  <div class="block lg:hidden w-full">
+    <img
+      src="assets/fala-ingles/hero-mobile.webp"
+      alt="Aluna no Método Shadowing"
+      width="800"
+      height="900"
+      fetchpriority="high"
+      class="w-full h-auto block select-none"
+    />
+  </div>
 
-  <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 relative z-10">
-    <!-- Lockup de Marca no topo -->
-    <div id="hero-lockup" class="w-fit flex items-center gap-3 mb-6 sm:mb-8">
-      <img alt="Modo Nativo" class="h-10 sm:h-12 w-auto shrink-0" src="assets/logo-transparente.webp"/>
-      <div id="hero-subtitulo-marca" class="text-white font-black leading-none text-base sm:text-xl whitespace-nowrap text-left">
-        Fale inglês de verdade
-      </div>
-    </div>
-
-    <!-- Grid Responsivo:
-         No celular: 1) Texto -> 2) Imagem -> 3) Formulário (empilhados)
-         No desktop (lg): Coluna Esquerda (Texto + Formulário) | Coluna Direita (Imagem grande) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-x-12 lg:gap-y-6 items-start">
-
-      <!-- BLOCO 1 · TEXTO (Esquerda superior no desktop / 1º no celular) -->
-      <div id="hero-bloco-texto" class="order-1 lg:col-start-1 lg:col-span-7 lg:row-start-1 flex flex-col items-start text-left">
-        <!-- Selo: 100 vagas gratuitas -->
-        <div class="inline-flex items-center gap-2 rounded-full bg-[#ff6b00]/15 border border-[#ff6b00]/50 px-3.5 py-1 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#ff8533]">
-          <span class="w-2 h-2 rounded-full bg-[#ff6b00]"></span>
-          <span>100 vagas gratuitas</span>
-        </div>
-
-        <!-- H1 -->
-        <h1 class="mt-4 text-[26px] sm:text-[32px] lg:text-[36px] font-black tracking-tight text-white !leading-[1.18]">
-          Plataforma brasileira libera <span class="text-[#ff6b00]">100 vagas gratuitas</span> para destravar o seu inglês
-        </h1>
-
-        <!-- Linha de apoio -->
-        <p class="mt-4 text-[15px] sm:text-base lg:text-lg text-zinc-300 leading-relaxed">
-          São 161 lições de 15 minutos, do A1 ao C2, com a sua pronúncia corrigida na hora. Preencha seus dados, responda 12 perguntas rápidas e sua trilha é montada do seu jeito.
-        </p>
-
-        <!-- Três selos -->
-        <div class="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
-          <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
-            <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">schedule</span>
-            <span>15 minutos por dia</span>
-          </div>
-          <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
-            <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">mic</span>
-            <span>Correção da fala na hora</span>
-          </div>
-          <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
-            <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">workspace_premium</span>
-            <span>Técnica de Shadowing</span>
-          </div>
+  <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 relative z-10 pt-6 pb-12 sm:pt-8 sm:pb-16 lg:py-0">
+    <div class="w-full lg:w-1/2 lg:max-w-[540px] flex flex-col items-start text-left">
+      <!-- Lockup de Marca -->
+      <div id="hero-lockup" class="w-fit flex items-center gap-3 mb-5 sm:mb-6">
+        <img alt="Modo Nativo" class="h-10 sm:h-12 w-auto shrink-0" src="assets/logo-transparente.webp"/>
+        <div id="hero-subtitulo-marca" class="text-[#17130f] font-black leading-none text-base sm:text-xl whitespace-nowrap text-left">
+          Fale inglês de verdade
         </div>
       </div>
 
-      <!-- BLOCO 2 · IMAGEM ÚNICA GRANDE (Visível no desktop na coluna direita / Oculta no mobile) -->
-      <div id="hero-bloco-imagem" class="hidden lg:block order-2 lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:row-span-2 lg:self-stretch lg:relative w-full lg:h-auto rounded-3xl overflow-hidden bg-[#141417] border border-[#2e2e36]">
-        <img
-          id="hero-imagem-aluna"
-          src="/media/images/aluna-shadowing.png"
-          alt="Aluna praticando conversação em inglês com fones de ouvido no Método Shadowing"
-          loading="eager"
-          width="1024"
-          height="1024"
-          class="w-full h-full lg:absolute lg:inset-0 object-cover object-top rounded-3xl block select-none"
-        />
+      <!-- Selo: 100 vagas gratuitas -->
+      <div class="inline-flex items-center gap-2 rounded-full bg-[#ff6b00]/15 border border-[#ff6b00]/50 px-3.5 py-1 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#d95200]">
+        <span class="w-2 h-2 rounded-full bg-[#ff6b00]"></span>
+        <span>100 vagas gratuitas</span>
       </div>
 
-      <!-- BLOCO 3 · CARD DO FORMULÁRIO (Esquerda inferior no desktop / 3º no celular) -->
-      <div id="form-inscricao" class="order-3 lg:col-start-1 lg:col-span-7 lg:row-start-2 w-full rounded-3xl bg-[#141417] border border-[#2e2e36] p-5 sm:p-7 shadow-[0_16px_50px_rgba(0,0,0,0.6)] text-left">
+      <!-- H1 -->
+      <h1 class="mt-4 text-[26px] sm:text-[32px] lg:text-[36px] font-black tracking-tight text-[#17130f] !leading-[1.18]">
+        Plataforma brasileira libera <span class="text-[#ff6b00]">100 vagas gratuitas</span> para destravar o seu inglês
+      </h1>
+
+      <!-- Linha de apoio / Subtítulo -->
+      <p class="mt-4 text-[15px] sm:text-base lg:text-lg text-[#4a4440] leading-relaxed">
+        São 161 lições de 15 minutos, do A1 ao C2, com a sua pronúncia corrigida na hora. Preencha seus dados, responda 12 perguntas rápidas e sua trilha é montada do seu jeito.
+      </p>
+
+      <!-- Três selos -->
+      <div class="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
+        <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">schedule</span>
+          <span>15 minutos por dia</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">mic</span>
+          <span>Correção da fala na hora</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 bg-[#141417] border border-[#2e2e36] rounded-full px-3 py-1.5 text-xs sm:text-sm font-bold text-zinc-200">
+          <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-[#ff6b00] shrink-0">workspace_premium</span>
+          <span>Técnica de Shadowing</span>
+        </div>
+      </div>
+
+      <!-- Card do Formulário (#form-inscricao) -->
+      <div id="form-inscricao" class="mt-6 w-full rounded-3xl bg-[#141417] border border-[#2e2e36] p-5 sm:p-7 shadow-[0_16px_50px_rgba(0,0,0,0.6)] text-left">
         <form id="leadCaptureForm" class="space-y-3.5" novalidate>
           <!-- Nome completo -->
           <div>
@@ -223,7 +220,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </button>
         </form>
       </div>
-
     </div>
   </div>
 </section>
