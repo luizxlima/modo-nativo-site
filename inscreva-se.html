@@ -308,7 +308,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .minutes-block .big{font-size:120px;letter-spacing:-.06em}
     .minutes-block .unit{font-size:24px}
     @media(max-width:600px){h2{font-size:28px}.section{padding:60px 0}.minutes-block .big{font-size:88px}.minutes-block .unit{font-size:19px}}
-    @media(max-width:600px){.brand-anchor{left:50%;transform:translateX(-50%);top:18px}.hero-inner{padding-top:84px}}
+    @media(max-width:600px){.brand-anchor{left:50%;transform:translateX(-50%);top:13px}.hero-inner{padding-top:74px}}
   </style>
 <link rel="preload" as="image" href="/assets/inscreva-se/aluna-hero.webp">
 </head>
@@ -340,7 +340,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <label class="mn-label" for="phone">WhatsApp com DDD</label>
             <input class="mn-input" id="phone" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="WhatsApp com DDD">
             <p class="mn-err" id="err-phone" hidden></p>
-            <label class="mn-check"><input type="checkbox" name="consentimento" id="consent"><span>Concordo com o <a href="https://modonativo.me/privacidade" target="_blank" rel="noopener noreferrer">regulamento</a> e aceito receber as informações da minha inscrição.</span></label>
+            <label class="mn-check"><input type="checkbox" name="consentimento" id="consent"><span>Concordo com o <a href="#regulamento" data-regulamento>regulamento</a> e aceito receber as informações da minha inscrição.</span></label>
             <p class="mn-err" id="err-consent" hidden></p>
             <button class="mn-btn" type="submit" id="send-btn">FAZER MINHA INSCRIÇÃO</button>
             <p id="form-message" class="mn-msg" role="status" aria-live="polite"></p>
@@ -1150,6 +1150,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     try{ ['utm_source','utm_campaign','utm_medium','utm_content','utm_term','xcod'].forEach(k=>{ const v=new URLSearchParams(location.search).get(k); if(v) sessionStorage.setItem('mn_'+k,v); }); }catch(e){}
     pv.hidden=false; document.documentElement.style.overflow='hidden'; intro();
   };
+})();
+</script>
+
+<div id="reg" class="reg" hidden role="dialog" aria-modal="true" aria-labelledby="reg-t">
+  <div class="reg-box">
+    <div class="reg-head"><strong id="reg-t">Regulamento do Programa de Bolsas</strong><button type="button" class="reg-x" id="reg-x" aria-label="Fechar regulamento">✕</button></div>
+    <div class="reg-body">
+      <h4>Regulamento do Programa de Bolsas Modo Nativo</h4>
+      <p>O Programa de Bolsas é uma iniciativa do Modo Nativo para ajudar mais brasileiros a aprender inglês. Aqui você entende, de forma simples, como participar e o que está incluído.</p>
+
+      <h5>1. O que é a bolsa</h5>
+      <p>A bolsa é de até 100% do valor do curso online Do Zero à Conversação, com 6 níveis (do A1 ao C2), 805 aulas práticas e acesso por 12 meses, mais 6 meses de bônus, totalizando 18 meses.</p>
+      <p>Nesta etapa estão disponíveis até 1.000 bolsas.</p>
+
+      <h5>2. Quem pode participar</h5>
+      <p>Pode participar qualquer pessoa brasileira com 18 anos ou mais. Menores de 18 anos podem participar com a autorização do responsável.</p>
+      <p>É uma bolsa por CPF.</p>
+
+      <h5>3. Como participar</h5>
+      <p><strong>Inscrição:</strong> você preenche o formulário desta página com nome, e-mail e WhatsApp.</p>
+      <p><strong>Prova:</strong> logo depois, a prova abre aqui mesmo. São perguntas rápidas sobre você, questões de escuta e frases curtas para repetir em voz alta (Shadowing). Não precisa saber inglês e não tem tempo limite. Se não puder gravar a voz, você responde por múltipla escolha.</p>
+      <p><strong>Resultado:</strong> ao concluir todas as etapas, você vê na hora o seu resultado e a sua bolsa.</p>
+
+      <h5>4. Taxa de matrícula</h5>
+      <p>A bolsa cobre o valor do curso. Para ativar sua bolsa e começar a estudar, existe apenas uma taxa única de matrícula de <strong>R$ 29,90</strong>, paga uma única vez. Não há mensalidades.</p>
+      <p>A taxa ajuda a manter a equipe acadêmica, a emissão dos certificados de curso livre e o programa aberto para mais pessoas.</p>
+      <p>O pagamento é feito pela Hotmart, em ambiente seguro. Assim que for confirmado, você recebe o acesso ao curso no seu e-mail.</p>
+
+      <h5>5. Garantia de 7 dias</h5>
+      <p>Se você não gostar, pode pedir o reembolso em até 7 dias depois da matrícula e devolvemos 100% do valor da taxa.</p>
+
+      <h5>6. Seus dados</h5>
+      <p>Seus dados são usados apenas para a sua participação no programa e para enviar informações sobre a sua inscrição, de acordo com a Lei Geral de Proteção de Dados (LGPD). A gravação de voz da prova é usada só durante a prova e não é guardada.</p>
+
+      <h5>7. Informações gerais</h5>
+      <p>O Modo Nativo pode encerrar esta etapa quando as bolsas se esgotarem ou atualizar este regulamento, sempre mantendo as bolsas já concedidas. Ao se inscrever, você concorda com estas condições.</p>
+      <p><strong>Modo Nativo Educação Digital</strong><br>CNPJ 70.057.911/0001-30</p>
+    </div>
+    <div class="reg-foot"><button type="button" class="reg-ok" id="reg-ok">ENTENDI E QUERO CONCORRER</button></div>
+  </div>
+</div>
+<style>
+  .reg{position:fixed;inset:0;z-index:9998;background:rgba(10,10,12,.62);display:flex;align-items:center;justify-content:center;padding:16px}
+  .reg[hidden]{display:none}
+  .reg-box{background:#fff;width:100%;max-width:640px;max-height:88vh;border-radius:20px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .reg-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;border-bottom:1px solid #ece7dd}
+  .reg-head strong{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;color:#191d25}
+  .reg-x{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:#f3f1ec;color:#191d25;font-size:18px;cursor:pointer}
+  .reg-body{overflow-y:auto;padding:18px 20px;-webkit-overflow-scrolling:touch}
+  .reg-body h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;margin:0 0 12px;color:#191d25}
+  .reg-body h5{font-size:14px;font-weight:800;color:#d95200;margin:18px 0 8px;letter-spacing:.02em}
+  .reg-body p{font-size:14px;line-height:1.6;color:#4b5563;margin:0 0 10px}
+  .reg-foot{padding:14px 18px;border-top:1px solid #ece7dd}
+  .reg-ok{width:100%;min-height:52px;border:0;border-radius:999px;background:#ff6b00;color:#0b0b0c;font:800 16px 'Inter',sans-serif;cursor:pointer}
+  body.reg-aberto{overflow:hidden}
+</style>
+<script>
+(function(){
+  var reg=document.getElementById('reg'), ultimo=null;
+  function abrir(e){ if(e) e.preventDefault(); ultimo=document.activeElement; reg.hidden=false; document.body.classList.add('reg-aberto'); reg.querySelector('.reg-body').scrollTop=0; document.getElementById('reg-x').focus(); }
+  function fechar(){ reg.hidden=true; document.body.classList.remove('reg-aberto'); if(ultimo&&ultimo.focus) ultimo.focus(); }
+  document.querySelectorAll('a[data-regulamento]').forEach(function(a){ a.addEventListener('click',abrir); });
+  document.getElementById('reg-x').onclick=fechar;
+  document.getElementById('reg-ok').onclick=function(){ var c=document.getElementById('consent'); if(c&&!c.checked){ c.checked=true; c.dispatchEvent(new Event('change',{bubbles:true})); } fechar(); };
+  reg.addEventListener('click',function(e){ if(e.target===reg) fechar(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!reg.hidden) fechar(); });
 })();
 </script>
 
