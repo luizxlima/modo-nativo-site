@@ -82,7 +82,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .micro-note{font-size:16px;color:#5b5f65;margin:8px 0 0;text-align:center;line-height:1.45}
     .mn-form{max-width:625px;position:relative;z-index:2;background:#fff;border:1px solid #ebe6dc;border-radius:24px;padding:28px;box-shadow:0 16px 50px rgba(31,30,28,.13);color:#191d25}
     .mn-form form{display:flex;flex-direction:column}
-    .mn-label{display:block;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#3d4149;margin:14px 0 6px}
+    .mn-label{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    #lead-form .mn-input,#lead-form .iti{margin-top:12px}
+    #lead-form .mn-label:first-child + .mn-input{margin-top:0}
+    #lead-form .iti .mn-input{margin-top:0}
     .mn-label:first-child{margin-top:0}
     .mn-input{width:100%;min-width:0;border-radius:12px;background:#fff;border:1px solid #dddfe2;padding:13px 16px;font-size:16px;color:#191d25;outline:none;transition:border-color .15s,box-shadow .15s}
     .mn-input::placeholder{color:#9ca3aa}
@@ -93,8 +96,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .iti__search-input{padding:10px 12px !important;font-size:16px !important;border-radius:8px !important;border:1px solid #dddfe2 !important}
     .iti__selected-country{border-radius:12px 0 0 12px}
     .mn-input.input-error,.mn-input.input-error:focus{border-color:#d92d20 !important}
-    .mn-check{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:16px;line-height:1.45;color:#555d6d;cursor:pointer}
-    .mn-check input{width:20px;height:20px;flex:none;margin-top:1px;accent-color:#ff6b00}
+    .mn-check{display:flex;gap:10px;align-items:center;margin-top:18px;font-size:12px;line-height:1.45;color:#555d6d;cursor:pointer}
+    .mn-check input{width:18px;height:18px;flex:none;margin-top:0;accent-color:#ff6b00}
     .mn-check a{color:#e05f00;text-decoration:underline;font-weight:600}
     .mn-err{margin:6px 0 0;font-size:16px;font-weight:600;color:#d92d20}
     .mn-btn{margin-top:18px;min-height:56px;border:0;border-radius:999px;background:#ff6b00;color:#0b0b0c;font-size:16px;font-weight:800;letter-spacing:.01em;animation:mnPulse 2.2s infinite;transition:background .15s}
@@ -305,6 +308,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .minutes-block .big{font-size:120px;letter-spacing:-.06em}
     .minutes-block .unit{font-size:24px}
     @media(max-width:600px){h2{font-size:28px}.section{padding:60px 0}.minutes-block .big{font-size:88px}.minutes-block .unit{font-size:19px}}
+    @media(max-width:600px){.brand-anchor{left:50%;transform:translateX(-50%);top:18px}.hero-inner{padding-top:84px}}
   </style>
 <link rel="preload" as="image" href="/assets/inscreva-se/aluna-hero.webp">
 </head>
@@ -328,15 +332,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="mn-form" id="inscricao">
           <form id="lead-form" novalidate>
             <label class="mn-label" for="fullName">Nome completo</label>
-            <input class="mn-input" id="fullName" name="nome" type="text" autocomplete="name" placeholder="Digite seu nome completo">
+            <input class="mn-input" id="fullName" name="nome" type="text" autocomplete="name" placeholder="Nome completo">
             <p class="mn-err" id="err-nome" hidden></p>
             <label class="mn-label" for="email">E-mail</label>
-            <input class="mn-input" id="email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com">
+            <input class="mn-input" id="email" name="email" type="email" autocomplete="email" placeholder="Seu melhor e-mail">
             <p class="mn-err" id="err-email" hidden></p>
             <label class="mn-label" for="phone">WhatsApp com DDD</label>
-            <input class="mn-input" id="phone" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000">
+            <input class="mn-input" id="phone" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="WhatsApp com DDD">
             <p class="mn-err" id="err-phone" hidden></p>
-            <label class="mn-check"><input type="checkbox" name="consentimento" id="consent"><span>Concordo com a <a href="https://modonativo.me/privacidade" target="_blank" rel="noopener noreferrer">Política de Privacidade</a> e aceito receber os dados de acesso da minha inscrição.</span></label>
+            <label class="mn-check"><input type="checkbox" name="consentimento" id="consent"><span>Concordo com o <a href="https://modonativo.me/privacidade" target="_blank" rel="noopener noreferrer">regulamento</a> e aceito receber as informações da minha inscrição.</span></label>
             <p class="mn-err" id="err-consent" hidden></p>
             <button class="mn-btn" type="submit" id="send-btn">FAZER MINHA INSCRIÇÃO</button>
             <p id="form-message" class="mn-msg" role="status" aria-live="polite"></p>
@@ -355,13 +359,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ol class="tl">
         <li class="tl-item tl-1">
           <div class="tl-card">
-            <div class="tl-text"><span class="tl-fase">FASE 1</span><h3>Cadastro</h3><p>Você se inscreve pelo formulário desta página com <strong>nome, e-mail e WhatsApp</strong>. Leva 30 segundos e é gratuito. Na hora, sua conta é criada e você entra direto na plataforma do Modo Nativo para fazer a prova.</p></div>
+            <div class="tl-text"><span class="tl-fase">FASE 1</span><h3>Cadastro</h3><p>Você se inscreve pelo formulário desta página com <strong>nome, e-mail e WhatsApp</strong>. Leva 30 segundos e é gratuito. Assim que você envia, a prova de seleção abre na hora, aqui mesmo nesta página.</p></div>
             <div class="tl-ill"><svg viewBox="0 0 140 140" aria-hidden="true"><g transform="rotate(8 70 70)"><rect x="30" y="16" width="80" height="104" rx="12" fill="#ffd5b8"/><rect x="36" y="22" width="68" height="92" rx="9" fill="#fff"/><circle cx="70" cy="50" r="12" fill="#ff6b00"/><path d="M50 78c3-11 11-16 20-16s17 5 20 16z" fill="#ff6b00"/><rect x="46" y="86" width="48" height="9" rx="4.5" fill="#ffe3cf"/><rect x="46" y="99" width="34" height="7" rx="3.5" fill="#ffe3cf"/></g><g transform="rotate(-24 34 80)"><rect x="28" y="40" width="12" height="70" rx="3" fill="#ff6b00"/><rect x="28" y="34" width="12" height="10" rx="3" fill="#ffc49e"/><path d="M28 110h12l-6 12z" fill="#ffd5b8"/></g><path d="M96 104l8 9 18-20" fill="none" stroke="#1fa855" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
         </li>
         <li class="tl-item tl-2">
           <div class="tl-card">
-            <div class="tl-text"><span class="tl-fase">FASE 2</span><h3>Prova de seleção</h3><p>Dentro da plataforma, você responde <strong>perguntas rápidas de inglês do dia a dia</strong>. Não se preocupe: não exigimos nível de inglês e não tem tempo limite. A prova serve para conhecermos o seu nível atual e calcular a sua bolsa.</p></div>
+            <div class="tl-text"><span class="tl-fase">FASE 2</span><h3>Prova de seleção</h3><p>Você responde <strong>perguntas rápidas de inglês do dia a dia</strong> e repete frases curtas em voz alta com a técnica de Shadowing. Não se preocupe: não exigimos nível de inglês e não tem tempo limite. A prova serve para conhecermos o seu nível atual e calcular a sua bolsa.</p></div>
             <div class="tl-ill"><svg viewBox="0 0 140 140" aria-hidden="true"><rect x="40" y="18" width="60" height="108" rx="12" fill="#3d4149"/><rect x="45" y="26" width="50" height="92" rx="7" fill="#fff"/><g fill="none" stroke-linecap="round"><rect x="51" y="44" width="10" height="10" rx="3" fill="#f5a623"/><path d="M53.5 49l2 2 3.5-4" stroke="#fff" stroke-width="2"/><path d="M66 49h22" stroke="#ffd5b8" stroke-width="4"/><rect x="51" y="62" width="10" height="10" rx="3" fill="#f5a623"/><path d="M53.5 67l2 2 3.5-4" stroke="#fff" stroke-width="2"/><path d="M66 67h18" stroke="#ffd5b8" stroke-width="4"/><rect x="51" y="80" width="10" height="10" rx="3" fill="#f5a623"/><path d="M53.5 85l2 2 3.5-4" stroke="#fff" stroke-width="2"/><path d="M66 85h20" stroke="#ffd5b8" stroke-width="4"/></g><path d="M78 6h40a8 8 0 0 1 8 8v20a8 8 0 0 1-8 8H98l-10 9v-9h-10a8 8 0 0 1-8-8V14a8 8 0 0 1 8-8z" fill="#ff6b00"/><text x="98" y="33" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="900" font-size="24" fill="#fff">?</text><path d="M30 92c-6-2-10 4-6 9l14 18c4 5 14 8 20 6V92z" fill="#ffc49e"/></svg></div>
           </div>
         </li>
@@ -531,7 +535,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         separateDialCode: true,
         autoPlaceholder: "aggressive",
         customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
-          return (selectedCountryData && selectedCountryData.iso2 === "br") ? "(11) 90000-0000" : selectedCountryPlaceholder;
+          return (selectedCountryData && selectedCountryData.iso2 === "br") ? "WhatsApp com DDD" : selectedCountryPlaceholder;
         },
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/utils.js",
         i18n: {
@@ -708,7 +712,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           form.reset();
           if (iti && typeof iti.setCountry === 'function') iti.setCountry('br');
           aplicarRegrasPais();
-          message.textContent = 'Inscrição recebida! Em instantes você recebe o acesso à prova de seleção.';
+          message.textContent = 'Inscrição recebida! Sua prova de seleção vai abrir agora.';
         }
       } catch (error) {
         message.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
