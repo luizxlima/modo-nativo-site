@@ -812,6 +812,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .pv-box span{font-size:16px;color:#a1a1aa}
   .pv-inc{background:#141417;border:1px solid #2a2a31;border-radius:16px;padding:16px;margin:14px 0;display:grid;gap:10px}
   .pv-inc div{display:flex;gap:10px;font-size:16px;line-height:1.45;color:#e4e4e7}
+  .pv-inc b{color:#fff}
   .pv-inc div::before{content:"✓";color:#00d254;font-weight:800}
   .pv-price{margin:16px 0;text-align:center;border:2px solid #ff6b00;border-radius:20px;padding:18px;background:#160d06}
   .pv-price s{color:#a1a1aa;font-size:16px}
@@ -819,6 +820,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .pv-price .b{font-family:'Plus Jakarta Sans',sans-serif;font-size:46px;font-weight:800;color:#00d254;letter-spacing:-.02em;margin:4px 0}
   .pv-price .c{font-size:16px;color:#a1a1aa}
   .pv-safe{text-align:center;font-size:16px;color:#a1a1aa;margin-top:12px}
+  .pv-sec{margin:34px 0 0}
+  .pv-kick{display:block;text-align:center;font-size:16px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#ff6b00;margin-bottom:6px}
+  .pv-res h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:24px;line-height:1.25;font-weight:800;color:#fff;text-align:center;margin:0 0 14px;letter-spacing:-.02em}
+  .pv-res h3 em{font-style:normal;color:#00d254}
+  .pv-badges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+  .pv-badges div{background:#141417;border:1px solid #2a2a31;border-radius:14px;padding:10px 6px;text-align:center;font-size:16px;line-height:1.3;color:#d4d4d8}
+  .pv-badges b{display:block;font-size:20px;margin-bottom:2px}
+  .pv-why{background:#141417;border:1px solid #2a2a31;border-radius:16px;padding:14px 16px;font-size:16px;line-height:1.55;color:#c4c4cc}
+  .pv-why b{color:#fff}
+  .pv-dep{display:grid;gap:12px}
+  .pv-dep figure{margin:0;background:#141417;border:1px solid #2a2a31;border-radius:16px;padding:16px}
+  .pv-dep blockquote{margin:0 0 10px;font-size:16px;line-height:1.55;color:#e4e4e7}
+  .pv-dep figcaption{font-size:16px;color:#a1a1aa}
+  .pv-dep figcaption b{color:#fff;display:block}
+  .pv-stars{color:#ffb800;font-size:16px;letter-spacing:2px;margin-bottom:6px}
+  .pv-bonus{display:grid;gap:12px}
+  .pv-bonus article{background:#141417;border:1px solid #2a2a31;border-radius:16px;padding:16px}
+  .pv-bonus .t{font-size:16px;font-weight:800;color:#ff6b00;letter-spacing:.06em}
+  .pv-bonus h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;color:#fff;margin:2px 0 6px}
+  .pv-bonus p{text-align:left;margin:0 0 8px}
+  .pv-bonus ul{margin:0 0 10px;padding:0;list-style:none;display:grid;gap:6px}
+  .pv-bonus li{display:flex;gap:8px;font-size:16px;color:#e4e4e7;line-height:1.4}
+  .pv-bonus li::before{content:"✓";color:#00d254;font-weight:800}
+  .pv-bonus .v{font-size:16px;color:#a1a1aa}
+  .pv-bonus .v s{color:#a1a1aa}
+  .pv-bonus .v b{color:#00d254}
+  .pv-recap{background:#141417;border:1px solid #2a2a31;border-radius:16px;padding:6px 16px}
+  .pv-recap div{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed #2a2a31;font-size:16px;color:#e4e4e7}
+  .pv-recap div:last-child{border:0}
+  .pv-recap s{color:#a1a1aa;white-space:nowrap}
+  .pv-total{text-align:center;margin:14px 0 0;font-size:16px;color:#c4c4cc}
+  .pv-total s{font-family:'Plus Jakarta Sans',sans-serif;font-size:30px;font-weight:800;color:#e5383b;display:block}
+  .pv-gar{display:flex;gap:14px;align-items:center;background:#0f1a13;border:1px solid #1f4d2f;border-radius:16px;padding:16px}
+  .pv-gar .s{flex:none;width:72px;height:72px;border-radius:50%;background:#00d254;color:#0b0b0c;display:grid;place-items:center;text-align:center;font:800 16px/1.1 'Inter',sans-serif}
+  .pv-gar p{text-align:left;margin:0}
+  .pv-gar b{color:#fff}
+  .pv-faq details{background:#141417;border:1px solid #2a2a31;border-radius:14px;margin:0 0 10px;padding:0}
+  .pv-faq summary{cursor:pointer;list-style:none;position:relative;padding:14px 44px 14px 16px;font-size:16px;font-weight:700;color:#fff;display:block}
+  .pv-faq summary::-webkit-details-marker{display:none}
+  .pv-faq summary::after{content:"+";position:absolute;right:16px;top:12px;color:#ff6b00;font-size:22px;line-height:1}
+  .pv-faq details[open] summary::after{content:"−"}
+  .pv-faq p{text-align:left;padding:0 16px 14px;margin:0}
   @media(prefers-reduced-motion:reduce){.pv-btn,.pv-play.on,.pv-mic.rec{animation:none}}
 </style>
 <script>
@@ -995,6 +1038,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   function nivel(){ return acertos<=1?'A1':acertos===2?'A2':'B1'; }
+  function blocoPreco(){ return `<div class="pv-price"><s>Curso de R$ 297</s><div class="a">por R$ 0 com a sua bolsa de 100%</div><div class="b">R$ 29,90</div><div class="c">taxa única de matrícula · sem mensalidades</div></div>`; }
+  const DEPO = [
+    ['Caracaaa! Não tenho palavras para agradecer vocês! Fiquei na dúvida sobre a taxa, mas paguei e recebi o curso completo, do A1 ao C2, com todos os bônus prometidos. O conteúdo é muito bom! Obrigada de coração! 🥹','Natalia Souza'],
+    ['Paguei a taxa e recebi o curso completo com os materiais. Estou adorando essa técnica de aprender inglês com repetição! Já pratiquei tanto que agora consigo reconhecer nas séries e nos filmes o que aprendi nas aulas. Estou muito feliz! 🧡🙌 Thanks!!','Marta Ribeiro'],
+    ['Fiz a matrícula e recebi todo o material. Depois de 6 meses estudando, consegui meus certificados dos níveis Beginner e Elementary e coloquei no LinkedIn. Uma das empresas para as quais eu tinha me candidatado me contratou, e o curso fez diferença nessa conquista. Gratidão! 🙏','Leonardo Santos']
+  ];
+  const BONUS = [
+    ['Fluency Planner','O mapa completo ao lado do curso para organizar sua rotina diária e não parar no meio.',['Plano diário de 15 minutos','Metas por nível, do A1 ao C2','Checklist das 5 etapas'],47],
+    ['Tutor Nativo','Tutor de inglês com IA dentro da plataforma para tirar qualquer dúvida na hora em que ela aparece.',['Dúvidas respondidas na hora, 24h por dia','Explicação simples com exemplos para repetir em voz alta','Indica a próxima lição a treinar'],97],
+    ['Painel de Prompts','Prompts prontos para transformar o chat que você já usa em um parceiro diário de conversação.',['Prompts por situação: entrevista, viagem, reunião, restaurante','Modo jogo com pontos, níveis e ofensiva diária','Funciona no ChatGPT, Claude ou Gemini'],47],
+    ['CV Bilíngue','Preencha seus dados uma vez e gere seu currículo em português e em inglês no padrão do mercado.',['Currículo em português e em inglês','PDF pronto para imprimir ou enviar','Envio direto para o LinkedIn'],47],
+    ['Modo Guiado','Ajuda passo a passo para quem está começando do zero: dá dica e adapta o exercício até sua boca destravar.',['Um botão: liga e desliga quando quiser','Dica na hora em que você trava','Refaz o exercício de outras formas até encaixar'],37],
+    ['Suporte Humanizado','Acompanhamento com professor de verdade no fórum da lição ou no WhatsApp para tirar dúvidas.',['Fórum dentro de cada lição','WhatsApp com professor de verdade','Resposta em texto ou áudio corrigindo sua fala'],97]
+  ];
+  const FAQ = [
+    ['O que é o Curso Do Zero à Conversação?','É um curso online de inglês, do nível A1 ao C2, feito para quem entende alguma coisa mas trava na hora de falar. São 805 aulas práticas em lições de 15 minutos, em que você ouve, repete em voz alta e recebe a correção da sua fala na hora.'],
+    ['Quanto tempo leva para ter resultado?','Já nas primeiras lições você percebe a diferença na hora de falar. O ritmo é seu: com 15 minutos por dia você avança nível a nível, e cada módulo termina com uma avaliação para você ver a sua evolução.'],
+    ['Já tentei aprender inglês e não deu certo… por que dessa vez seria diferente?','Porque aqui você não fica só assistindo aula. Em toda lição você fala em voz alta e recebe correção na hora, e o que você erra volta para revisão no dia certo. É treino de fala de verdade, em pequenas doses, que cabe na sua rotina.'],
+    ['Qual é a forma de pagamento?','Você paga apenas a taxa simbólica de R$ 29,90, em pagamento único. O curso não tem mensalidades.'],
+    ['Se a bolsa é de 100%, por que existe uma taxa?','O valor do curso é coberto pela sua bolsa. A taxa simbólica de R$ 29,90 ajuda a manter a equipe acadêmica, a emissão dos certificados de curso livre e o Programa de Bolsas aberto para mais pessoas. Não existem mensalidades.'],
+    ['O pagamento é seguro?','Sim. O pagamento é processado pela Hotmart, uma das maiores plataformas de produtos digitais do Brasil, com ambiente 100% seguro.'],
+    ['Como recebo o acesso ao curso?','Assim que o pagamento for confirmado, você recebe no seu e-mail o acesso à plataforma, com o curso e todos os bônus liberados. Você recebe 18 meses de acesso (12 meses + 6 meses de bônus).'],
+    ['E se eu não gostar?','Você tem 7 dias de garantia. Se não gostar, é só pedir o reembolso dentro desse prazo e devolvemos 100% do valor da taxa, sem perguntas.']
+  ];
   function resultado(){
     pv.classList.add('pv-res'); bar.style.width='100%'; count.textContent='Resultado';
     const media = notas.length? Math.round(notas.reduce((a,b)=>a+b,0)/notas.length) : null;
@@ -1007,17 +1074,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="pv-box"><b>${media!=null? media+'/100' : shadowFeitos+'/3'}</b><span>${media!=null?'nota de Shadowing':'frases de Shadowing'}</span></div>
       </div>
       <div class="pv-inc">
-        <div>Curso Do Zero à Conversação completo, do A1 ao C2</div>
-        <div>805 aulas práticas em lições de 15 minutos</div>
-        <div>Shadowing em todas as lições e correção da pronúncia por IA</div>
-        <div>Certificado de conclusão</div>
+        <div><span><b>Curso completo Do Zero à Conversação</b> (805 aulas práticas do A1 ao C2)</span></div>
+        <div><span><b>Certificado de curso livre</b> em cada nível concluído</span></div>
+        <div><span><b>Tutor Nativo sem limite</b> para tirar dúvidas 24h por dia</span></div>
+        <div><span><b>Todos os 6 bônus</b> inclusos</span></div>
+        <div><span><b>12 meses de acesso + 6 meses de bônus</b> (18 meses no total)</span></div>
       </div>
-      <div class="pv-price"><s>Curso de R$ 297</s><div class="a">por R$ 0 com a sua bolsa de 100%</div><div class="b">R$ 29,90</div><div class="c">taxa única de matrícula · sem mensalidades</div></div>
+      ${blocoPreco()}
       <button class="pv-btn green" id="ck">ATIVAR MINHA BOLSA</button>
+      <div class="pv-badges"><div><b>🛡️</b>Compra segura</div><div><b>✅</b>Garantia de 7 dias</div><div><b>🔒</b>Privacidade protegida</div></div>
+      <div class="pv-why"><b>Por que existe uma taxa?</b> O valor do curso é coberto pela sua bolsa. A taxa simbólica ajuda a manter a equipe acadêmica, a emissão dos certificados de curso livre e o Programa de Bolsas aberto para mais pessoas.</div>
+
+      <div class="pv-sec">
+        <span class="pv-kick">É real!</span>
+        <h3>E já está mudando o inglês dos nossos alunos</h3>
+        <div class="pv-dep">${DEPO.map(d=>`<figure><div class="pv-stars">★★★★★</div><blockquote>“${d[0]}”</blockquote><figcaption><b>${d[1]}</b>Aluno(a) Modo Nativo</figcaption></figure>`).join('')}</div>
+      </div>
+
+      <div class="pv-sec">
+        <span class="pv-kick">Inclusos na sua bolsa</span>
+        <h3>Os <em>6 bônus</em> que você recebe junto com o curso</h3>
+        <div class="pv-bonus">${BONUS.map((x,i)=>`<article><div class="t">BÔNUS #${i+1}</div><h4>${x[0]}</h4><p>${x[1]}</p><ul>${x[2].map(l=>`<li>${l}</li>`).join('')}</ul><div class="v"><s>R$ ${x[3]},00</s> · <b>Incluído na sua bolsa</b></div></article>`).join('')}</div>
+      </div>
+
+      <div class="pv-sec">
+        <span class="pv-kick">Recapitulando…</span>
+        <h3>Veja tudo que você vai receber</h3>
+        <div class="pv-recap"><div><span>👉 Curso Modo Nativo: Do Zero à Conversação</span><s>R$297,00</s></div>${BONUS.map(x=>`<div><span>👉 ${x[0]}</span><s>R$${x[3]},00</s></div>`).join('')}</div>
+        <p class="pv-total">Tudo isso deveria custar<s>R$669</s>Mas, com a sua bolsa de 100%, o curso e todos os bônus são por nossa conta:</p>
+        ${blocoPreco()}
+        <button class="pv-btn green" id="ck2">ATIVAR MINHA BOLSA</button>
+      </div>
+
+      <div class="pv-sec">
+        <div class="pv-gar"><div class="s">7<br>DIAS</div><p><b>7 dias para testar. O risco é todo nosso.</b> Entre, faça o nivelamento e as primeiras lições, grave sua voz. Se não sentir que esse é o caminho, peça o reembolso em até 7 dias e devolvemos 100%, sem perguntas.</p></div>
+      </div>
+
+      <div class="pv-sec pv-faq">
+        <h3>Perguntas Frequentes</h3>
+        ${FAQ.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('')}
+      </div>
+      <button class="pv-btn green" id="ck3">ATIVAR MINHA BOLSA</button>
       <p class="pv-safe">🔒 Pagamento seguro pela Hotmart · 7 dias de garantia</p>`);
     track('etapa',12,'resultado','nivel '+nivel()+' | acertos '+acertos+' | shadowing '+shadowFeitos);
     fire('quiz_completo',{origem:'inscreva-se', nivel:nivel(), acertos_escuta:acertos, shadowing_gravados:shadowFeitos});
-    document.getElementById('ck').onclick=irCheckout;
+    ['ck','ck2','ck3'].forEach(id=>document.getElementById(id).onclick=irCheckout);
   }
 
   function montarUrl(){
