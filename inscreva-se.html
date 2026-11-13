@@ -837,9 +837,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {id:'escuta_3', nivel:'B1', frase:'Where did you go on your last holiday?', q:'Qual é a pergunta feita no áudio?', a:['Quando serão as suas próximas férias?','Com quem você viaja no fim de semana?','Para onde você foi nas suas últimas férias?','Quanto tempo duraram as suas férias?'], c:2}
   ];
   const SHADOW = [
-    {id:'shadowing_1', texto:'Thank you.', trad:'Obrigado.'},
-    {id:'shadowing_2', texto:'Nice to meet you.', trad:'Prazer em te conhecer.'},
-    {id:'shadowing_3', texto:'I want to learn English.', trad:'Eu quero aprender inglês.'}
+    {id:'shadowing_1', texto:'Thank you.', trad:'Obrigado.', a:['Obrigado.','Por favor.','Com licença.','De nada.'], c:0},
+    {id:'shadowing_2', texto:'Nice to meet you.', trad:'Prazer em te conhecer.', a:['Até mais tarde.','Prazer em te conhecer.','Bom dia para você.','Como você está?'], c:1},
+    {id:'shadowing_3', texto:'I want to learn English.', trad:'Eu quero aprender inglês.', a:['Eu falo inglês muito bem.','Eu preciso trabalhar hoje.','Eu quero aprender inglês.','Eu estudo inglês todos os dias.'], c:2}
   ];
 
   const TOTAL = 1 + PERFIL.length + ESCUTA.length + SHADOW.length;
@@ -942,28 +942,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       sc.innerHTML = nota!=null ? `<span class="pv-score">Pronúncia: ${nota}/100</span>` : '';
       q._nota = nota; nx.disabled=false;
     }
-    async function iniciar(){
+    function iniciar(){
       try{ speechSynthesis && speechSynthesis.cancel(); }catch(e){}
-      tentativas++; reconhecido='';
-      try{
-        stream = await navigator.mediaDevices.getUserMedia({audio:true});
-      }catch(e){ rt.textContent='Não conseguimos acessar o microfone. Libere o microfone no navegador ou toque em "Não consigo gravar agora".'; return; }
-      gravando=true; mic.classList.remove('ok'); mic.classList.add('rec'); mic.textContent='■'; rt.textContent='Gravando... fale a frase e toque para parar'; sc.innerHTML='';
-      if(SR){ try{ rec=new SR(); rec.lang='en-US'; rec.interimResults=false; rec.maxAlternatives=3;
-        rec.onresult=ev=>{ const alts=[...ev.results[0]].map(r=>r.transcript); reconhecido=alts.sort((a,b)=>similaridade(q.texto,b)-similaridade(q.texto,a))[0]||''; };
-        rec.onend=()=>{ if(gravando) parar(); };
-        rec.start(); }catch(e){ rec=null; } }
-      setTimeout(()=>{ if(gravando) parar(); }, 6000);
+      tentativas++; reconhecido=''; let deuErro=false;
+      if(!window.isSecureContext){ rt.textContent='A gravação só funciona com o site aberto em https.'; return; }
+      function falhou(msg){ deuErro=true; gravando=false; mic.classList.remove('rec'); mic.textContent='🎙️';
+        try{ stream && stream.getTracks().forEach(t=>t.stop()); }catch(e){}
+        rt.textContent=msg||'Não conseguimos acessar o microfone. Libere o microfone no navegador ou toque em "Não consigo gravar agora".'; }
+      function comecou(){ gravando=true; mic.classList.remove('ok'); mic.classList.add('rec'); mic.textContent='■'; rt.textContent='Gravando... fale a frase agora'; sc.innerHTML='';
+        setTimeout(()=>{ if(gravando) parar(); }, 6000); }
+      // 1) reconhecimento de voz direto no toque (Safari/iPhone exigem isso), ele mesmo pede o microfone
+      if(SR){
+        try{
+          rec=new SR(); rec.lang='en-US'; rec.interimResults=false; rec.maxAlternatives=3; rec.continuous=false;
+          rec.onresult=ev=>{ const alts=[...ev.results[0]].map(r=>r.transcript); reconhecido=alts.sort((a,b)=>similaridade(q.texto,b)-similaridade(q.texto,a))[0]||''; };
+          rec.onerror=ev=>{ if(ev.error==='not-allowed'||ev.error==='service-not-allowed'||ev.error==='audio-capture') falhou(); };
+          rec.onend=()=>{ if(gravando && !deuErro) parar(); };
+          rec.start(); comecou(); return;
+        }catch(e){ rec=null; }
+      }
+      // 2) sem reconhecimento: só grava pelo microfone
+      if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ falhou('Seu navegador não permite gravar. Abra o link no Chrome ou Safari, ou toque em "Não consigo gravar agora".'); return; }
+      navigator.mediaDevices.getUserMedia({audio:true}).then(st=>{ stream=st; comecou(); }).catch(()=>falhou());
     }
     function parar(){
-      if(!gravando) return;
+      if(!gravando) return; gravando=false;
       try{ rec && rec.stop(); }catch(e){}
       try{ stream && stream.getTracks().forEach(t=>t.stop()); }catch(e){}
-      setTimeout(()=>{ const nota = SR && reconhecido ? Math.max(similaridade(q.texto,reconhecido), 30) : null; concluir(nota); }, 400);
+      rt.textContent='Processando...';
+      setTimeout(()=>{ const nota = SR && reconhecido ? Math.max(similaridade(q.texto,reconhecido), 30) : null; concluir(nota); }, 700);
     }
-    mic.onclick=()=>{ gravando ? parar() : iniciar(); };
+    mic.onclick=()=>{ if(gravando) parar(); else if(rt.textContent!=='Processando...') iniciar(); };
     nx.onclick=()=>{ shadowFeitos++; if(q._nota!=null) notas.push(q._nota); respostas[q.id]='gravado'+(q._nota!=null?' | nota '+q._nota:''); track('etapa',8+i,q.id,respostas[q.id]); proximo(i); };
-    document.getElementById('skip').onclick=()=>{ respostas[q.id]='pulou'; track('etapa',8+i,q.id,'pulou'); proximo(i); };
+    document.getElementById('skip').onclick=()=>{
+      gravando=false; try{ rec && rec.stop(); }catch(e){} try{ stream && stream.getTracks().forEach(t=>t.stop()); }catch(e){}
+      ['.pv-frase','.pv-trad','.pv-rec','#skip'].forEach(sel=>{ const el=body.querySelector(sel); if(el) el.remove(); });
+      body.querySelector('h2').textContent='O que significa a frase que você ouviu?';
+      const au=body.querySelector('.pv-audio div'); au.innerHTML='<strong>Toque para ouvir</strong><small>Pode ouvir quantas vezes quiser</small>';
+      au.parentNode.insertAdjacentHTML('afterend','<p class="pv-fallback" hidden>Seu navegador não tocou o áudio. A frase é: <strong>"'+esc(q.texto)+'"</strong></p><div class="pv-opts">'+opcoes(q.a)+'</div>');
+      nx.disabled=true;
+      ligarOpcoes(sel=>{ const ok=sel===q.c; respostas[q.id]='sem gravar | '+(ok?'certo':'errado')+' | '+q.a[sel]; track('etapa',8+i,q.id,respostas[q.id]); proximo(i); });
+      falar(q.texto,false,pl);
+    };
     function proximo(i){ try{speechSynthesis.cancel();}catch(e){} if(i+1<SHADOW.length) shadowing(i+1); else analisando(); }
   }
 
