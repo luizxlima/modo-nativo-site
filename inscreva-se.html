@@ -936,7 +936,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function pegarVoz(){ if(!('speechSynthesis' in window))return null; const v=speechSynthesis.getVoices()||[];
     voz=v.find(x=>/en-US/i.test(x.lang)&&/google|samantha|jenny|aria|natural/i.test(x.name))||v.find(x=>/en-US/i.test(x.lang))||v.find(x=>/^en/i.test(x.lang))||null; return voz; }
   if('speechSynthesis' in window){pegarVoz(); speechSynthesis.onvoiceschanged=pegarVoz;}
+  const AUDIOS = {
+    'She is from Brazil.':'/assets/inscreva-se/audio/escuta-1.mp3',
+    'We take the bus to work every day.':'/assets/inscreva-se/audio/escuta-2.mp3',
+    'Where did you go on your last holiday?':'/assets/inscreva-se/audio/escuta-3.mp3',
+    'Thank you.':'/assets/inscreva-se/audio/shadowing-1.mp3',
+    'Nice to meet you.':'/assets/inscreva-se/audio/shadowing-2.mp3',
+    'I want to learn English.':'/assets/inscreva-se/audio/shadowing-3.mp3'
+  };
+  let tocando=null;
   function falar(txt, devagar, btn){
+    try{ if(tocando){ tocando.pause(); tocando.currentTime=0; } }catch(e){}
+    try{ speechSynthesis && speechSynthesis.cancel(); }catch(e){}
+    if(AUDIOS[txt]){
+      const a=new Audio(AUDIOS[txt]); tocando=a;
+      a.playbackRate=devagar?0.75:1; try{ a.preservesPitch=true; a.webkitPreservesPitch=true; }catch(e){}
+      if(btn){ btn.classList.add('on'); a.onended=a.onerror=()=>btn.classList.remove('on'); }
+      const p=a.play();
+      if(p&&p.catch) p.catch(()=>{ if(btn) btn.classList.remove('on'); });
+      a.onerror=()=>{ if(btn) btn.classList.remove('on'); falarVoz(txt,devagar,btn); };
+      return;
+    }
+    falarVoz(txt,devagar,btn);
+  }
+  function falarVoz(txt, devagar, btn){
     if(!('speechSynthesis' in window)){ const fb=body.querySelector('.pv-fallback'); if(fb) fb.hidden=false; return; }
     try{speechSynthesis.cancel();}catch(e){}
     const u=new SpeechSynthesisUtterance(txt); u.lang='en-US'; u.rate=devagar?0.7:0.95; if(voz||pegarVoz()) u.voice=voz;
