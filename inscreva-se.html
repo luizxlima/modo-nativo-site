@@ -1001,7 +1001,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function escuta(i){
     const q=ESCUTA[i]; progresso(1+PERFIL.length+i);
     render(`<span class="pv-tag">Parte 2 · Escuta</span><h2>${esc(q.q)}</h2>
-      <div class="pv-audio"><button class="pv-play" id="pl" aria-label="Ouvir o áudio">▶</button><div><strong>Toque para ouvir</strong><small>Pode ouvir quantas vezes quiser</small></div><button class="pv-slow" id="sl">🐢 Devagar</button></div>
+      <div class="pv-audio"><button class="pv-play" id="pl" aria-label="Ouvir o áudio">▶</button><div><strong>Toque para ouvir o nativo</strong><small>Pode ouvir quantas vezes quiser</small></div><button class="pv-slow" id="sl">🐢 Devagar</button></div>
       <p class="pv-fallback" hidden>Seu navegador não tocou o áudio. A frase é: <strong>"${esc(q.frase)}"</strong></p>
       <div class="pv-opts">${opcoes(q.a)}</div><button class="pv-btn" id="nx" disabled>CONTINUAR</button>`);
     const pl=document.getElementById('pl'); pl.onclick=()=>falar(q.frase,false,pl); document.getElementById('sl').onclick=()=>falar(q.frase,true,pl);
@@ -1073,7 +1073,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       gravando=false; try{ rec && rec.stop(); }catch(e){} try{ stream && stream.getTracks().forEach(t=>t.stop()); }catch(e){}
       ['.pv-frase','.pv-trad','.pv-rec','#skip'].forEach(sel=>{ const el=body.querySelector(sel); if(el) el.remove(); });
       body.querySelector('h2').textContent='O que significa a frase que você ouviu?';
-      const au=body.querySelector('.pv-audio div'); au.innerHTML='<strong>Toque para ouvir</strong><small>Pode ouvir quantas vezes quiser</small>';
+      const au=body.querySelector('.pv-audio div'); au.innerHTML='<strong>Toque para ouvir o nativo</strong><small>Pode ouvir quantas vezes quiser</small>';
       au.parentNode.insertAdjacentHTML('afterend','<p class="pv-fallback" hidden>Seu navegador não tocou o áudio. A frase é: <strong>"'+esc(q.texto)+'"</strong></p><div class="pv-opts">'+opcoes(q.a)+'</div>');
       nx.disabled=true;
       ligarOpcoes(sel=>{ const ok=sel===q.c; respostas[q.id]='sem gravar | '+(ok?'certo':'errado')+' | '+q.a[sel]; track('etapa',8+i,q.id,respostas[q.id]); proximo(i); });
