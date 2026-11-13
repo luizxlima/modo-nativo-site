@@ -928,7 +928,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>Ouça o nativo e repita em voz alta</h2>
       <div class="pv-frase">${esc(q.texto)}</div><div class="pv-trad">${esc(q.trad)}</div>
       <div class="pv-audio"><button class="pv-play" id="pl" aria-label="Ouvir a frase">▶</button><div><strong>1. Ouça a frase</strong><small>Preste atenção no ritmo</small></div><button class="pv-slow" id="sl">🐢 Devagar</button></div>
-      <div class="pv-rec"><button class="pv-mic" id="mic" aria-label="Gravar minha voz">🎙️</button><div class="pv-rec-txt" id="rt">2. Toque no microfone e repita a frase</div><div id="sc"></div></div>
+      <div class="pv-rec"><button class="pv-mic" id="mic" aria-label="Gravar minha voz">🎙️</button><div class="pv-rec-txt" id="rt">2. Aperte o microfone para falar e aperte de novo para parar</div><div id="sc"></div></div>
       <button class="pv-btn" id="nx" disabled>PRÓXIMA FRASE</button>
       <button class="pv-link" id="skip">Não consigo gravar agora</button>`);
     const pl=document.getElementById('pl'); pl.onclick=()=>falar(q.texto,false,pl); document.getElementById('sl').onclick=()=>falar(q.texto,true,pl);
@@ -938,7 +938,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     let gravando=false, rec=null, stream=null, reconhecido='', tentativas=0;
     function concluir(nota){
       gravando=false; mic.classList.remove('rec'); mic.classList.add('ok'); mic.textContent='✓';
-      rt.textContent='Gravação concluída! Se quiser, grave de novo.';
+      rt.textContent='Gravação concluída! Se quiser, aperte o microfone e grave de novo.';
       sc.innerHTML = nota!=null ? `<span class="pv-score">Pronúncia: ${nota}/100</span>` : '';
       q._nota = nota; nx.disabled=false;
     }
@@ -949,15 +949,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       function falhou(msg){ deuErro=true; gravando=false; mic.classList.remove('rec'); mic.textContent='🎙️';
         try{ stream && stream.getTracks().forEach(t=>t.stop()); }catch(e){}
         rt.textContent=msg||'Não conseguimos acessar o microfone. Libere o microfone no navegador ou toque em "Não consigo gravar agora".'; }
-      function comecou(){ gravando=true; mic.classList.remove('ok'); mic.classList.add('rec'); mic.textContent='■'; rt.textContent='Gravando... fale a frase agora'; sc.innerHTML='';
-        setTimeout(()=>{ if(gravando) parar(); }, 6000); }
+      function comecou(){ gravando=true; mic.classList.remove('ok'); mic.classList.add('rec'); mic.textContent='■'; rt.textContent='Gravando... fale a frase e aperte para parar'; sc.innerHTML='';
+        const meu=tentativas; setTimeout(()=>{ if(gravando && tentativas===meu) parar(); }, 30000); }
       // 1) reconhecimento de voz direto no toque (Safari/iPhone exigem isso), ele mesmo pede o microfone
       if(SR){
         try{
-          rec=new SR(); rec.lang='en-US'; rec.interimResults=false; rec.maxAlternatives=3; rec.continuous=false;
-          rec.onresult=ev=>{ const alts=[...ev.results[0]].map(r=>r.transcript); reconhecido=alts.sort((a,b)=>similaridade(q.texto,b)-similaridade(q.texto,a))[0]||''; };
+          rec=new SR(); rec.lang='en-US'; rec.interimResults=false; rec.maxAlternatives=3; rec.continuous=true;
+          rec.onresult=ev=>{ let txt=''; for(let k=0;k<ev.results.length;k++){ const alts=[...ev.results[k]].map(r=>r.transcript); txt+=' '+(alts.sort((a,b)=>similaridade(q.texto,b)-similaridade(q.texto,a))[0]||''); } if(similaridade(q.texto,txt)>=similaridade(q.texto,reconhecido)) reconhecido=txt.trim(); };
           rec.onerror=ev=>{ if(ev.error==='not-allowed'||ev.error==='service-not-allowed'||ev.error==='audio-capture') falhou(); };
-          rec.onend=()=>{ if(gravando && !deuErro) parar(); };
+          rec.onend=()=>{ if(gravando && !deuErro){ try{ rec.start(); }catch(e){} } };
           rec.start(); comecou(); return;
         }catch(e){ rec=null; }
       }
