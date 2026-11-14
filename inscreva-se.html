@@ -14,6 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Programa de Bolsas 2026 | Inscreva-se | Modo Nativo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ff6b00">
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
   <meta name="description" content="Inscreva-se para participar do processo seletivo de bolsas de até 100% do Modo Nativo. Pratique inglês 15 minutos por dia com Shadowing e correção de pronúncia por IA.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://modonativo.me/inscreva-se">
@@ -1209,7 +1210,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       atual.forEach((v,k)=>{ if(!u.searchParams.has(k)) u.searchParams.set(k,v); });
       const src=param('utm_source'), xcod=param('xcod');
       if(src && !u.searchParams.has('src')) u.searchParams.set('src',src);
-      if(xcod && !u.searchParams.has('sck')) u.searchParams.set('sck',xcod);
+      let sck=xcod;
+      if(!sck){ const SEP='hQwK21wXxR'; const partes=['utm_source','utm_campaign','utm_medium','utm_content','utm_term'].map(k=>param(k)); if(partes.some(Boolean)) sck=partes.join(SEP); }
+      if(sck){ u.searchParams.set('sck',sck); if(!u.searchParams.has('xcod')) u.searchParams.set('xcod',sck); }
       if(lead.nome) u.searchParams.set('name',lead.nome);
       if(lead.email) u.searchParams.set('email',lead.email);
       const d=String(lead.phone||'').replace(/\D/g,''); const br=d.indexOf('55')===0&&d.length>=12?d.slice(2):d;
@@ -1223,6 +1226,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   // chamado pelo formulário depois do lead enviado
+  try{ ['utm_source','utm_campaign','utm_medium','utm_content','utm_term','xcod'].forEach(k=>{ const v=new URLSearchParams(location.search).get(k); if(v) sessionStorage.setItem('mn_'+k,v); }); }catch(e){}
   window.mnIniciarProva = function(dados){
     lead = Object.assign({}, dados||{}); lead.primeiro = String(lead.nome||'').trim().split(/\s+/)[0]||'';
     try{ ['utm_source','utm_campaign','utm_medium','utm_content','utm_term','xcod'].forEach(k=>{ const v=new URLSearchParams(location.search).get(k); if(v) sessionStorage.setItem('mn_'+k,v); }); }catch(e){}
