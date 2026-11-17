@@ -602,8 +602,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
 
       let ok = true;
-      if (nameInput.value.trim().split(/\s+/).length < 2) {
-        erro('err-nome', 'Digite seu nome e sobrenome.', nameInput);
+      if (nameInput.value.trim().length < 2) {
+        erro('err-nome', 'Digite seu nome.', nameInput);
         ok = false;
       }
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(emailInput.value.trim())) {
