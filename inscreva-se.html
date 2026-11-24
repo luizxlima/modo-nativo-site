@@ -105,8 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .iti__search-input{padding:10px 12px !important;font-size:16px !important;border-radius:8px !important;border:1px solid #dddfe2 !important}
     .iti__selected-country{border-radius:12px 0 0 12px}
     .mn-input.input-error,.mn-input.input-error:focus{border-color:#d92d20 !important}
-    .mn-check{display:flex;gap:10px;align-items:center;margin-top:18px;font-size:12px;line-height:1.45;color:#555d6d;cursor:pointer}
-    .mn-check input{width:18px;height:18px;flex:none;margin-top:0;accent-color:#ff6b00}
+    .mn-check{margin:18px 0 0;font-size:12px;line-height:1.45;color:#555d6d}
     .mn-check a{color:#e05f00;text-decoration:underline;font-weight:600}
     .mn-err{margin:6px 0 0;font-size:16px;font-weight:600;color:#d92d20}
     .mn-btn{margin-top:18px;min-height:56px;border:0;border-radius:999px;background:#ff6b00;color:#0b0b0c;font-size:16px;font-weight:800;letter-spacing:.01em;animation:mnPulse 2.2s infinite;transition:background .15s}
@@ -349,8 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <label class="mn-label" for="phone">WhatsApp com DDD</label>
             <input class="mn-input" id="phone" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="WhatsApp com DDD">
             <p class="mn-err" id="err-phone" hidden></p>
-            <label class="mn-check"><input type="checkbox" name="consentimento" id="consent"><span>Concordo com o <a href="#regulamento" data-regulamento>regulamento</a> e aceito receber as informações da minha inscrição.</span></label>
-            <p class="mn-err" id="err-consent" hidden></p>
+            <p class="mn-check">Concordo com o <a href="#regulamento" data-regulamento>regulamento</a> e aceito receber as informações da minha inscrição.</p>
             <button class="mn-btn" type="submit" id="send-btn">FAZER MINHA INSCRIÇÃO</button>
             <p id="form-message" class="mn-msg" role="status" aria-live="polite"></p>
           </form>
@@ -575,7 +573,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const sendButton = document.getElementById('send-btn');
     const nameInput = document.getElementById('fullName');
     const emailInput = document.getElementById('email');
-    const consentInput = document.getElementById('consent');
 
     const erro = (id, txt, inputEl) => {
       const el = document.getElementById(id);
@@ -588,12 +585,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     if (nameInput) nameInput.addEventListener('input', () => erro('err-nome', '', nameInput));
     if (emailInput) emailInput.addEventListener('input', () => erro('err-email', '', emailInput));
-    if (consentInput) consentInput.addEventListener('change', () => erro('err-consent', ''));
 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       message.textContent = '';
-      ['err-nome', 'err-email', 'err-phone', 'err-consent'].forEach(id => {
+      ['err-nome', 'err-email', 'err-phone'].forEach(id => {
         const el = document.getElementById(id);
         if (el) { el.textContent = ''; el.hidden = true; }
       });
@@ -631,11 +627,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           erro('err-phone', 'Digite um número de WhatsApp válido.', whatsInput);
           ok = false;
         }
-      }
-
-      if (!consentInput.checked) {
-        erro('err-consent', 'Marque a caixa para continuar.');
-        ok = false;
       }
 
       if (!ok) return;
