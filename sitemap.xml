@@ -17,27 +17,697 @@
   </url>
   <url>
     <loc>https://modonativo.me/blog</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://modonativo.me/termos</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://modonativo.me/privacidade</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://modonativo.me/consideracoes</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-on</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-on.webp</image:loc>
+      <image:title>Phrasal verbs com ON: 20 que os nativos usam todo dia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-off</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-off.webp</image:loc>
+      <image:title>Phrasal verbs com OFF: o que muda quando o nativo diz off</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-in</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-in.webp</image:loc>
+      <image:title>Phrasal verbs com IN: 18 combinações do dia a dia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-down</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-down.webp</image:loc>
+      <image:title>Phrasal verbs com DOWN: de calm down a break down</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-back</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-back.webp</image:loc>
+      <image:title>Phrasal verbs com BACK: como falar de volta e resposta</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-over</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-over.webp</image:loc>
+      <image:title>Phrasal verbs com OVER: pensar, revisar e superar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-away</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-away.webp</image:loc>
+      <image:title>Phrasal verbs com AWAY: distanciar, guardar e fugir</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-through</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-through.webp</image:loc>
+      <image:title>Phrasal verbs com THROUGH: atravessar, revisar e aguentar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-around</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-around.webp</image:loc>
+      <image:title>Phrasal verbs com AROUND: rodeio, espera e bagunça</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-get</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-get.webp</image:loc>
+      <image:title>Phrasal verbs com GET: 25 combinações essenciais</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-take</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-take.webp</image:loc>
+      <image:title>Phrasal verbs com TAKE: take off, take over, take on</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-put</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-put.webp</image:loc>
+      <image:title>Phrasal verbs com PUT: put off, put up with, put on</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-come</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-come.webp</image:loc>
+      <image:title>Phrasal verbs com COME: come up, come across, come back</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-com-go</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-com-go.webp</image:loc>
+      <image:title>Phrasal verbs com GO: go on, go out, go through</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-de-trabalho</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-de-trabalho.webp</image:loc>
+      <image:title>20 phrasal verbs de trabalho e reunião em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-de-dinheiro</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-de-dinheiro.webp</image:loc>
+      <image:title>Phrasal verbs de dinheiro e compras em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-de-relacionamento</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-de-relacionamento.webp</image:loc>
+      <image:title>Phrasal verbs de relacionamento e amizade em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-de-saude</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-de-saude.webp</image:loc>
+      <image:title>Phrasal verbs de saúde, corpo e cansaço em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-separaveis</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-separaveis.webp</image:loc>
+      <image:title>Phrasal verbs separáveis e inseparáveis: onde entra o objeto</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/phrasal-verbs-que-mudam-de-sentido</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/phrasal-verbs-que-mudam-de-sentido.webp</image:loc>
+      <image:title>Phrasal verbs que mudam de sentido com a partícula</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-em-ingles-com-animais</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-em-ingles-com-animais.webp</image:loc>
+      <image:title>20 expressões em inglês com animais e o que significam</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-com-partes-do-corpo-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-com-partes-do-corpo-em-ingles.webp</image:loc>
+      <image:title>Expressões com partes do corpo em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-com-cores-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-com-cores-em-ingles.webp</image:loc>
+      <image:title>Expressões com cores em inglês: 15 idioms do dia a dia</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-com-comida-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-com-comida-em-ingles.webp</image:loc>
+      <image:title>Expressões com comida em inglês que não falam de comer</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-sobre-clima-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-sobre-clima-em-ingles.webp</image:loc>
+      <image:title>Expressões sobre clima e tempo em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-sobre-dinheiro-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-sobre-dinheiro-em-ingles.webp</image:loc>
+      <image:title>Expressões sobre dinheiro em inglês: 18 idioms úteis</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-de-esporte-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-de-esporte-em-ingles.webp</image:loc>
+      <image:title>Expressões de esporte usadas fora do campo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-com-casa-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-com-casa-em-ingles.webp</image:loc>
+      <image:title>Expressões com casa e móveis em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-com-numeros-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-com-numeros-em-ingles.webp</image:loc>
+      <image:title>Expressões com números em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-com-musica-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-com-musica-em-ingles.webp</image:loc>
+      <image:title>Expressões com música em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/business-idioms-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/business-idioms-em-ingles.webp</image:loc>
+      <image:title>20 business idioms que você ouve em call internacional</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-de-pressa-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-de-pressa-em-ingles.webp</image:loc>
+      <image:title>Expressões de pressa e atraso em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-de-sorte-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-de-sorte-em-ingles.webp</image:loc>
+      <image:title>Expressões de sorte e azar em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-de-discussao-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-de-discussao-em-ingles.webp</image:loc>
+      <image:title>Expressões de discussão e desacordo em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-de-amor-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-de-amor-em-ingles.webp</image:loc>
+      <image:title>Expressões de amor e relacionamento em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-com-roupas-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-com-roupas-em-ingles.webp</image:loc>
+      <image:title>Expressões com roupas em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-de-transito-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-de-transito-em-ingles.webp</image:loc>
+      <image:title>Expressões de carro e trânsito em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-que-nao-se-traduzem-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-que-nao-se-traduzem-em-ingles.webp</image:loc>
+      <image:title>20 expressões em inglês que não se traduzem ao pé da letra</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/proverbios-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/proverbios-em-ingles.webp</image:loc>
+      <image:title>Provérbios em inglês e o equivalente em português</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/expressoes-datadas-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/expressoes-datadas-em-ingles.webp</image:loc>
+      <image:title>Expressões em inglês que soam datadas e o que falar hoje</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/girias-do-tiktok-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/girias-do-tiktok-em-ingles.webp</image:loc>
+      <image:title>Gírias do TikTok em inglês: 25 termos para entender os vídeos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/o-que-significa-rizz-mid-no-cap</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/o-que-significa-rizz-mid-no-cap.webp</image:loc>
+      <image:title>O que significam rizz, mid, no cap e slaps</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/girias-geracao-z-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/girias-geracao-z-ingles.webp</image:loc>
+      <image:title>Gírias da Geração Z e dos Millennials: o que mudou</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/termos-do-reddit-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/termos-do-reddit-em-ingles.webp</image:loc>
+      <image:title>Termos do Reddit em inglês: TIL, ELI5, AMA e OP</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/termos-do-discord-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/termos-do-discord-em-ingles.webp</image:loc>
+      <image:title>A linguagem do Discord em inglês: termos de servidor e chat</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/termos-de-twitch-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/termos-de-twitch-em-ingles.webp</image:loc>
+      <image:title>Termos de Twitch e streamers em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/abreviacoes-de-jogos-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/abreviacoes-de-jogos-em-ingles.webp</image:loc>
+      <image:title>Abreviações de jogos online em inglês: GG, AFK, nerf e buff</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/memes-em-ingles-explicados</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/memes-em-ingles-explicados.webp</image:loc>
+      <image:title>15 memes em inglês explicados (e o que a frase quer dizer)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-comentar-em-ingles-nas-redes</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-comentar-em-ingles-nas-redes.webp</image:loc>
+      <image:title>Como comentar em inglês no Instagram e no TikTok</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/legendas-em-ingles-para-fotos</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/legendas-em-ingles-para-fotos.webp</image:loc>
+      <image:title>Legendas em inglês para fotos: 40 captions prontas</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/bio-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/bio-em-ingles.webp</image:loc>
+      <image:title>Como escrever uma bio em inglês que não soa traduzida</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/hashtags-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/hashtags-em-ingles.webp</image:loc>
+      <image:title>Hashtags em inglês: como escolher e o que elas significam</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/termos-de-streaming-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/termos-de-streaming-em-ingles.webp</image:loc>
+      <image:title>Termos de streaming e Netflix em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/girias-britanicas-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/girias-britanicas-em-ingles.webp</image:loc>
+      <image:title>Gírias britânicas que confundem brasileiros</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/girias-australianas-e-canadenses</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/girias-australianas-e-canadenses.webp</image:loc>
+      <image:title>Gírias australianas e canadenses em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/ingles-de-forum-e-suporte</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/ingles-de-forum-e-suporte.webp</image:loc>
+      <image:title>Inglês de fórum e suporte técnico: bump, thread, DM</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/emojis-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/emojis-em-ingles.webp</image:loc>
+      <image:title>Emojis e o que eles significam em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/termos-de-ia-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/termos-de-ia-em-ingles.webp</image:loc>
+      <image:title>Termos de IA e tecnologia em inglês: prompt, token, model</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/girias-de-dinheiro-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/girias-de-dinheiro-em-ingles.webp</image:loc>
+      <image:title>Gírias de dinheiro na internet: broke, flex, bag</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/girias-que-ninguem-usa-mais-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/girias-que-ninguem-usa-mais-ingles.webp</image:loc>
+      <image:title>Como saber se uma gíria em inglês já morreu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/assunto-de-email-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/assunto-de-email-em-ingles.webp</image:loc>
+      <image:title>Assunto de e-mail em inglês: 30 exemplos que fazem abrir</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-comecar-e-terminar-email-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-comecar-e-terminar-email-em-ingles.webp</image:loc>
+      <image:title>Como começar e terminar um e-mail em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-responder-email-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-responder-email-em-ingles.webp</image:loc>
+      <image:title>Como responder a um e-mail em inglês (com modelos)</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/follow-up-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/follow-up-em-ingles.webp</image:loc>
+      <image:title>Follow up em inglês: como cobrar resposta sem soar grosso</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-pedir-desculpa-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-pedir-desculpa-em-ingles.webp</image:loc>
+      <image:title>Como pedir desculpa por escrito em inglês</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-dizer-nao-em-ingles-no-trabalho</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-dizer-nao-em-ingles-no-trabalho.webp</image:loc>
+      <image:title>Como dizer não em inglês no trabalho</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://modonativo.me/blog/como-pedir-mais-prazo-em-ingles</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://modonativo.me/blog/img/como-pedir-mais-prazo-em-ingles.webp</image:loc>
+      <image:title>Como pedir mais prazo em inglês</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://modonativo.me/blog/curso-de-ingles-online-funciona</loc>
